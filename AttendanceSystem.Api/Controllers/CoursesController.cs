@@ -2,57 +2,66 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
+using AttendanceSystem.Domain.Services;
 
 namespace AttendanceSystem.Api.Controllers;
 
 public class CoursesController
 {
     private readonly ILogger<CoursesController> _logger;
+    private readonly CourseService _courseService;
     
-    public CoursesController(ILogger<CoursesController> logger)
+    public CoursesController(ILogger<CoursesController> logger, CourseService courseService)
     {
         _logger = logger;
+        _courseService = courseService;
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(GetAllCourses)}")]
-    public IActionResult GetAllCourses([HttpTrigger(AuthorizationLevel.User, "get", Route="courses")] HttpRequest req)
+    public async Task<IActionResult> GetAllCourses([HttpTrigger(AuthorizationLevel.User, "get", Route="courses")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        var courses = await _courseService.GetAllCourses();
+        return new OkObjectResult(courses);
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(CreateNewCourse)}")]
-    public IActionResult CreateNewCourse([HttpTrigger(AuthorizationLevel.User, "post", Route="courses")] HttpRequest req)
+    public async Task<IActionResult> CreateNewCourse([HttpTrigger(AuthorizationLevel.User, "post", Route="courses")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        var course = await _courseService.CreateNewCourse(req);
+        return new OkObjectResult(course);
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(GetCourse)}")]
-    public IActionResult GetCourse([HttpTrigger(AuthorizationLevel.User, "get", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
+    public async Task<IActionResult> GetCourse([HttpTrigger(AuthorizationLevel.User, "get", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        var course = await _courseService.GetCourse(courseId);
+        return new OkObjectResult(course);
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(ConfigureCourse)}")]
-    public IActionResult ConfigureCourse([HttpTrigger(AuthorizationLevel.User, "put", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
+    public async Task<IActionResult> ConfigureCourse([HttpTrigger(AuthorizationLevel.User, "put", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        var course = await _courseService.ConfigureCourse(req, courseId);
+        return new OkObjectResult(course);
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(DeleteCourse)}")]
-    public IActionResult DeleteCourse([HttpTrigger(AuthorizationLevel.User, "delete", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
+    public async Task<IActionResult> DeleteCourse([HttpTrigger(AuthorizationLevel.User, "delete", Route="courses/{courseId:guid}")] HttpRequest req, Guid courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        await _courseService.DeleteCourse(courseId);
+        return new OkObjectResult($"Course {courseId} deleted.");
     }
     
     [Function( $"{nameof(CoursesController)}-{nameof(EnrollUser)}")]
-    public IActionResult EnrollUser([HttpTrigger(AuthorizationLevel.User, "post", Route="courses/{courseId:guid}/participants")] HttpRequest req, Guid courseId)
+    public async Task<IActionResult> EnrollUser([HttpTrigger(AuthorizationLevel.User, "post", Route="courses/{courseId:guid}/participants")] HttpRequest req, Guid courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"Welcome to Azure Functions!");
+        var user = await _courseService.EnrollUser(req, courseId);
+        return new OkObjectResult(user);
     }
 }
