@@ -7,7 +7,7 @@ namespace AttendanceSystem.Domain.Services;
 public class AttendanceService
 {
     private readonly CoursesContext _context;
-    
+
     public AttendanceService(CoursesContext context)
     {
         _context = context;
@@ -17,8 +17,8 @@ public class AttendanceService
     {
         return await _context.Sessions.SingleAsync(s => s.Id == sessionId);
     }
-    
-    public async Task SetAttendance(Guid sessionId, Guid studentId, AttendanceKind kind)
+
+    public async Task SetAttendance(Guid sessionId, string studentId, AttendanceKind kind)
     {
         var session = await GetSession(sessionId);
         session.SetAttendance(studentId, kind);

@@ -9,11 +9,11 @@ public class User
     /// We want to store this because otherwise, we cannot identify the user based on the
     /// information provided by the identity provider.
     /// </remarks>
-    public Guid Id { get; init; }
-    
+    public string Id { get; init; }
+
     public string Name { get; set; }
-    
+
     public string Email { get; set; }
-    
+
     public List<Course> Courses { get; set; }
 }

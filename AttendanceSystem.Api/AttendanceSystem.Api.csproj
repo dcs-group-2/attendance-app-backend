@@ -36,5 +36,6 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\AttendanceSystem.Data\AttendanceSystem.Data.csproj" />
+      <ProjectReference Include="..\AttendanceSystem.Domain.Services\AttendanceSystem.Domain.Services.csproj" />
     </ItemGroup>
 </Project>

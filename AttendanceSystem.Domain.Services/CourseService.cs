@@ -1,5 +1,6 @@
 using AttendanceSystem.Data;
 using AttendanceSystem.Domain.Model;
+using AttendanceSystem.Domain.Services.Alterations;
 using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceSystem.Domain.Services;
@@ -18,43 +19,43 @@ public class CourseService
         return await _context.Courses.ToListAsync();
     }
 
-    public async Task<Course> CreateNewCourse(HttpRequest req)
+    public async Task<Course> CreateNewCourse(string name, string description, string departmentId, List<string> teacherIds)
     {
-        // Extract course details from the request and create a new course
-        var course = new Course(/* parameters */);
+        var course = new Course(name, name, departmentId, teacherIds);
         _context.Courses.Add(course);
         await _context.SaveChangesAsync();
         return course;
     }
 
-    public async Task<Course> GetCourse(Guid courseId)
+    public async Task<Course> GetCourse(string courseId)
     {
-        return await _context.Courses.SingleOrDefaultAsync(c => c.Id == courseId);
+        return await _context.Courses.FindAsync(courseId) ?? throw new ArgumentException("Course not found");
     }
 
-    public async Task<Course> ConfigureCourse(HttpRequest req, Guid courseId)
+    public async Task<Course> ConfigureCourse(string courseId, CourseAlteration alteration)
     {
         // Extract course details from the request and update the course
         var course = await GetCourse(courseId);
-        // Update course properties
+
+        course.Name = alteration.Name ?? course.Name;
+        course.Department = alteration.Department ?? course.Department;
+
         await _context.SaveChangesAsync();
         return course;
     }
 
-    public async Task DeleteCourse(Guid courseId)
+    public async Task DeleteCourse(string courseId)
     {
         var course = await GetCourse(courseId);
         _context.Courses.Remove(course);
         await _context.SaveChangesAsync();
     }
 
-    public async Task<User> EnrollUser(HttpRequest req, Guid courseId)
+    public async Task EnrollUser(string courseId, string userId)
     {
         // Extract user details from the request and enroll the user in the course
         var course = await GetCourse(courseId);
-        var user = new User(/* parameters */);
-        course.Students.Add(user);
+        course.Students.Add(userId);
         await _context.SaveChangesAsync();
-        return user;
     }
 }

@@ -15,13 +15,14 @@ builder.ConfigureFunctionsWebApplication();
 //     .ConfigureFunctionsApplicationInsights();
 
 builder.Services.AddServices();
+builder.Services.AddMvc();
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
     string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
-    
+
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
-    
+
     options.UseAzureSql(connectionString);
 });
 
