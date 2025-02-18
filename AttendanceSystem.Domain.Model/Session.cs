@@ -1,4 +1,5 @@
-﻿using static AttendanceSystem.Domain.Model.AttendanceKind;
+﻿using System.Diagnostics.CodeAnalysis;
+using static AttendanceSystem.Domain.Model.AttendanceKind;
 
 namespace AttendanceSystem.Domain.Model;
 
@@ -12,6 +13,10 @@ public class Session
 
     public IEnumerable<AttendanceRecord> Register { get; }
 
+    [SetsRequiredMembers]
+    private Session() { }
+    
+    [SetsRequiredMembers]
     public Session(Course course, List<StudentId> students, DateTime startTime, DateTime endTime)
     {
         Course = course;

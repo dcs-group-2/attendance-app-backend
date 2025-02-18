@@ -19,39 +19,54 @@ public class UserService
         return await _context.Students.FindAsync(userId) ?? throw new ArgumentException("User not found");
     }
 
-    public async Task<List<User>> GetUsers()
+    public async Task<List<User>> GetAllStudents()
     {
         return await _context.Students.ToListAsync<User>();
     }
 
     public async Task<User> CreateTeacher(string id, string name, string email)
     {
-        return new Teacher()
+        User user = new Teacher()
         {
             Id = id,
             Name = name,
             Email = email,
         };
+        
+        _context.Users.Add(user);
+        
+        await _context.SaveChangesAsync();
+        return user;
     }
 
     public async Task<User> CreateStudent(string id, string name, string email)
     {
-        return new Student()
+        User user = new Student()
         {
             Id = id,
             Name = name,
             Email = email,
         };
+        
+        _context.Users.Add(user);
+        
+        await _context.SaveChangesAsync();
+        return user;
     }
 
     public async Task<User> CreateAdministrator(string id, string name, string email)
     {
-        return new Administrator()
+        User user = new Administrator()
         {
             Id = id,
             Name = name,
             Email = email,
         };
+        
+        _context.Users.Add(user);
+        
+        await _context.SaveChangesAsync();
+        return user;
     }
 
     public async Task<User> EditUser(string userId, UserAlteration alteration)
@@ -69,5 +84,12 @@ public class UserService
         await _context.SaveChangesAsync();
 
         return user;
+    }
+
+    public async Task DeleteUser(string userId)
+    {
+        var user = await GetUser(userId);
+        _context.Remove(user);
+        await _context.SaveChangesAsync();
     }
 }
