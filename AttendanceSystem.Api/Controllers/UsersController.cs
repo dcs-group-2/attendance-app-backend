@@ -7,6 +7,8 @@ using Microsoft.Extensions.Logging;
 using AttendanceSystem.Domain.Services;
 using AttendanceSystem.Domain.Services.Alterations;
 
+using FromBodyAttribute = Microsoft.Azure.Functions.Worker.Http.FromBodyAttribute;
+
 namespace AttendanceSystem.Api.Controllers;
 
 public class UsersController
@@ -44,7 +46,7 @@ public class UsersController
 
     [Function($"{nameof(UsersController)}-{nameof(ConfigureUser)}")]
     public async Task<IActionResult> ConfigureUser(
-        [HttpTrigger(AuthorizationLevel.User, "put", Route="users/{userId:string}")] HttpRequest req, string userId, UserAlteration alteration)
+        [HttpTrigger(AuthorizationLevel.User, "put", Route="users/{userId}")] HttpRequest req, string userId, UserAlteration alteration)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         
@@ -55,7 +57,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(GetUser)}")]
-    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.User, "get", Route="users/{userId:string}")] HttpRequest req, string userId)
+    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.User, "get", Route="users/{userId}")] HttpRequest req, string userId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var user = await _userService.GetUser(userId);
@@ -63,7 +65,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(DeleteUser)}")]
-    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.User, "delete", Route="users/{userId:string}")] HttpRequest req, string userId)
+    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.User, "delete", Route="users/{userId}")] HttpRequest req, string userId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 

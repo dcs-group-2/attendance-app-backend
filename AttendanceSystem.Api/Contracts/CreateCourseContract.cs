@@ -2,8 +2,8 @@
 
 public class CreateCourseContract
 {
-    public required string name;
-    public required string description;
-    public required string departmentId;
-    public required List<string> teacherIds;
+    public required string Id { get; set; }
+    public required string Name { get; set; }
+    public required string DepartmentId { get; set; }
+    public required List<string> TeacherIds { get; set; }
 }

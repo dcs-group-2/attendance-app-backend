@@ -19,9 +19,9 @@ public class CourseService
         return await _context.Courses.ToListAsync();
     }
 
-    public async Task<Course> CreateNewCourse(string name, string description, string departmentId, List<string> teacherIds)
+    public async Task<Course> CreateNewCourse(string id, string name, string departmentId, List<string> teacherIds)
     {
-        var course = new Course(name, name, departmentId, teacherIds);
+        var course = new Course(id, name, departmentId, teacherIds);
         _context.Courses.Add(course);
         await _context.SaveChangesAsync();
         return course;
