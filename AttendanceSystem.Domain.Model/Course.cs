@@ -2,27 +2,31 @@
 
 public class Course
 {
-    public Guid Id { get; init; } = Guid.NewGuid();
-    
-    public Department Department { get; private set; }
-    
-    public List<Teacher> Teachers { get; private set; } = [];
+    public CourseId Id { get; private set; }
 
-    
-    public List<Student> Students { get; private set; } = [];
-    
-    
-    public List<Session> Sessions { get; private set; } = [];
-    
-    public string Name { get; private set; }
+    public string Name { get; internal set; }
 
-    public Course(string name, Department department, List<Teacher> teachers)
+    public string Department { get; internal set; }
+
+    public List<string> Teachers { get; internal set; }
+
+    public List<string> Students { get; internal set; } = [];
+
+
+    public List<Session> Sessions { get; internal set; } = [];
+
+#pragma warning disable CS8618, CS9264
+    private Course() { }
+#pragma warning restore CS8618, CS9264
+
+    public Course(CourseId id, string name, string department, List<string> teachers)
     {
         if (teachers.Count == 0)
         {
             throw new ArgumentException("A course must have at least one teacher", nameof(teachers));
         }
-        
+
+        Id = id;
         Name = name;
         Department = department;
         Teachers = teachers;
