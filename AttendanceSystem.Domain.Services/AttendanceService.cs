@@ -1,5 +1,6 @@
 ﻿using AttendanceSystem.Data;
 using AttendanceSystem.Domain.Model;
+using AttendanceSystem.Domain.Model.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceSystem.Domain.Services;
@@ -16,8 +17,7 @@ public class AttendanceService
     public async Task<Session> CreateSession(string courseId, DateTime startdate, DateTime enddate)
     {
         // Get the course to see if it is available
-        Course course = await _context.Courses.FindAsync(courseId) ?? throw new ArgumentException("Course not found", nameof(courseId));
-        if (course is null) throw new ArgumentException("Course not found", nameof(courseId));
+        Course course = await _context.Courses.FindAsync(courseId) ?? throw new EntityNotFoundException("Course not found");
         
         Session session = new Session(course, [], startdate, enddate);
         

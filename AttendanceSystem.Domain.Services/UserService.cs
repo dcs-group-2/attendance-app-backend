@@ -1,5 +1,6 @@
 ﻿using AttendanceSystem.Data;
 using AttendanceSystem.Domain.Model;
+using AttendanceSystem.Domain.Model.Exceptions;
 using AttendanceSystem.Domain.Services.Alterations;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +17,7 @@ public class UserService
 
     public async Task<User> GetUser(string userId)
     {
-        return await _context.Students.FindAsync(userId) ?? throw new ArgumentException("User not found");
+        return await _context.Students.FindAsync(userId) ?? throw new EntityNotFoundException("User not found");
     }
 
     public async Task<List<User>> GetAllStudents()
