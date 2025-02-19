@@ -7,15 +7,8 @@ using Microsoft.Extensions.Logging;
 
 namespace AttendanceSystem.Api.Middleware;
 
-public class ExceptionToErrorCodeHandler : IFunctionsWorkerMiddleware
+public class ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler> logger) : IFunctionsWorkerMiddleware
 {
-    private readonly ILogger<ExceptionToErrorCodeHandler> _logger;
-
-    public ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler> logger)
-    {
-        _logger = logger;
-    }
-
     public async Task Invoke(FunctionContext context, FunctionExecutionDelegate next)
     {
         try
@@ -49,7 +42,7 @@ public class ExceptionToErrorCodeHandler : IFunctionsWorkerMiddleware
                     message = entityNotFoundException.Message;
                     break;
                 default:
-                    _logger.LogError(ex, "An unhandled exception occurred.");
+                    logger.LogError(ex, "An unhandled exception occurred.");
                     response.StatusCode = System.Net.HttpStatusCode.InternalServerError;
                     message = "An unhandled exception occurred. Please try again later";
                     break;
