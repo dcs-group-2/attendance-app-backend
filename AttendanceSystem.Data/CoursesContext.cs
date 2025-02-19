@@ -39,7 +39,7 @@ public class CoursesContext : DbContext
 
         modelBuilder.Entity<AttendanceRecord>(e =>
         {
-            e.HasKey(r => new {r.Session, r.Student});
+            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId});
         });
     }
 }
