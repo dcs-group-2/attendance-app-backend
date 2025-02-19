@@ -1,33 +1,41 @@
-@minLength(3)
-@maxLength(11)
-param storagePrefix string
+@description('The subscription ID')
+param subscriptionId string
 
-@allowed([
-  'Standard_LRS'
-  'Standard_GRS'
-  'Standard_RAGRS'
-  'Standard_ZRS'
-  'Premium_LRS'
-  'Premium_ZRS'
-  'Standard_GZRS'
-  'Standard_RAGZRS'
-])
-param storageSKU string = 'Standard_LRS'
-
+@description('The location for all resources')
 param location string = resourceGroup().location
 
-var uniqueStorageName = '${storagePrefix}${uniqueString(resourceGroup().id)}'
+@description('Name of the Storage Account for Function App runtime (must be globally unique)')
+param storageAccountName string = 'attendancebackendstore'
 
-resource stg 'Microsoft.Storage/storageAccounts@2023-04-01' = {
-  name: uniqueStorageName
-  location: location
-  sku: {
-    name: storageSKU
-  }
-  kind: 'StorageV2'
-  properties: {
-    supportsHttpsTrafficOnly: true
+@description('Function App parameters object (supplied via functionAppParameters.bicepparam)')
+param functionAppParams object
+
+// -----------------------------------------------------
+// Module: Deploy Storage Account
+// -----------------------------------------------------
+module storageAccount 'storageAccount.bicep' = {
+  name: 'storageAccountDeployment'
+  params: {
+    location: location
+    storagePrefix: 'devops-'
   }
 }
 
-output storageEndpoint object = stg.properties.primaryEndpoints
+// -----------------------------------------------------
+// Module: Deploy Function App
+// -----------------------------------------------------
+module functionApp 'functionApp.bicep' = {
+  name: 'functionAppDeployment'
+  // Merge common parameters with the Function App–specific ones from your parameter file.
+  params: union(
+    {
+      subscriptionId: subscriptionId
+      location: location
+      storageAccountName: storageAccountName
+    },
+    functionAppParams
+  )
+  dependsOn: [
+    storageAccount
+  ]
+}
