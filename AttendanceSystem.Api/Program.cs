@@ -15,14 +15,35 @@ builder.ConfigureFunctionsWebApplication();
 //     .ConfigureFunctionsApplicationInsights();
 
 builder.Services.AddServices();
+builder.Services.AddMvc();
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
     string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
-    
+
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
-    
+
     options.UseAzureSql(connectionString);
 });
 
-builder.Build().Run();
+IHost host = builder.Build();
+
+// Configure the database
+using (var scope = host.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
+
+    if (builder.Environment.IsDevelopment())
+    {
+        // If we are in development, start with a fresh database on every launch
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
+    }
+    else
+    {
+        context.Database.Migrate();
+    }
+}
+
+// Open the server
+host.Run();

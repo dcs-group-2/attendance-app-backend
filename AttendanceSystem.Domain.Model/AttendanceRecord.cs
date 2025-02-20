@@ -2,7 +2,7 @@
 
 public record AttendanceRecord
 {
-    public required Session Session { get; set; }
-    public required Student Student { get; set; }
+    public required SessionId SessionId { get; set; }
+    public required StudentId StudentId { get; set; }
     public required AttendanceKind Record { get; set; }
 }
