@@ -33,9 +33,9 @@ public class UserService
             Name = name,
             Email = email,
         };
-        
+
         _context.Users.Add(user);
-        
+
         await _context.SaveChangesAsync();
         return user;
     }
@@ -48,9 +48,9 @@ public class UserService
             Name = name,
             Email = email,
         };
-        
+
         _context.Users.Add(user);
-        
+
         await _context.SaveChangesAsync();
         return user;
     }
@@ -63,9 +63,9 @@ public class UserService
             Name = name,
             Email = email,
         };
-        
+
         _context.Users.Add(user);
-        
+
         await _context.SaveChangesAsync();
         return user;
     }

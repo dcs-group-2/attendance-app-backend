@@ -15,7 +15,7 @@ public class Session
 
     [SetsRequiredMembers]
     private Session() { }
-    
+
     [SetsRequiredMembers]
     public Session(Course course, List<StudentId> students, DateTime startTime, DateTime endTime)
     {
@@ -32,14 +32,14 @@ public class Session
         // Create the attendance records for all students
         Register = students.Select(s => new AttendanceRecord
         {
-            Session = Id,
-            Student = s,
+            SessionId = Id,
+            StudentId = s,
             Record = Unknown
         });
     }
 
     public void SetAttendance(StudentId studentId, AttendanceKind kind)
     {
-        Register.Single(r => r.Student == studentId).Record = kind;
+        Register.Single(r => r.StudentId == studentId).Record = kind;
     }
 }

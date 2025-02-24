@@ -10,7 +10,7 @@ public class CoursesContext : DbContext
     }
 
     public DbSet<Student> Students { get; set; }
-    
+
     public DbSet<User> Users { get; set; }
 
     public DbSet<Course> Courses { get; set; }
@@ -39,7 +39,7 @@ public class CoursesContext : DbContext
 
         modelBuilder.Entity<AttendanceRecord>(e =>
         {
-            e.HasKey(r => new {r.Session, r.Student});
+            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId});
         });
     }
 }

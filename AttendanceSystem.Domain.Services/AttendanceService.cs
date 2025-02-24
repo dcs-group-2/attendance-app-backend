@@ -18,9 +18,10 @@ public class AttendanceService
     {
         // Get the course to see if it is available
         Course course = await _context.Courses.FindAsync(courseId) ?? throw new EntityNotFoundException("Course not found");
-        
+        if (course is null) throw new EntityNotFoundException("Course not found");
+
         Session session = new Session(course, [], startdate, enddate);
-        
+
         _context.Sessions.Add(session);
         course.Sessions.Add(session);
         await _context.SaveChangesAsync();
