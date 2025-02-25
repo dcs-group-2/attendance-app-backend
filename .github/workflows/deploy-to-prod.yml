@@ -28,9 +28,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B76618F72A904F538A30FCC1AF3ACD01 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9AC75F70452549439104F9400AA756CC }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9AC11EC8C2A64070B500EBB5707A5B46 }}
+          client-id: ${{ secrets.AZURE_AGENT_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_AGENT_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           
       - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
         uses: actions/setup-dotnet@v1
