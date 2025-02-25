@@ -15,7 +15,7 @@ public class Session
 
     [SetsRequiredMembers]
     private Session() { }
-    
+
     [SetsRequiredMembers]
     public Session(Course course, List<StudentId> students, DateTime startTime, DateTime endTime)
     {

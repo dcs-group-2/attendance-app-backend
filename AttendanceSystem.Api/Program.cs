@@ -1,4 +1,5 @@
 using AttendanceSystem.Api;
+using AttendanceSystem.Api.Middleware;
 using AttendanceSystem.Data;
 using Microsoft.Azure.Functions.Worker.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 var builder = FunctionsApplication.CreateBuilder(args);
 
 builder.ConfigureFunctionsWebApplication();
+
+builder.UseMiddleware<ExceptionToErrorCodeHandler>();
 
 // Application Insights isn't enabled by default. See https://aka.ms/AAt8mw4.
 // builder.Services

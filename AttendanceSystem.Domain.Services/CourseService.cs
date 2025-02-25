@@ -1,5 +1,6 @@
 using AttendanceSystem.Data;
 using AttendanceSystem.Domain.Model;
+using AttendanceSystem.Domain.Model.Exceptions;
 using AttendanceSystem.Domain.Services.Alterations;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,7 +30,7 @@ public class CourseService
 
     public async Task<Course> GetCourse(string courseId)
     {
-        return await _context.Courses.FindAsync(courseId) ?? throw new ArgumentException("Course not found");
+        return await _context.Courses.FindAsync(courseId) ?? throw new EntityNotFoundException("Course not found");
     }
 
     public async Task<Course> ConfigureCourse(string courseId, CourseAlteration alteration)
