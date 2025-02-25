@@ -4,6 +4,8 @@ using Microsoft.Azure.Functions.Worker.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using AttendanceSystem.Domain.Services.Tools;
+using AttendanceSystem.Domain.Services;
 
 var builder = FunctionsApplication.CreateBuilder(args);
 
@@ -19,11 +21,11 @@ builder.Services.AddMvc();
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
-    string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
+    string? connectionString = Environment.GetEnvironmentVariable("ConnectionString");
 
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
 
-    options.UseAzureSql(connectionString);
+    options.UseSqlServer("Data Source=attendancesystemserverdb.database.windows.net;Initial Catalog=attendancesystem-db; Authentication=Active Directory Default; Encrypt=True;");
 });
 
 IHost host = builder.Build();
@@ -32,6 +34,17 @@ IHost host = builder.Build();
 using (var scope = host.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
+
+    var userService = new UserService(context);
+    var courseService = new CourseService(context);
+    var attendanceService = new AttendanceService(context);
+    var MockDataGenerator = new MockDataGenerator(
+        userService,
+        courseService,
+        attendanceService
+    );
+
+    await MockDataGenerator.GenerateMockData();
 
     if (builder.Environment.IsDevelopment())
     {

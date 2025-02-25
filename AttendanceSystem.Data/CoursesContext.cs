@@ -5,12 +5,12 @@ namespace AttendanceSystem.Data;
 
 public class CoursesContext : DbContext
 {
-    public CoursesContext(DbContextOptions options) : base(options)
+    public CoursesContext(DbContextOptions<CoursesContext> options) : base(options)
     {
     }
 
     public DbSet<Student> Students { get; set; }
-    
+
     public DbSet<User> Users { get; set; }
 
     public DbSet<Course> Courses { get; set; }
@@ -39,7 +39,15 @@ public class CoursesContext : DbContext
 
         modelBuilder.Entity<AttendanceRecord>(e =>
         {
-            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId});
+            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId });
         });
+
+        base.OnModelCreating(modelBuilder);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("Data Source=attendancesystemserverdb.database.windows.net;Initial Catalog=attendancesystem-db; Authentication=Active Directory Default; Encrypt=True;");
+        base.OnConfiguring(optionsBuilder);
     }
 }
