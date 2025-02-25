@@ -14,7 +14,6 @@ public class ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler> lo
         try
         {
             await next(context);
-            Console.WriteLine("No exception occurred");
         }
         catch (Exception ex)
         {
