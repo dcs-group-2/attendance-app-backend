@@ -35,16 +35,8 @@ using (var scope = host.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
 
-    var userService = new UserService(context);
-    var courseService = new CourseService(context);
-    var attendanceService = new AttendanceService(context);
-    var MockDataGenerator = new MockDataGenerator(
-        userService,
-        courseService,
-        attendanceService
-    );
-
-    //await MockDataGenerator.GenerateMockData();
+    var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
+    await mockDataGenerator.GenerateMockData();
 
     if (builder.Environment.IsDevelopment())
     {

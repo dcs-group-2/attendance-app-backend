@@ -39,7 +39,7 @@ public class Session
         });
     }
 
-    public async Task SetAttendance(StudentId studentId, AttendanceKind kind)
+    public void SetAttendance(StudentId studentId, AttendanceKind kind)
     {   
         Register.Single(r => r.StudentId == studentId).Record = kind;
     }
