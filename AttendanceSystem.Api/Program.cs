@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using AttendanceSystem.Domain.Services.Tools;
-using AttendanceSystem.Domain.Services;
+using Microsoft.Azure.Functions.Worker;
 
 var builder = FunctionsApplication.CreateBuilder(args);
 
@@ -15,9 +15,9 @@ builder.ConfigureFunctionsWebApplication();
 builder.UseMiddleware<ExceptionToErrorCodeHandler>();
 
 // Application Insights isn't enabled by default. See https://aka.ms/AAt8mw4.
-// builder.Services
-//     .AddApplicationInsightsTelemetry()
-//     .ConfigureFunctionsApplicationInsights();
+builder.Services
+    .AddApplicationInsightsTelemetryWorkerService()
+    .ConfigureFunctionsApplicationInsights();
 
 builder.Services.AddServices();
 builder.Services.AddMvc();
