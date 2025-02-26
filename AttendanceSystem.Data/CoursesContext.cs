@@ -5,7 +5,7 @@ namespace AttendanceSystem.Data;
 
 public class CoursesContext : DbContext
 {
-    public CoursesContext(DbContextOptions options) : base(options)
+    public CoursesContext(DbContextOptions<CoursesContext> options) : base(options)
     {
     }
 
@@ -39,7 +39,10 @@ public class CoursesContext : DbContext
 
         modelBuilder.Entity<AttendanceRecord>(e =>
         {
-            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId});
+            e.HasKey(r => new { Session = r.SessionId, Student = r.StudentId });
         });
+
+        base.OnModelCreating(modelBuilder);
     }
+
 }

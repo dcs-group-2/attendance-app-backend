@@ -5,6 +5,8 @@ using Microsoft.Azure.Functions.Worker.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using AttendanceSystem.Domain.Services.Tools;
+using AttendanceSystem.Domain.Services;
 
 var builder = FunctionsApplication.CreateBuilder(args);
 
@@ -35,6 +37,9 @@ IHost host = builder.Build();
 using (var scope = host.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
+
+    var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
+    await mockDataGenerator.GenerateMockData();
 
     if (builder.Environment.IsDevelopment())
     {
