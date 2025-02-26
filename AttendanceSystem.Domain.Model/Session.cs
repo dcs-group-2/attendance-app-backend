@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 using static AttendanceSystem.Domain.Model.AttendanceKind;
 
 namespace AttendanceSystem.Domain.Model;
@@ -38,8 +39,8 @@ public class Session
         });
     }
 
-    public void SetAttendance(StudentId studentId, AttendanceKind kind)
-    {
+    public async Task SetAttendance(StudentId studentId, AttendanceKind kind)
+    {   
         Register.Single(r => r.StudentId == studentId).Record = kind;
     }
 }

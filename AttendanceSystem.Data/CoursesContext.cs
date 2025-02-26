@@ -47,7 +47,6 @@ public class CoursesContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source=attendancesystemserverdb.database.windows.net;Initial Catalog=attendancesystem-db; Authentication=Active Directory Default; Encrypt=True;");
         base.OnConfiguring(optionsBuilder);
     }
 }

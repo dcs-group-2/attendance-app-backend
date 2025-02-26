@@ -106,14 +106,27 @@ namespace AttendanceSystem.Domain.Services.Tools
 
             // Generate random courses
             var courseIds = new List<string>();
-            for (int i = 0; i < 5; i++) // Creating 5 courses
+            foreach(var course in Courses)
             {
-                var courseTuple = Courses[new Random().Next(Courses.Count)];
-                string courseId = courseTuple.CourseId;
-                string courseName = courseTuple.CourseName;
-                string department = $"{Departments[new Random().Next(Departments.Count)]}";
-                var course = await _courseService.CreateNewCourse(courseId, courseName, department, teacherIds);
-                courseIds.Add(course.Id);
+
+                //create a list of 2 random teachers id
+                var courseTeachers = new List<string>();
+                var random = new Random();
+                for (int i = 0; i < 2; i++)
+                {
+                    string teacherId;
+                    do
+                    {
+                        teacherId = teacherIds[random.Next(teacherIds.Count)];
+                    } while (courseTeachers.Contains(teacherId));
+                    courseTeachers.Add(teacherId);
+                }
+                string courseId = course.CourseId;
+                string courseName = course.CourseName;
+                string courseDepartment = "Department";
+                var newCourse = new Course(courseId, courseName, courseDepartment, courseTeachers);
+                courseIds.Add(courseId);
+                await _courseService.CreateNewCourse(courseId, courseName, courseDepartment, courseTeachers);
             }
 
             // Generate random sessions and attendance
@@ -125,11 +138,6 @@ namespace AttendanceSystem.Domain.Services.Tools
                 DateTime endTime = startTime.AddHours(2);
 
                 var session = await _attendanceService.CreateSession(courseId, startTime, endTime);
-                foreach (var studentId in studentIds)
-                {
-                    var attendanceKind = (AttendanceKind)new Random().Next(0, 6); // Random attendance status
-                    await _attendanceService.SetAttendance(session.Id, studentId, attendanceKind);
-                }
             }
         }
     }

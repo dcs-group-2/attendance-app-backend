@@ -21,11 +21,11 @@ builder.Services.AddMvc();
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
-    string? connectionString = Environment.GetEnvironmentVariable("ConnectionString");
+    string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
 
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
 
-    options.UseSqlServer("Data Source=attendancesystemserverdb.database.windows.net;Initial Catalog=attendancesystem-db; Authentication=Active Directory Default; Encrypt=True;");
+    options.UseAzureSql(connectionString);
 });
 
 IHost host = builder.Build();
@@ -44,7 +44,7 @@ using (var scope = host.Services.CreateScope())
         attendanceService
     );
 
-    await MockDataGenerator.GenerateMockData();
+    //await MockDataGenerator.GenerateMockData();
 
     if (builder.Environment.IsDevelopment())
     {
