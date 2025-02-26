@@ -39,13 +39,13 @@ using (var scope = host.Services.CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
 
     var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
-    await mockDataGenerator.GenerateMockData();
 
     if (builder.Environment.IsDevelopment())
     {
         // If we are in development, start with a fresh database on every launch
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
+        await mockDataGenerator.GenerateMockData();
     }
     else
     {
