@@ -13,6 +13,8 @@ public static class Services
         sp.AddScoped<UserService>();
         sp.AddScoped<MockDataGenerator>();
 
+        sp.AddSwagger();
+
         return sp;
     }
 }

@@ -22,7 +22,7 @@ public class SessionsController
     }
     
     [Function( $"{nameof(SessionsController)}-{nameof(GetAllSessions)}")]
-    public async Task<IActionResult> GetAllSessions([HttpTrigger(AuthorizationLevel.User, "get", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId)
+    public async Task<IActionResult> GetAllSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var sessions = await _attendanceService.GetSessions(courseId);
@@ -32,7 +32,7 @@ public class SessionsController
     }
     
     [Function( $"{nameof(SessionsController)}-{nameof(CreateNewSession)}")]
-    public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.User, "post", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId, [FromBody] CreateSessionContract contract)
+    public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId, [FromBody] CreateSessionContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         
@@ -42,7 +42,7 @@ public class SessionsController
     }
     
     [Function( $"{nameof(SessionsController)}-{nameof(GetSessionInfo)}")]
-    public async Task<IActionResult> GetSessionInfo([HttpTrigger(AuthorizationLevel.User, "get", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, string courseId, Guid sessionId)
+    public async Task<IActionResult> GetSessionInfo([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, string courseId, Guid sessionId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var session = await _attendanceService.GetSession(sessionId);
@@ -50,7 +50,7 @@ public class SessionsController
     }
     
     [Function( $"{nameof(SessionsController)}-{nameof(EditAttendance)}")]
-    public async Task<IActionResult> EditAttendance([HttpTrigger(AuthorizationLevel.User, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    public async Task<IActionResult> EditAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -60,7 +60,7 @@ public class SessionsController
     }
     
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
-    public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.User, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, string courseId, Guid sessionId)
+    public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, string courseId, Guid sessionId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         
@@ -71,7 +71,7 @@ public class SessionsController
     
     // [Function( $"{nameof(SessionsController)}-{nameof(GetCourseAttendanceReport)}")]
     // public async Task<IActionResult> GetCourseAttendanceReport(
-    //     [HttpTrigger(AuthorizationLevel.User, "get", Route = "courses/{courseId}/attendance")] HttpRequest req,
+    //     [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses/{courseId}/attendance")] HttpRequest req,
     //     string courseId)
     // {
     //     _logger.LogInformation("C# HTTP trigger function processed a request.");
@@ -81,7 +81,7 @@ public class SessionsController
     //
     // [Function( $"{nameof(SessionsController)}-{nameof(GetAttendanceReport)}")]
     // public async Task<IActionResult> GetAttendanceReport(
-    //     [HttpTrigger(AuthorizationLevel.User, "get",
+    //     [HttpTrigger(AuthorizationLevel.Anonymous, "get",
     //         Route = "courses/{courseId}/sessions/{sessionId:guid}/attendance")]
     //     HttpRequest req, string courseId, Guid sessionId)
     // {
