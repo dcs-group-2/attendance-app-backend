@@ -23,7 +23,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(GetAllUsers)}")]
-    public async Task<IActionResult> GetAllUsers([HttpTrigger(AuthorizationLevel.User, "get", Route="users")] HttpRequest req)
+    public async Task<IActionResult> GetAllUsers([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var users = await _userService.GetAllStudents();
@@ -31,7 +31,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(CreateUser)}")]
-    public async Task<IActionResult> CreateUser([HttpTrigger(AuthorizationLevel.User, "post", Route="users")] HttpRequest req, [FromBody] CreateUserContract contract)
+    public async Task<IActionResult> CreateUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="users")] HttpRequest req, [FromBody] CreateUserContract contract)
     {
         User user = contract.Type switch 
         {
@@ -46,7 +46,7 @@ public class UsersController
 
     [Function($"{nameof(UsersController)}-{nameof(ConfigureUser)}")]
     public async Task<IActionResult> ConfigureUser(
-        [HttpTrigger(AuthorizationLevel.User, "put", Route="users/{userId}")] HttpRequest req, string userId, UserAlteration alteration)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="users/{userId}")] HttpRequest req, string userId, UserAlteration alteration)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         
@@ -57,7 +57,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(GetUser)}")]
-    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.User, "get", Route="users/{userId}")] HttpRequest req, string userId)
+    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users/{userId}")] HttpRequest req, string userId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var user = await _userService.GetUser(userId);
@@ -65,7 +65,7 @@ public class UsersController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(DeleteUser)}")]
-    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.User, "delete", Route="users/{userId}")] HttpRequest req, string userId)
+    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="users/{userId}")] HttpRequest req, string userId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 

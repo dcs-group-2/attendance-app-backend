@@ -22,7 +22,7 @@ public class CoursesController
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(GetAllCourses)}")]
-    public async Task<IActionResult> GetAllCourses([HttpTrigger(AuthorizationLevel.User, "get", Route="courses")] HttpRequest req)
+    public async Task<IActionResult> GetAllCourses([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var courses = await _courseService.GetAllCourses();
@@ -30,14 +30,14 @@ public class CoursesController
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(CreateNewCourse)}")]
-    public async Task<IActionResult> CreateNewCourse([HttpTrigger(AuthorizationLevel.User, "post", Route="courses")] HttpRequest req, [FromBody] CreateCourseContract contract)
+    public async Task<IActionResult> CreateNewCourse([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses")] HttpRequest req, [FromBody] CreateCourseContract contract)
     {
         var course = await _courseService.CreateNewCourse(contract.Id, contract.Name, contract.DepartmentId, contract.TeacherIds);
         return new OkObjectResult(course);
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(GetCourse)}")]
-    public async Task<IActionResult> GetCourse([HttpTrigger(AuthorizationLevel.User, "get", Route="courses/{courseId}")] HttpRequest req, string courseId)
+    public async Task<IActionResult> GetCourse([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}")] HttpRequest req, string courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var course = await _courseService.GetCourse(courseId);
@@ -45,7 +45,7 @@ public class CoursesController
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(ConfigureCourse)}")]
-    public async Task<IActionResult> ConfigureCourse([HttpTrigger(AuthorizationLevel.User, "put", Route="courses/{courseId}")] HttpRequest req, string courseId, [FromBody] CourseAlteration alteration)
+    public async Task<IActionResult> ConfigureCourse([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}")] HttpRequest req, string courseId, [FromBody] CourseAlteration alteration)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var course = await _courseService.ConfigureCourse(courseId, alteration);
@@ -53,7 +53,7 @@ public class CoursesController
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(DeleteCourse)}")]
-    public async Task<IActionResult> DeleteCourse([HttpTrigger(AuthorizationLevel.User, "delete", Route="courses/{courseId}")] HttpRequest req, string courseId)
+    public async Task<IActionResult> DeleteCourse([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}")] HttpRequest req, string courseId)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         await _courseService.DeleteCourse(courseId);
@@ -61,7 +61,7 @@ public class CoursesController
     }
 
     [Function( $"{nameof(CoursesController)}-{nameof(EnrollUser)}")]
-    public async Task<IActionResult> EnrollUser([HttpTrigger(AuthorizationLevel.User, "post", Route="courses/{courseId}/participants")] HttpRequest req, string courseId, [FromBody] EnrollUserContract contract)
+    public async Task<IActionResult> EnrollUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/participants")] HttpRequest req, string courseId, [FromBody] EnrollUserContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         await _courseService.EnrollUser(courseId, contract.UserId);
