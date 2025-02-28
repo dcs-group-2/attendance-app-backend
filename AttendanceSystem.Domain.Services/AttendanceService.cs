@@ -45,10 +45,17 @@ public class AttendanceService
         await _context.SaveChangesAsync();
     }
 
-    public async Task SetAttendance(Guid sessionId, string studentId, AttendanceKind kind)
+    public async Task SetStudentAttendance(Guid sessionId, string studentId, AttendanceKind kind)
     {
         var session = await GetSession(sessionId);
-        session.SetAttendance(studentId, kind);
+        session.SetStudentAttendance(studentId, kind, DateTime.UtcNow);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task SetTeacherAttendance(Guid sessionId, string teacherId, AttendanceKind kind)
+    {
+        var session = await GetSession(sessionId);
+        session.SetTeacherAttendance(teacherId, kind, DateTime.UtcNow);
         await _context.SaveChangesAsync();
     }
 }
