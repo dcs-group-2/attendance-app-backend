@@ -44,7 +44,8 @@ public static class SwaggerSetup
                         {
                             Implicit = new()
                             {
-                                AuthorizationUrl = new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize"),
+                                AuthorizationUrl =
+                                    new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize"),
                                 TokenUrl = new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token"),
                                 Scopes = new Dictionary<string, string>
                                 {
