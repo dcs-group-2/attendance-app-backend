@@ -51,11 +51,7 @@ public class Session
 
     public void SetTeacherAttendance(StudentId studentId, AttendanceKind attendance, DateTime submitted)
     {
-        var record = Register.FirstOrDefault(r => r.StudentId == studentId);
-        if (record is null)
-        {
-            throw new ArgumentException("Student is not registered for this session.");
-        }
+        var record = Register.FirstOrDefault(r => r.StudentId == studentId) ?? throw new ArgumentException("Student is not registered for this session.");
         record.TeacherAttendance = attendance;
         record.TeacherSubmitted = submitted;
     }
