@@ -35,12 +35,24 @@ public class Session
         {
             SessionId = Id,
             StudentId = s,
-            Record = Unknown
+            StudentAttendance = Unknown,
+            StudentSubmitted = null,
+            TeacherAttendance = Unknown,
+            TeacherSubmitted = null
         });
     }
 
-    public void SetAttendance(StudentId studentId, AttendanceKind kind)
-    {   
-        Register.Single(r => r.StudentId == studentId).Record = kind;
+    public void SetStudentAttendance(StudentId studentId, AttendanceKind attendance, DateTime submitted)
+    {
+        var record = Register.FirstOrDefault(r => r.StudentId == studentId) ?? throw new ArgumentException("Student is not registered for this session.");
+        record.StudentAttendance = attendance;
+        record.StudentSubmitted = submitted;
+    }
+
+    public void SetTeacherAttendance(StudentId studentId, AttendanceKind attendance, DateTime submitted)
+    {
+        var record = Register.FirstOrDefault(r => r.StudentId == studentId) ?? throw new ArgumentException("Student is not registered for this session.");
+        record.TeacherAttendance = attendance;
+        record.TeacherSubmitted = submitted;
     }
 }
