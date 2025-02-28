@@ -33,6 +33,12 @@ public class AttendanceService
         return await _context.Sessions.Where(s => s.Course.Id == courseId).ToListAsync();
     }
 
+    public async Task<List<Session>> GetSessionsByUserIdAndDate(string userId, DateTime date)
+    {
+        var student = await _context.Users.FindAsync(userId) ?? throw new EntityNotFoundException("User not found");
+        return await _context.Sessions.Where(s => s.StartTime.Date == date.Date && (s.Register.Any(i => i.StudentId == userId) && (s.Course.Teachers.Any(t => t == userId)))).OrderBy(m=>m.StartTime).ToListAsync();
+    }
+
     public async Task<Session> GetSession(Guid sessionId)
     {
         return await _context.Sessions.FindAsync(sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));

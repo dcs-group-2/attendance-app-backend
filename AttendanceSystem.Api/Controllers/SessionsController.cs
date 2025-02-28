@@ -30,7 +30,15 @@ public class SessionsController
         // Replace with actual logic from AttendanceService
         return new OkObjectResult(sessions);
     }
-    
+
+    [Function($"{nameof(SessionsController)}-{nameof(GetSessionsByDateAndUserId)}")]
+    public async Task<IActionResult> GetSessionsByDateAndUserId([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses/{courseId}/students/{studentId}/sessions")] HttpRequest req, GetSessionsByDateAndUserContract query)
+    {
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        var sessions = await _attendanceService.GetSessionsByUserIdAndDate(query.UserId,query.Date);
+        return new OkObjectResult(sessions);
+    }
+
     [Function( $"{nameof(SessionsController)}-{nameof(CreateNewSession)}")]
     public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId, [FromBody] CreateSessionContract contract)
     {
