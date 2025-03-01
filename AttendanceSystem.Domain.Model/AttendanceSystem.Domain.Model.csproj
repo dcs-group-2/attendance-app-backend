@@ -10,4 +10,8 @@
         <InternalsVisibleTo Include="AttendanceSystem.Domain.Services" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.2" />
+    </ItemGroup>
+
 </Project>

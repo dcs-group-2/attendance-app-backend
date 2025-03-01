@@ -63,7 +63,7 @@ public class SessionsController
     public async Task<IActionResult> EditTeacherAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/teacherattendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        await _attendanceService.SetTeacherAttendance(sessionId, contract.UserId, contract.Kind);
+        await _attendanceService.SetTeacherApproval(sessionId, contract.UserId, contract.Kind);
         return new NoContentResult();
     }
 

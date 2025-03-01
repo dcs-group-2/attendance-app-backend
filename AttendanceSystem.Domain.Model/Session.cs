@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using AttendanceSystem.Domain.Model.Exceptions;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using static AttendanceSystem.Domain.Model.AttendanceKind;
 
@@ -35,10 +36,13 @@ public class Session
         {
             SessionId = Id,
             StudentId = s,
-            StudentAttendance = Unknown,
-            StudentSubmitted = null,
-            TeacherAttendance = Unknown,
-            TeacherSubmitted = null
+            AttendanceSubmission = new AttendanceSubmission
+            {
+                StudentAttendance = Unknown,
+                StudentSubmitted = null,
+                TeacherAttendance = Unknown,
+                TeacherSubmitted = null
+            }
         });
     }
 
@@ -47,20 +51,20 @@ public class Session
         var record = Register.FirstOrDefault(r => r.StudentId == studentId);
         if (record is null)
         {
-            throw new ArgumentException("Student is not registered for this session.");
+            throw new EntityNotFoundException("Student is not registered for this session.");
         }
-        record.StudentAttendance = attendance;
-        record.StudentSubmitted = submitted;
+        record.AttendanceSubmission.StudentAttendance = attendance;
+        record.AttendanceSubmission.StudentSubmitted = submitted;
     }
 
-    public void SetTeacherAttendance(StudentId studentId, AttendanceKind attendance, DateTime submitted)
+    public void SetTeacherApproval(StudentId studentId, AttendanceKind attendance, DateTime submitted)
     {
         var record = Register.FirstOrDefault(r => r.StudentId == studentId);
         if (record is null)
         {
-            throw new ArgumentException("Student is not registered for this session.");
+            throw new EntityNotFoundException("Student is not registered for this session.");
         }
-        record.TeacherAttendance = attendance;
-        record.TeacherSubmitted = submitted;
+        record.AttendanceSubmission.TeacherAttendance = attendance;
+        record.AttendanceSubmission.TeacherSubmitted = submitted;
     }
 }
