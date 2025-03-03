@@ -30,7 +30,15 @@ public class SessionsController
         // Replace with actual logic from AttendanceService
         return new OkObjectResult(sessions);
     }
-    
+
+    [Function($"{nameof(SessionsController)}-{nameof(GetSessionsByDateAndUserId)}")]
+    public async Task<IActionResult> GetSessionsByDateAndUserId([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses/{courseId}/students/{studentId}/sessions")] HttpRequest req, GetSessionsByDateAndUserContract query)
+    {
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        var sessions = await _attendanceService.GetSessionsByUserIdAndDate(query.UserId,query.Date);
+        return new OkObjectResult(sessions);
+    }
+
     [Function( $"{nameof(SessionsController)}-{nameof(CreateNewSession)}")]
     public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/sessions")] HttpRequest req, string courseId, [FromBody] CreateSessionContract contract)
     {
@@ -49,16 +57,24 @@ public class SessionsController
         return new OkObjectResult(session);
     }
     
-    [Function( $"{nameof(SessionsController)}-{nameof(EditAttendance)}")]
-    public async Task<IActionResult> EditAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    [Function( $"{nameof(SessionsController)}-{nameof(EditStudentAttendance)}")]
+    public async Task<IActionResult> EditStudentAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        await _attendanceService.SetAttendance(sessionId, contract.UserId, contract.Kind);
+        await _attendanceService.SetStudentAttendance(sessionId, contract.UserId, contract.Kind);
         
         return new NoContentResult();
     }
-    
+
+    [Function($"{nameof(SessionsController)}-{nameof(EditTeacherAttendance)}")]
+    public async Task<IActionResult> EditTeacherAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/teacherattendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    {
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        await _attendanceService.SetTeacherAttendance(sessionId, contract.UserId, contract.Kind);
+        return new NoContentResult();
+    }
+
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
     public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, string courseId, Guid sessionId)
     {
