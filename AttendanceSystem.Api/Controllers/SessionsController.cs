@@ -49,8 +49,8 @@ public class SessionsController
         return new OkObjectResult(session);
     }
     
-    [Function( $"{nameof(SessionsController)}-{nameof(EditStudentAttendance)}")]
-    public async Task<IActionResult> EditStudentAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    [Function( $"{nameof(SessionsController)}-{nameof(ConfirmStudentAttendance)}")]
+    public async Task<IActionResult> ConfirmStudentAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
