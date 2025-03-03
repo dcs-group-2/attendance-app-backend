@@ -53,14 +53,14 @@ public class AttendanceService
     public async Task SetStudentAttendance(Guid sessionId, string studentId, AttendanceKind kind)
     {
         var session = await GetSessionWithRegister(sessionId);
-        session.SetStudentAttendance(studentId, kind, DateTime.UtcNow);
+        session.SetStudentAttendance(studentId, kind);
         await _context.SaveChangesAsync();
     }
 
     public async Task SetTeacherApproval(Guid sessionId, string teacherId, AttendanceKind kind)
     {
         var session = await GetSessionWithRegister(sessionId);
-        session.SetTeacherApproval(teacherId, kind, DateTime.UtcNow);
+        session.SetTeacherApproval(teacherId, kind);
         await _context.SaveChangesAsync();
     }
 }

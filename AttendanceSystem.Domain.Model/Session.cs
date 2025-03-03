@@ -36,35 +36,29 @@ public class Session
         {
             SessionId = Id,
             StudentId = s,
-            AttendanceSubmission = new AttendanceSubmission
-            {
-                StudentAttendance = Unknown,
-                StudentSubmitted = null,
-                TeacherAttendance = Unknown,
-                TeacherSubmitted = null
-            }
+            StudentSubmission = new AttendanceSubmission(),
+            TeacherSubmission = new AttendanceSubmission(),
         });
     }
 
-    public void SetStudentAttendance(StudentId studentId, AttendanceKind attendance, DateTime submitted)
+    public void SetStudentAttendance(StudentId studentId, AttendanceKind attendance)
     {
         var record = Register.FirstOrDefault(r => r.StudentId == studentId);
         if (record is null)
         {
             throw new EntityNotFoundException("Student is not registered for this session.");
         }
-        record.AttendanceSubmission.StudentAttendance = attendance;
-        record.AttendanceSubmission.StudentSubmitted = submitted;
+        record.StudentSubmission.Attendance = attendance;
     }
 
-    public void SetTeacherApproval(StudentId studentId, AttendanceKind attendance, DateTime submitted)
+    public void SetTeacherApproval(StudentId studentId, AttendanceKind attendance)
     {
         var record = Register.FirstOrDefault(r => r.StudentId == studentId);
         if (record is null)
         {
             throw new EntityNotFoundException("Student is not registered for this session.");
         }
-        record.AttendanceSubmission.TeacherAttendance = attendance;
-        record.AttendanceSubmission.TeacherSubmitted = submitted;
+        
+        record.TeacherSubmission.Attendance = attendance;
     }
 }

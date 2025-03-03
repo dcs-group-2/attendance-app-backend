@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,22 @@ using System.Threading.Tasks;
 namespace AttendanceSystem.Domain.Model
 {
     [Owned]
-    public class AttendanceSubmission
+    [method: SetsRequiredMembers]
+    public record AttendanceSubmission()
     {
+        public required AttendanceKind Attendance
+        {
+            get;
+            set
+            {
+                field = value;
+                Submitted = DateTime.Now;
+            }
+        } = AttendanceKind.Unknown;
 
-        public required AttendanceKind StudentAttendance { get; set; }
-        public required DateTime? StudentSubmitted { get; set; }
-        public required AttendanceKind TeacherAttendance { get; set; }
-        public required DateTime? TeacherSubmitted { get; set; }
+        public DateTime? Submitted { get; private set; }
+
+        public bool IsSubmitted => Submitted != null;
     }
 }
 
