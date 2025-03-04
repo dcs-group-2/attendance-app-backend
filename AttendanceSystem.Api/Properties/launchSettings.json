@@ -3,6 +3,10 @@
     "AttendanceSystem": {
       "commandName": "Project",
       "commandLineArgs": "--port 7017",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_ENVIRONMENT": "Development"
+      },
       "launchBrowser": false
     }
   }
