@@ -80,7 +80,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(EnrollUser)}")]
-    public async Task<IActionResult> EnrollUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "courses/{courseId}/participants")] HttpRequest req, FunctionContext ctx, string courseId, [FromBody] EnrollUserContract contract)
+    public async Task<IActionResult> EnrollUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "courses/{courseId}/participants")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, [FromBody] EnrollUserContract contract)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowElevated);

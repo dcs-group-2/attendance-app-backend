@@ -6,6 +6,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using AttendanceSystem.Domain.Services;
 using AttendanceSystem.Domain.Services.Alterations;
+using AzureFunctions.Extensions.Swashbuckle.Attribute;
 using static AttendanceSystem.Api.Roles;
 
 using FromBodyAttribute = Microsoft.Azure.Functions.Worker.Http.FromBodyAttribute;
@@ -24,7 +25,7 @@ public class UsersController : BaseController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(GetAllUsers)}")]
-    public async Task<IActionResult> GetAllUsers([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users")] HttpRequest req, FunctionContext ctx)
+    public async Task<IActionResult> GetAllUsers([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx)
     {
         // Assert user is authenticated
         await AssertAuthentication(ctx, [Admin]);
@@ -35,7 +36,7 @@ public class UsersController : BaseController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(CreateUser)}")]
-    public async Task<IActionResult> CreateUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="users")] HttpRequest req, FunctionContext ctx, [FromBody] CreateUserContract contract)
+    public async Task<IActionResult> CreateUser([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="users")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, [FromBody] CreateUserContract contract)
     {
         await AssertAuthentication(ctx, [Admin]);
 
@@ -52,7 +53,7 @@ public class UsersController : BaseController
 
     [Function($"{nameof(UsersController)}-{nameof(ConfigureUser)}")]
     public async Task<IActionResult> ConfigureUser(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="users/{userId}")] HttpRequest req, FunctionContext ctx, string userId, UserAlteration alteration)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="users/{userId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string userId, UserAlteration alteration)
     {
         await AssertAuthentication(ctx, [Admin]);
 
@@ -65,7 +66,7 @@ public class UsersController : BaseController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(GetUser)}")]
-    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users/{userId}")] HttpRequest req, FunctionContext ctx, string userId)
+    public async Task<IActionResult> GetUser([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="users/{userId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string userId)
     {
         await AssertAuthentication(ctx, AllowElevated);
 
@@ -75,7 +76,7 @@ public class UsersController : BaseController
     }
 
     [Function( $"{nameof(UsersController)}-{nameof(DeleteUser)}")]
-    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="users/{userId}")] HttpRequest req, FunctionContext ctx, string userId)
+    public async Task<IActionResult> DeleteUser([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="users/{userId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string userId)
     {
         await AssertAuthentication(ctx, [Admin]);
 
