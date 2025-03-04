@@ -43,7 +43,7 @@ public class SessionsController : BaseController
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        Session session = await _attendanceService.CreateSession(courseId, contract.StartDate, contract.EndDate);
+        Session session = await _attendanceService.CreateSession(courseId, contract.StartDate, contract.EndDate, []);
 
         return new OkObjectResult(session);
     }
@@ -84,5 +84,4 @@ public class SessionsController : BaseController
 
         return new NoContentResult();
     }
-
 }
