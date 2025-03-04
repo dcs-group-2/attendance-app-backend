@@ -10,21 +10,11 @@ public class AuthenticationService(ILogger<AuthenticationService> logger, JsonWe
     {
         if (!jwt.Claims.TryGetValue("roles", out object? rolesClaim)) return false;
 
-        // Get the roles from the claims
-        var roles = rolesClaim as List<object>;
-        if (roles is null)
+        return jwt.IsValid && rolesClaim switch
         {
-            // It could be that there is just one role
-            var role = rolesClaim as string;
-
-            if (role is not null && requiredRoles.Contains(role)) return true;
-
-            return false;
-        }
-
-
-        var isAuthenticated = roles.Any(requiredRoles.Contains);
-
-        return jwt.IsValid && isAuthenticated;
+            string role => requiredRoles.Contains(role),
+            List<object> roles => roles.Any(requiredRoles.Contains),
+            _ => false,
+        };
     }
 }
