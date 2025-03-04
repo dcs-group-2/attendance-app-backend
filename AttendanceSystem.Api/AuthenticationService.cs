@@ -4,12 +4,16 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace AttendanceSystem.Api;
 
-public class AuthenticationService(Logger<AuthenticationService> logger, JsonWebTokenHandler jwtHandler)
+public class AuthenticationService(ILogger<AuthenticationService> logger, JsonWebTokenHandler jwtHandler)
 {
-    public async Task<bool> IsAuthenticated(JsonWebToken jwt, IEnumerable<string> requiredRoles)
+    public async Task<bool> IsAuthenticated(TokenValidationResult jwt, IEnumerable<string> requiredRoles)
     {
-        var validationResult = await jwtHandler.ValidateTokenAsync(jwt, new TokenValidationParameters());
+        // Get the roles from the claims
+        var roles = jwt.Claims["roles"] as IEnumerable<string>;
+        if (roles == null) return false;
         
-        return validationResult.IsValid;
+        var isAuthenticated = roles.Any(requiredRoles.Contains);
+        
+        return jwt.IsValid && isAuthenticated;
     }
 }
