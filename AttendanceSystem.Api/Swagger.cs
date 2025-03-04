@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using AttendanceSystem.Api.Controllers;
-using AzureFunctions.Extensions.Swashbuckle;
+﻿using AzureFunctions.Extensions.Swashbuckle;
 using AzureFunctions.Extensions.Swashbuckle.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi;
@@ -65,7 +63,7 @@ public static class SwaggerSetup
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
+                                Id = "EntraID"
                             },
                         },
                         []
