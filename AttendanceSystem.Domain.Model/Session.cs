@@ -38,7 +38,7 @@ public class Session
             StudentId = s,
             StudentSubmission = new AttendanceSubmission(),
             TeacherSubmission = new AttendanceSubmission(),
-        });
+        }).ToList();
     }
 
     public void SetStudentAttendance(StudentId studentId, AttendanceKind attendance)
@@ -58,7 +58,7 @@ public class Session
         {
             throw new EntityNotFoundException("Student is not registered for this session.");
         }
-        
+
         record.TeacherSubmission.Attendance = attendance;
     }
 
