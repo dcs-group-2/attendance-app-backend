@@ -14,13 +14,13 @@ public class AttendanceService
         _context = context;
     }
 
-    public async Task<Session> CreateSession(string courseId, DateTime startdate, DateTime enddate)
+    public async Task<Session> CreateSession(string courseId, DateTime startdate, DateTime enddate, List<string> students)
     {
         // Get the course to see if it is available
         Course course = await _context.Courses.FindAsync(courseId) ?? throw new EntityNotFoundException("Course not found");
         if (course is null) throw new EntityNotFoundException("Course not found");
 
-        Session session = new Session(course, [], startdate, enddate);
+        Session session = new Session(course, students, startdate, enddate);
 
         _context.Sessions.Add(session);
         course.Sessions.Add(session);
@@ -31,6 +31,13 @@ public class AttendanceService
     public async Task<List<Session>> GetSessions(string courseId)
     {
         return await _context.Sessions.Where(s => s.Course.Id == courseId).ToListAsync();
+    }
+
+    public async Task<List<Session>> GetUpcomingSessionsForUser(string userId)
+    {
+        return await _context.Sessions
+            .Include(s => s.Course)
+            .Where(s => s.Course.Students.Contains(userId)).ToListAsync();
     }
 
     public async Task<Session> GetSession(Guid sessionId)

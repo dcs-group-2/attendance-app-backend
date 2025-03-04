@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using AttendanceSystem.Api;
 using AttendanceSystem.Api.Middleware;
 using AttendanceSystem.Data;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using AttendanceSystem.Domain.Services.Tools;
 using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 
 var builder = FunctionsApplication.CreateBuilder(args);
 
@@ -20,7 +22,11 @@ builder.Services
     .ConfigureFunctionsApplicationInsights();
 
 builder.Services.AddServices();
-builder.Services.AddMvc();
+builder.Services.AddMvc().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
@@ -37,6 +43,7 @@ IHost host = builder.Build();
 using (var scope = host.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<CoursesContext>();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 
     var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
 
@@ -45,6 +52,8 @@ using (var scope = host.Services.CreateScope())
         // If we are in development, start with a fresh database on every launch
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
+
+        logger.LogInformation("Generating mock data...");
         await mockDataGenerator.GenerateMockData();
     }
     else
