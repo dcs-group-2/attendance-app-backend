@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using AttendanceSystem.Domain.Services;
 using AttendanceSystem.Domain.Services.Tools;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace AttendanceSystem.Api;
 
@@ -12,6 +13,9 @@ public static class Services
         sp.AddScoped<AttendanceService>();
         sp.AddScoped<UserService>();
         sp.AddScoped<MockDataGenerator>();
+        
+        sp.AddSingleton<JsonWebTokenHandler>();
+        sp.AddScoped<AuthenticationService>();
 
         sp.AddSwagger();
 

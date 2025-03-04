@@ -19,7 +19,7 @@ public class SwaggerController(ILogger<SwaggerController> logger, ISwashBuckleCl
     private readonly ILogger<SwaggerController> _logger = logger;
 
     [SwaggerIgnore]
-    [Function("SwaggerJson")]
+    [Function("Swagger-Json")]
     public async Task<HttpResponseData> SwaggerJson(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "swagger/json")]
         HttpRequestData  req)
@@ -28,7 +28,7 @@ public class SwaggerController(ILogger<SwaggerController> logger, ISwashBuckleCl
     }
 
     [SwaggerIgnore]
-    [Function("SwaggerUi")]
+    [Function("Swagger-Ui")]
     public async Task<HttpResponseData> SwaggerUi(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "swagger/ui")]
         HttpRequestData req)
@@ -44,7 +44,7 @@ public class SwaggerController(ILogger<SwaggerController> logger, ISwashBuckleCl
     /// <param name="req">The request given by the azure functions</param>
     /// <returns>An OAuth2 Redirect Response</returns>
     [SwaggerIgnore]
-    [Function("SwaggerOAuth2Redirect")]
+    [Function("Swagger-OAuth2Redirect")]
     public async Task<HttpResponseData> SwaggerOAuth2Redirect(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "swagger/oauth2-redirect")]
         HttpRequestData req)

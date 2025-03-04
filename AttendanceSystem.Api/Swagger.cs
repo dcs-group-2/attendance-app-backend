@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using AttendanceSystem.Api.Controllers;
-using AzureFunctions.Extensions.Swashbuckle;
+﻿using AzureFunctions.Extensions.Swashbuckle;
 using AzureFunctions.Extensions.Swashbuckle.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi;
@@ -34,7 +32,7 @@ public static class SwaggerSetup
                 // Get the tenant id
                 var tenantId = Environment.GetEnvironmentVariable("TenantId");
                 if (string.IsNullOrEmpty(tenantId)) throw new InvalidOperationException("TenantId is not set.");
-                
+
                 //oauth2
                 x.AddSecurityDefinition("EntraID",
                     new OpenApiSecurityScheme
@@ -44,18 +42,19 @@ public static class SwaggerSetup
                         {
                             Implicit = new()
                             {
-                                AuthorizationUrl = new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize"),
+                                AuthorizationUrl =
+                                    new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize"),
                                 TokenUrl = new Uri($"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token"),
                                 Scopes = new Dictionary<string, string>
                                 {
                                     { "openid", "Access OpenID" },
                                     { "email", "Access email" },
-                                    { "api://uva-devops-attendance-app/Admin.Admin", "Access admin operations" },
+                                    { "api://uva-devops-attendance-app/application.fullaccess", "Access the API" },
                                 }
                             }
                         }
                     });
-                
+
                 x.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -64,7 +63,7 @@ public static class SwaggerSetup
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
+                                Id = "EntraID"
                             },
                         },
                         []
@@ -76,8 +75,8 @@ public static class SwaggerSetup
             opts.ClientId = Environment.GetEnvironmentVariable("ClientId")!;
             opts.OAuth2RedirectPath = "http://localhost:7017/api/swagger/oauth2-redirect";
         });
-        
+
         return services;
     }
-    
+
 }
