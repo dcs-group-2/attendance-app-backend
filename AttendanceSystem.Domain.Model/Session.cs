@@ -13,7 +13,7 @@ public class Session
     public required DateTime StartTime { get; set; }
     public required DateTime EndTime { get; set; }
 
-    public IEnumerable<AttendanceRecord> Register { get; }
+    public ICollection<AttendanceRecord> Register { get; }
 
     [SetsRequiredMembers]
     private Session() { }
@@ -61,4 +61,5 @@ public class Session
         
         record.TeacherSubmission.Attendance = attendance;
     }
+
 }

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AttendanceSystem.Data;
 using AttendanceSystem.Domain.Model;
 using AttendanceSystem.Domain.Services;
 using AttendanceSystem.Domain.Services.Alterations;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceSystem.Domain.Services.Tools
 {
@@ -14,11 +16,14 @@ namespace AttendanceSystem.Domain.Services.Tools
         private readonly CourseService _courseService;
         private readonly AttendanceService _attendanceService;
 
-        public MockDataGenerator(UserService userService, CourseService courseService, AttendanceService attendanceService)
+        private readonly CoursesContext _context;
+
+        public MockDataGenerator(UserService userService, CourseService courseService, AttendanceService attendanceService, CoursesContext context)
         {
             _userService = userService;
             _courseService = courseService;
             _attendanceService = attendanceService;
+            _context = context;
         }
 
         // Name and surname arrays for random selection
@@ -84,6 +89,10 @@ namespace AttendanceSystem.Domain.Services.Tools
 
         public async Task GenerateMockData()
         {
+            // Generate the Beef Boss character
+            var beefBoss =
+                await _userService.CreateStudent("deadbeef-dead-beef-dead-beefdeadbeef", "Beef Boss", "Beef@Boss.com");
+
             // Generate random teachers
             var teacherIds = new List<string>();
             for (int i = 0; i < 10; i++) // Creating 10 teachers for the mock data
@@ -108,7 +117,6 @@ namespace AttendanceSystem.Domain.Services.Tools
             var courseIds = new List<string>();
             foreach(var course in Courses)
             {
-
                 //create a list of 2 random teachers id
                 var courseTeachers = new List<string>();
                 var random = new Random();
@@ -124,10 +132,18 @@ namespace AttendanceSystem.Domain.Services.Tools
                 string courseId = course.CourseId;
                 string courseName = course.CourseName;
                 string courseDepartment = "Department";
-                var newCourse = new Course(courseId, courseName, courseDepartment, courseTeachers);
                 courseIds.Add(courseId);
                 await _courseService.CreateNewCourse(courseId, courseName, courseDepartment, courseTeachers);
             }
+
+
+            // Add Beef Boss to every course
+            List<Course> courses = await _context.Courses.ToListAsync();
+            foreach (var course in courses)
+            {
+                course.Students.Add(beefBoss.Id);
+            }
+            await _context.SaveChangesAsync();
 
             // Generate random sessions and attendance
             for (int i = 0; i < 5; i++) // Creating 5 sessions
@@ -137,7 +153,8 @@ namespace AttendanceSystem.Domain.Services.Tools
                 DateTime startTime = DateTime.Now.AddDays(new Random().Next(1, 30));
                 DateTime endTime = startTime.AddHours(2);
 
-                var session = await _attendanceService.CreateSession(courseId, startTime, endTime);
+                // Also make sure Beef Boss attends them
+                await _attendanceService.CreateSession(courseId, startTime, endTime, [beefBoss.Id]);
             }
         }
     }
