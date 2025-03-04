@@ -5,6 +5,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using AttendanceSystem.Domain.Services;
 using AttendanceSystem.Domain.Services.Alterations;
+using AzureFunctions.Extensions.Swashbuckle.Attribute;
 using FromBodyAttribute = Microsoft.Azure.Functions.Worker.Http.FromBodyAttribute;
 using static AttendanceSystem.Api.Roles;
 
@@ -25,7 +26,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(GetAllCourses)}")]
-    public async Task<IActionResult> GetAllCourses([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses")] HttpRequest req, FunctionContext ctx)
+    public async Task<IActionResult> GetAllCourses([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
@@ -36,7 +37,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(CreateNewCourse)}")]
-    public async Task<IActionResult> CreateNewCourse([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "courses")] HttpRequest req, FunctionContext ctx, [FromBody] CreateCourseContract contract)
+    public async Task<IActionResult> CreateNewCourse([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "courses")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, [FromBody] CreateCourseContract contract)
     {
         // Authorize
         await AssertAuthentication(ctx, [Admin]);
@@ -46,7 +47,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(GetCourse)}")]
-    public async Task<IActionResult> GetCourse([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses/{courseId}")] HttpRequest req, FunctionContext ctx, string courseId)
+    public async Task<IActionResult> GetCourse([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "courses/{courseId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
@@ -57,7 +58,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(ConfigureCourse)}")]
-    public async Task<IActionResult> ConfigureCourse([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}")] HttpRequest req, FunctionContext ctx, string courseId, [FromBody] CourseAlteration alteration)
+    public async Task<IActionResult> ConfigureCourse([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, [FromBody] CourseAlteration alteration)
     {
         // Authorize
         await AssertAuthentication(ctx, [Admin]);
@@ -68,7 +69,7 @@ public class CoursesController : BaseController
     }
 
     [Function($"{nameof(CoursesController)}-{nameof(DeleteCourse)}")]
-    public async Task<IActionResult> DeleteCourse([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "courses/{courseId}")] HttpRequest req, FunctionContext ctx, string courseId)
+    public async Task<IActionResult> DeleteCourse([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "courses/{courseId}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId)
     {
         // Authorize
         await AssertAuthentication(ctx, [Admin]);
