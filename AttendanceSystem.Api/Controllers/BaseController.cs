@@ -16,9 +16,18 @@ public class BaseController
         _authenticationService = authenticationService;
     }
 
-    protected User GetUser()
+    protected Task<User> GetUser(FunctionContext context)
     {
-        throw new NotImplementedException();
+        // Get the JWT token
+        TokenValidationResult? token = context.Items["validationResult"] as TokenValidationResult;
+        
+        // Get the openID value
+        if (token.Claims.TryGetValue("oid", out var oid) || oid is not string openId)
+        {
+            throw new ArgumentException("OpenID was not found in JWT claims.");
+        }
+        
+        return _userService.GetUser(openId);
     }
 
     protected async Task AssertAuthentication(FunctionContext context, IEnumerable<string> allowedRoles)
