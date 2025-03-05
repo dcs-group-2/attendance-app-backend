@@ -47,11 +47,8 @@ using (var scope = host.Services.CreateScope())
     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 
     var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
-
-    // Get the environmental variable for a reset
-    bool resetDatabase = Environment.GetEnvironmentVariable("ResetDatabase") is "true";
     
-    if (builder.Environment.IsDevelopment() || resetDatabase)
+    if (builder.Environment.IsDevelopment())
     {
         // If we are in development, start with a fresh database on every launch
         context.Database.EnsureDeleted();
@@ -62,7 +59,14 @@ using (var scope = host.Services.CreateScope())
     }
     else
     {
+        bool seedDatabase = Environment.GetEnvironmentVariable("SeedDatabase") is "true";
         context.Database.Migrate();
+        
+        if (seedDatabase)
+        {
+            logger.LogInformation("Generating mock data...");
+            await mockDataGenerator.GenerateMockData();
+        }
     }
 }
 
