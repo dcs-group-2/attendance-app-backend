@@ -48,7 +48,10 @@ using (var scope = host.Services.CreateScope())
 
     var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
 
-    if (builder.Environment.IsDevelopment())
+    // Get the environmental variable for a reset
+    bool resetDatabase = Environment.GetEnvironmentVariable("ResetDatabase") is "true";
+    
+    if (builder.Environment.IsDevelopment() || resetDatabase)
     {
         // If we are in development, start with a fresh database on every launch
         context.Database.EnsureDeleted();
