@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AttendanceSystem.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -83,7 +83,10 @@ namespace AttendanceSystem.Data.Migrations
                 {
                     SessionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     StudentId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Record = table.Column<int>(type: "int", nullable: false)
+                    StudentSubmission_Attendance = table.Column<int>(type: "int", nullable: false),
+                    StudentSubmission_Submitted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    TeacherSubmission_Attendance = table.Column<int>(type: "int", nullable: false),
+                    TeacherSubmission_Submitted = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

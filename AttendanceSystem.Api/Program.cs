@@ -31,7 +31,7 @@ builder.Services.AddMvc().AddJsonOptions(options =>
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
-    string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
+    string? connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=AttendanceSystem;Trusted_Connection=True"; // Environment.GetEnvironmentVariable("SqlConnectionString");
 
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
 
@@ -47,7 +47,7 @@ using (var scope = host.Services.CreateScope())
     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 
     var mockDataGenerator = scope.ServiceProvider.GetRequiredService<MockDataGenerator>();
-
+    
     if (builder.Environment.IsDevelopment())
     {
         // If we are in development, start with a fresh database on every launch
@@ -59,7 +59,14 @@ using (var scope = host.Services.CreateScope())
     }
     else
     {
+        bool seedDatabase = Environment.GetEnvironmentVariable("SeedDatabase") is "true";
         context.Database.Migrate();
+        
+        if (seedDatabase)
+        {
+            logger.LogInformation("Generating mock data...");
+            await mockDataGenerator.GenerateMockData();
+        }
     }
 }
 
