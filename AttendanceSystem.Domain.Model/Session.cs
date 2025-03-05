@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using AttendanceSystem.Domain.Model.Exceptions;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using static AttendanceSystem.Domain.Model.AttendanceKind;
 
@@ -35,12 +36,30 @@ public class Session
         {
             SessionId = Id,
             StudentId = s,
-            Record = Unknown
+            StudentSubmission = new AttendanceSubmission(),
+            TeacherSubmission = new AttendanceSubmission(),
         }).ToList();
     }
 
-    public void SetAttendance(StudentId studentId, AttendanceKind kind)
+    public void SetStudentAttendance(StudentId studentId, AttendanceKind attendance)
     {
-        Register.Single(r => r.StudentId == studentId).Record = kind;
+        var record = Register.FirstOrDefault(r => r.StudentId == studentId);
+        if (record is null)
+        {
+            throw new EntityNotFoundException("Student is not registered for this session.");
+        }
+        record.StudentSubmission.Attendance = attendance;
     }
+
+    public void SetTeacherApproval(StudentId studentId, AttendanceKind attendance)
+    {
+        var record = Register.FirstOrDefault(r => r.StudentId == studentId);
+        if (record is null)
+        {
+            throw new EntityNotFoundException("Student is not registered for this session.");
+        }
+
+        record.TeacherSubmission.Attendance = attendance;
+    }
+
 }

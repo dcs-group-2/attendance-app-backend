@@ -45,6 +45,11 @@ public class AttendanceService
         return await _context.Sessions.FindAsync(sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));
     }
 
+    public async Task<Session> GetSessionWithRegister(Guid sessionId)
+    {
+        return await _context.Sessions.Include(s => s.Register).FirstOrDefaultAsync(s => s.Id == sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));
+    }
+
     public async Task DeleteSession(Guid sessionId)
     {
         var session = await GetSession(sessionId);
@@ -52,10 +57,17 @@ public class AttendanceService
         await _context.SaveChangesAsync();
     }
 
-    public async Task SetAttendance(Guid sessionId, string studentId, AttendanceKind kind)
+    public async Task SetStudentAttendance(Guid sessionId, string studentId, AttendanceKind kind)
     {
-        var session = await GetSession(sessionId);
-        session.SetAttendance(studentId, kind);
+        var session = await GetSessionWithRegister(sessionId);
+        session.SetStudentAttendance(studentId, kind);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task SetTeacherApproval(Guid sessionId, string teacherId, AttendanceKind kind)
+    {
+        var session = await GetSessionWithRegister(sessionId);
+        session.SetTeacherApproval(teacherId, kind);
         await _context.SaveChangesAsync();
     }
 }

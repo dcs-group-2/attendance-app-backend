@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using AttendanceSystem.Domain.Services;
+using AzureFunctions.Extensions.Swashbuckle.Attribute;
 using static AttendanceSystem.Api.Roles;
 
 using FromBodyAttribute = Microsoft.Azure.Functions.Worker.Http.FromBodyAttribute;
@@ -23,7 +24,7 @@ public class SessionsController : BaseController
     }
 
     [Function( $"{nameof(SessionsController)}-{nameof(GetAllSessions)}")]
-    public async Task<IActionResult> GetAllSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions")] HttpRequest req, FunctionContext ctx, string courseId)
+    public async Task<IActionResult> GetAllSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
@@ -36,7 +37,7 @@ public class SessionsController : BaseController
     }
 
     [Function( $"{nameof(SessionsController)}-{nameof(CreateNewSession)}")]
-    public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/sessions")] HttpRequest req, FunctionContext ctx, string courseId, [FromBody] CreateSessionContract contract)
+    public async Task<IActionResult> CreateNewSession([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route="courses/{courseId}/sessions")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, [FromBody] CreateSessionContract contract)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
@@ -49,7 +50,7 @@ public class SessionsController : BaseController
     }
 
     [Function( $"{nameof(SessionsController)}-{nameof(GetSessionInfo)}")]
-    public async Task<IActionResult> GetSessionInfo([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, FunctionContext ctx, string courseId, Guid sessionId)
+    public async Task<IActionResult> GetSessionInfo([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
@@ -59,21 +60,31 @@ public class SessionsController : BaseController
         return new OkObjectResult(session);
     }
 
-    [Function( $"{nameof(SessionsController)}-{nameof(EditAttendance)}")]
-    public async Task<IActionResult> EditAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    [Function( $"{nameof(SessionsController)}-{nameof(ConfirmStudentAttendance)}")]
+    public async Task<IActionResult> ConfirmStudentAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        await _attendanceService.SetAttendance(sessionId, contract.UserId, contract.Kind);
+        await _attendanceService.SetStudentAttendance(sessionId, contract.UserId, contract.Kind);
 
         return new NoContentResult();
     }
 
+    [Function($"{nameof(SessionsController)}-{nameof(EditTeacherAttendance)}")]
+    public async Task<IActionResult> EditTeacherAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/teacherattendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    {
+        // Authorize
+        await AssertAuthentication(ctx, AllowElevated);
+
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        await _attendanceService.SetTeacherApproval(sessionId, contract.UserId, contract.Kind);
+        return new NoContentResult();
+    }
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
-    public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, FunctionContext ctx, string courseId, Guid sessionId)
+    public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
