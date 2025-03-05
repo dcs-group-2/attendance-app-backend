@@ -31,7 +31,7 @@ builder.Services.AddMvc().AddJsonOptions(options =>
 
 builder.Services.AddDbContext<CoursesContext>(options =>
 {
-    string? connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=AttendanceSystem;Trusted_Connection=True"; // Environment.GetEnvironmentVariable("SqlConnectionString");
+    string? connectionString = Environment.GetEnvironmentVariable("SqlConnectionString");
 
     if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("SqlConnectionString is not set.");
 
