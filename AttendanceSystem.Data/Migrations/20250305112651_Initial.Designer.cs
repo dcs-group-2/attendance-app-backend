@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AttendanceSystem.Data.Migrations
 {
     [DbContext(typeof(CoursesContext))]
-    [Migration("20250304220013_RegisterToCollection")]
-    partial class RegisterToCollection
+    [Migration("20250305112651_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,6 @@ namespace AttendanceSystem.Data.Migrations
 
                     b.Property<string>("StudentId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Record")
-                        .HasColumnType("int");
 
                     b.HasKey("SessionId", "StudentId");
 
@@ -159,6 +156,56 @@ namespace AttendanceSystem.Data.Migrations
                         .WithMany("Register")
                         .HasForeignKey("SessionId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("AttendanceSystem.Domain.Model.AttendanceSubmission", "StudentSubmission", b1 =>
+                        {
+                            b1.Property<Guid>("AttendanceRecordSessionId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("AttendanceRecordStudentId")
+                                .HasColumnType("nvarchar(450)");
+
+                            b1.Property<int>("Attendance")
+                                .HasColumnType("int");
+
+                            b1.Property<DateTime?>("Submitted")
+                                .HasColumnType("datetime2");
+
+                            b1.HasKey("AttendanceRecordSessionId", "AttendanceRecordStudentId");
+
+                            b1.ToTable("AttendanceRecord");
+
+                            b1.WithOwner()
+                                .HasForeignKey("AttendanceRecordSessionId", "AttendanceRecordStudentId");
+                        });
+
+                    b.OwnsOne("AttendanceSystem.Domain.Model.AttendanceSubmission", "TeacherSubmission", b1 =>
+                        {
+                            b1.Property<Guid>("AttendanceRecordSessionId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("AttendanceRecordStudentId")
+                                .HasColumnType("nvarchar(450)");
+
+                            b1.Property<int>("Attendance")
+                                .HasColumnType("int");
+
+                            b1.Property<DateTime?>("Submitted")
+                                .HasColumnType("datetime2");
+
+                            b1.HasKey("AttendanceRecordSessionId", "AttendanceRecordStudentId");
+
+                            b1.ToTable("AttendanceRecord");
+
+                            b1.WithOwner()
+                                .HasForeignKey("AttendanceRecordSessionId", "AttendanceRecordStudentId");
+                        });
+
+                    b.Navigation("StudentSubmission")
+                        .IsRequired();
+
+                    b.Navigation("TeacherSubmission")
                         .IsRequired();
                 });
 

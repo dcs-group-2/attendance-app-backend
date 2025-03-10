@@ -73,7 +73,7 @@ public static class SwaggerSetup
 
             // set up your client ID if your API is protected
             opts.ClientId = Environment.GetEnvironmentVariable("ClientId")!;
-            opts.OAuth2RedirectPath = "http://localhost:7017/api/swagger/oauth2-redirect";
+            opts.OAuth2RedirectPath = Environment.GetEnvironmentVariable("Swagger:OAuth2RedirectPath") ?? "http://localhost:7017/api/swagger/oauth2-redirect";
         });
 
         return services;
