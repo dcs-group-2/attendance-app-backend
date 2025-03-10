@@ -17,8 +17,8 @@ public class CoursesController : BaseController
     private readonly CourseService _courseService;
     private readonly AuthenticationService _authenticationService;
 
-    public CoursesController(ILogger<CoursesController> logger, CourseService courseService, AuthenticationService authenticationService)
-        : base(authenticationService)
+    public CoursesController(ILogger<CoursesController> logger, CourseService courseService, AuthenticationService authenticationService, UserService userService)
+        : base(authenticationService, userService)
     {
         _logger = logger;
         _courseService = courseService;
@@ -32,7 +32,7 @@ public class CoursesController : BaseController
         await AssertAuthentication(ctx, AllowAll);
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        var courses = await _courseService.GetAllCourses();
+        var courses = await _courseService.GetAllCourses(GetUserId(ctx));
         return new OkObjectResult(courses);
     }
 
@@ -84,6 +84,11 @@ public class CoursesController : BaseController
     {
         // Authorize
         await AssertAuthentication(ctx, AllowElevated);
+
+        if (!GetUserRoles(ctx).Contains(Roles.Admin) && !await _courseService.UserCanAccessCourse(courseId, GetUserId(ctx)))
+        {
+            throw new UnauthorizedAccessException("You are not authorized to delete this course.");
+        }
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         await _courseService.EnrollUser(courseId, contract.UserId);

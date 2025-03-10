@@ -16,11 +16,22 @@ public class SessionsController : BaseController
 {
     private readonly ILogger<SessionsController> _logger;
     private readonly AttendanceService _attendanceService;
+    private readonly CourseService _courseService;
 
-    public SessionsController(ILogger<SessionsController> logger, AttendanceService attendanceService, AuthenticationService authenticationService) : base(authenticationService)
+    public SessionsController(ILogger<SessionsController> logger, AttendanceService attendanceService, AuthenticationService authenticationService, UserService userService, CourseService courseService) : base(authenticationService, userService)
     {
         _logger = logger;
         _attendanceService = attendanceService;
+        _courseService = courseService;
+    }
+
+    private async Task AssertCourseAuthorization(string courseId, string userId)
+    {
+        // Check if the user is allowed to retrieve the session.
+        if(!await _courseService.UserCanAccessCourse(courseId, userId))
+        {
+            throw new UnauthorizedAccessException("The user is not allowed to retrieve the session.");
+        };
     }
 
     [Function( $"{nameof(SessionsController)}-{nameof(GetAllSessions)}")]
@@ -28,7 +39,8 @@ public class SessionsController : BaseController
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
-
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+        
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var sessions = await _attendanceService.GetSessions(courseId);
 
@@ -54,6 +66,7 @@ public class SessionsController : BaseController
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var session = await _attendanceService.GetSession(sessionId);
@@ -64,7 +77,8 @@ public class SessionsController : BaseController
     public async Task<IActionResult> ConfirmStudentAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
         // Authorize
-        await AssertAuthentication(ctx, AllowAll);
+        await AssertAuthentication(ctx, [Roles.Student]);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -79,6 +93,12 @@ public class SessionsController : BaseController
         // Authorize
         await AssertAuthentication(ctx, AllowElevated);
 
+        // Check if the teacher can change the course
+        if (!GetUserRoles(ctx).Contains(Roles.Admin))
+        {
+            await AssertCourseAuthorization(courseId, GetUserId(ctx));
+        }
+
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         await _attendanceService.SetTeacherApproval(sessionId, contract.UserId, contract.Kind);
         return new NoContentResult();
@@ -87,7 +107,7 @@ public class SessionsController : BaseController
     public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId)
     {
         // Authorize
-        await AssertAuthentication(ctx, AllowAll);
+        await AssertAuthentication(ctx, [Admin]);
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
