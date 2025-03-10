@@ -36,6 +36,10 @@ public class ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler> lo
                     response.StatusCode = System.Net.HttpStatusCode.BadRequest;
                     message = "The request is not formatted properly.";
                     break;
+                case ArgumentException ae:
+                    response.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                    message = "The request is not formatted properly.";
+                    break;
                 case EntityNotFoundException entityNotFoundException:
                     response.StatusCode = System.Net.HttpStatusCode.NotFound;
                     message = entityNotFoundException.Message;
