@@ -23,7 +23,7 @@ public class BaseController
         TokenValidationResult? token = context.Items["validationResult"] as TokenValidationResult;
         
         // Get the openID value
-        if (token.Claims.TryGetValue("oid", out var oid) || oid is not string openId)
+        if (!token.Claims.TryGetValue("oid", out var oid) || oid is not string openId)
         {
             throw new ArgumentException("OpenID was not found in JWT claims.");
         }
@@ -44,7 +44,7 @@ public class BaseController
         TokenValidationResult? token = context.Items["validationResult"] as TokenValidationResult;
         
         // Get the openID value
-        if (token.Claims.TryGetValue("oid", out var oid) || oid is not string openId)
+        if (!token.Claims.TryGetValue("oid", out var oid) || oid is not string openId)
         {
             throw new ArgumentException("OpenID was not found in JWT claims.");
         }
