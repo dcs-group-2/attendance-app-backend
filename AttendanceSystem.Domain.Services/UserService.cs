@@ -93,4 +93,9 @@ public class UserService
         _context.Remove(user);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<List<User>> GetUsers(List<string> users)
+    {
+        return await _context.Users.Where(u => users.Contains(u.Id)).ToListAsync();
+    }
 }
