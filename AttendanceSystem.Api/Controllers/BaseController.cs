@@ -9,7 +9,7 @@ namespace AttendanceSystem.Api.Controllers;
 public class BaseController
 {
     private readonly AuthenticationService _authenticationService;
-    private readonly UserService _userService;
+    protected readonly UserService _userService;
     
     public BaseController(AuthenticationService authenticationService, UserService userService)
     {

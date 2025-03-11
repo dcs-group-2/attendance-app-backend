@@ -7,5 +7,4 @@ public record AttendanceRecord
 
     public required AttendanceSubmission StudentSubmission { get; set; }
     public required AttendanceSubmission TeacherSubmission { get; set; }
-
 }

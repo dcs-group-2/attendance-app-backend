@@ -32,6 +32,12 @@ public class CoursesController : BaseController
         await AssertAuthentication(ctx, AllowAll);
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
+        if (GetUserRoles(ctx).Contains(Admin))
+        {
+            var allCourses = await _courseService.GetAllCourses();
+            return new OkObjectResult(allCourses);
+        }
+        
         var courses = await _courseService.GetAllCourses(GetUserId(ctx));
         return new OkObjectResult(courses);
     }
