@@ -43,7 +43,6 @@ public class FeedController : BaseController
             courses = await _attendanceService.GetUpcomingSessionsForTeacher(userId);
             return new OkObjectResult(courses);
         }
-        
 
         courses = await _attendanceService.GetUpcomingSessionsForUser(userId);
         return new OkObjectResult(courses);
