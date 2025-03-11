@@ -18,7 +18,7 @@ public class UsersController : BaseController
     private readonly ILogger<UsersController> _logger;
     private readonly UserService _userService;
 
-    public UsersController(ILogger<UsersController> logger, UserService userService, AuthenticationService authenticationService) : base(authenticationService)
+    public UsersController(ILogger<UsersController> logger, UserService userService, AuthenticationService authenticationService) : base(authenticationService, userService)
     {
         _logger = logger;
         _userService = userService;

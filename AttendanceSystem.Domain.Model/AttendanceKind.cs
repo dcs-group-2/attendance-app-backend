@@ -1,5 +1,8 @@
-﻿namespace AttendanceSystem.Domain.Model;
+﻿using System.Text.Json.Serialization;
 
+namespace AttendanceSystem.Domain.Model;
+
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum AttendanceKind
 {
     Unknown = 0,

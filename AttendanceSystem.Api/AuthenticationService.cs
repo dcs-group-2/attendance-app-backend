@@ -6,7 +6,19 @@ namespace AttendanceSystem.Api;
 
 public class AuthenticationService(ILogger<AuthenticationService> logger, JsonWebTokenHandler jwtHandler)
 {
-    public async Task<bool> IsAuthenticated(TokenValidationResult jwt, IEnumerable<string> requiredRoles)
+    public List<string> GetRoles(TokenValidationResult jwt)
+    {
+        if (!jwt.Claims.TryGetValue("roles", out var rolesClaim)) return [];
+
+        return rolesClaim switch
+        {
+            string role => [role],
+            List<object> roles => roles.Cast<string>().ToList(),
+            _ => [],
+        };
+    }
+    
+    public bool IsAuthenticated(TokenValidationResult jwt, IEnumerable<string> requiredRoles)
     {
         if (!jwt.Claims.TryGetValue("roles", out object? rolesClaim)) return false;
 

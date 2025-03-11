@@ -19,7 +19,22 @@ public class CourseService
     {
         return await _context.Courses.ToListAsync();
     }
+    
+    public async Task<List<Course>> GetAllCourses(string userId)
+    {
+        return await _context.Courses.Where(c => c.Students.Contains(userId)).ToListAsync();
+    }
 
+    public async Task<bool> CourseExists(string courseId)
+    {
+        return await _context.Courses.AnyAsync(c => c.Id == courseId);
+    }
+
+    public async Task<bool> UserCanAccessCourse(string courseId, string userId)
+    {
+        return await _context.Courses.AnyAsync(c => c.Id == courseId && (c.Students.Contains(userId) || c.Teachers.Contains(userId)));
+    }
+    
     public async Task<Course> CreateNewCourse(string id, string name, string departmentId, List<string> teacherIds)
     {
         var course = new Course(id, name, departmentId, teacherIds);
