@@ -40,11 +40,11 @@ public class AttendanceService
             .Where(s => s.Course.Students.Contains(userId)).ToListAsync();
     }
 
-    public async Task<List<Session>> GetUpcomingSessionsForTeacher(string userId)
+    public async Task<List<Session>> GetUpcomingSessions(string userId)
     {
         return await _context.Sessions
             .Include(s => s.Course)
-            .Where(s => s.Course.Teachers.Contains(userId)).OrderBy(m=>m.StartTime).ToListAsync();
+            .Where(s => s.Course.Students.Contain(userId) || s.Course.Teachers.Contains(userId)).OrderBy(m=>m.StartTime).ToListAsync();
     }
 
     public async Task<Session> GetSession(Guid sessionId)
