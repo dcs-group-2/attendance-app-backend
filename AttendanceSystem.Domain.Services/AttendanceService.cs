@@ -40,6 +40,13 @@ public class AttendanceService
             .Where(s => s.Course.Students.Contains(userId)).ToListAsync();
     }
 
+    public async Task<List<Session>> GetUpcomingSessionsForTeacher(string userId)
+    {
+        return await _context.Sessions
+            .Include(s => s.Course)
+            .Where(s => s.Course.Teachers.Contains(userId)).OrderBy(m=>m.StartTime).ToListAsync();
+    }
+
     public async Task<Session> GetSession(Guid sessionId)
     {
         return await _context.Sessions.FindAsync(sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));
@@ -64,10 +71,10 @@ public class AttendanceService
         await _context.SaveChangesAsync();
     }
 
-    public async Task SetTeacherApproval(Guid sessionId, string teacherId, AttendanceKind kind)
+    public async Task SetTeacherApproval(Guid sessionId, string studentId, AttendanceKind kind)
     {
         var session = await GetSessionWithRegister(sessionId);
-        session.SetTeacherApproval(teacherId, kind);
+        session.SetTeacherApproval(studentId, kind);
         await _context.SaveChangesAsync();
     }
 }

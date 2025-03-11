@@ -142,10 +142,51 @@ public class SessionsController : BaseController
         {
             await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
         }
-        
         return new NoContentResult();
     }
-    
+
+    [Function($"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
+    public async Task<ActionResult<Session>> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] List<UpdateAttendanceContract> contracts)
+    {
+        // Right now, we process multiple attendance records at once
+        if (contracts == null || contracts.Count == 0)
+        {
+            return new BadRequestObjectResult("At least one attendance record is required.");
+        }
+
+        // Authorize
+        await AssertAuthentication(ctx, AllowAll);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+
+        // Based on the role, set the attendance as a student or as a teacher
+        bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
+
+        if (isTeacher)
+        {
+            // Ensure all records contain a user ID for teachers
+            if (contracts.Any(c => c.Attendance.FirstOrDefault()?.UserId == null))
+            {
+                return new BadRequestObjectResult("The user id is required for teacher attendance.");
+            }
+
+            // Call the method to set teacher approvals for multiple records
+            foreach (var contract in contracts)
+            {
+                var recordProcessRequest = contract.Attendance.First();
+                await _attendanceService.SetTeacherApproval(sessionId, recordProcessRequest.UserId, recordProcessRequest.Kind);
+            }
+        }
+
+        return await _attendanceService.GetSessionWithRegister(sessionId);
+    }
+
+
+
+
+
+
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
     public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId)
     {
