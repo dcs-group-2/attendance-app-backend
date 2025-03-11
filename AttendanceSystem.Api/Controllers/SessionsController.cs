@@ -121,74 +121,31 @@ public class SessionsController : BaseController
         {
             return new BadRequestObjectResult("Only one attendance record can be updated at a time.");
         }
-        
-        var recordProcessRequest = contract.Attendance.First();
-        
-
-
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
-
-        // Based on the role, set the attendance as a student or as a teacher
-        bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
-        
-        if (isTeacher)
-        {
-            if(recordProcessRequest.UserId is null)
-            {
-                return new BadRequestObjectResult("The user id is required for teacher attendance.");
-            }
-            
-            await _attendanceService.SetTeacherApproval(sessionId, recordProcessRequest.UserId, recordProcessRequest.Kind);
-        }
-        else
-        {
-            await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
-        }
-        return new NoContentResult();
-    }
-
-    [Function($"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
-    public async Task<ActionResult<Session>> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] List<UpdateAttendanceContract> contracts)
-    {
-        // Authorize
-        await AssertAuthentication(ctx, AllowAll);
-        await AssertCourseAuthorization(courseId, GetUserId(ctx));
-
-        // Right now, we process multiple attendance records at once
-        if (contracts == null || contracts.Count == 0)
-        {
-            return new BadRequestObjectResult("At least one attendance record is required.");
-        }
-
-
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
         // Based on the role, set the attendance as a student or as a teacher
         bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
 
-        if (isTeacher)
-        {
-            // Ensure all records contain a user ID for teachers
-            if (contracts.Any(c => c.Attendance.FirstOrDefault()?.UserId == null))
-            {
-                return new BadRequestObjectResult("The user id is required for teacher attendance.");
-            }
 
-            // Call the method to set teacher approvals for multiple records
-            foreach (var contract in contracts)
+        foreach (var recordProcessRequest in contract.Attendance)
+        {
+            if (isTeacher)
             {
-                var recordProcessRequest = contract.Attendance.First();
+                if (recordProcessRequest.UserId is null)
+                {
+                    return new BadRequestObjectResult("The user id is required for teacher attendance.");
+                }
+
                 await _attendanceService.SetTeacherApproval(sessionId, recordProcessRequest.UserId, recordProcessRequest.Kind);
             }
+            else
+            {
+                await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
+            }
         }
-
-        return await _attendanceService.GetSessionWithRegister(sessionId);
+        return new OkObjectResult(await _attendanceService.GetSessionWithRegister(sessionId));
     }
-
-
-
-
 
 
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
