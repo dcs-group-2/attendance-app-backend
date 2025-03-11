@@ -58,10 +58,10 @@ public class AuthenticationHandler(ILogger<AuthenticationHandler> logger, JsonWe
         // Configure token validation parameters
         TokenValidationParameters tokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuer = false,
+            ValidateIssuer = true,
             ValidIssuer = _openIdConfig.Issuer,
             ValidateAudience = true,
-            ValidAudience = "api://uva-devops-attendance-app",
+            ValidAudiences = ["api://uva-devops-attendance-app", "1d5d790f-f1c2-41bc-80df-e57e3642b219"],
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             IssuerSigningKeys = _openIdConfig.SigningKeys,
