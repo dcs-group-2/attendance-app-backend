@@ -112,6 +112,10 @@ public class SessionsController : BaseController
     [Function( $"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
     public async Task<IActionResult> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
+        // Authorize
+        await AssertAuthentication(ctx, AllowAll);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
         // Right now, we only accept one attendance record at a time.
         if (contract.Attendance.Count != 1)
         {
@@ -120,9 +124,7 @@ public class SessionsController : BaseController
         
         var recordProcessRequest = contract.Attendance.First();
         
-        // Authorize
-        await AssertAuthentication(ctx, AllowAll);
-        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -148,15 +150,17 @@ public class SessionsController : BaseController
     [Function($"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
     public async Task<ActionResult<Session>> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] List<UpdateAttendanceContract> contracts)
     {
+        // Authorize
+        await AssertAuthentication(ctx, AllowAll);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
         // Right now, we process multiple attendance records at once
         if (contracts == null || contracts.Count == 0)
         {
             return new BadRequestObjectResult("At least one attendance record is required.");
         }
 
-        // Authorize
-        await AssertAuthentication(ctx, AllowAll);
-        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
