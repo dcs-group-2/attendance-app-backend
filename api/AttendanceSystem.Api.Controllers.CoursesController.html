@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CoursesController | Attendance App </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CoursesController | Attendance App ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dcs-group-2/attendance-app-backend/new/main/apiSpec/new?filename=AttendanceSystem_Api_Controllers_CoursesController.md&amp;value=---%0Auid%3A%20AttendanceSystem.Api.Controllers.CoursesController%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Attendance App">
+            Attendance App
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="AttendanceSystem.Api.Controllers.CoursesController">
+
+
+
+  <h1 id="AttendanceSystem_Api_Controllers_CoursesController" data-uid="AttendanceSystem.Api.Controllers.CoursesController" class="text-break">
+Class CoursesController  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="AttendanceSystem.html">AttendanceSystem</a>.<a class="xref" href="AttendanceSystem.Api.html">Api</a>.<a class="xref" href="AttendanceSystem.Api.Controllers.html">Controllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>AttendanceSystem.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CoursesController : BaseController</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html">BaseController</a></div>
+      <div><span class="xref">CoursesController</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController__userService">BaseController._userService</a>
+    </div>
+    <div>
+      <a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserId_Microsoft_Azure_Functions_Worker_FunctionContext_">BaseController.GetUserId(FunctionContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserRoles_Microsoft_Azure_Functions_Worker_FunctionContext_">BaseController.GetUserRoles(FunctionContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUser_Microsoft_Azure_Functions_Worker_FunctionContext_">BaseController.GetUser(FunctionContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_AssertAuthentication_Microsoft_Azure_Functions_Worker_FunctionContext_System_Collections_Generic_IEnumerable_System_String__">BaseController.AssertAuthentication(FunctionContext, IEnumerable&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController__ctor_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.#ctor*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_CoursesController__AttendanceSystem_Domain_Services_CourseService_AttendanceSystem_Api_AuthenticationService_AttendanceSystem_Domain_Services_UserService_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.CoursesController},AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)">
+  CoursesController(ILogger&lt;CoursesController&gt;, CourseService, AuthenticationService, UserService)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoursesController(ILogger&lt;CoursesController&gt; logger, CourseService courseService, AuthenticationService authenticationService, UserService userService)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="AttendanceSystem.Api.Controllers.CoursesController.html">CoursesController</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>courseService</code> <a class="xref" href="AttendanceSystem.Domain.Services.CourseService.html">CourseService</a></dt>
+    <dd></dd>
+    <dt><code>authenticationService</code> <a class="xref" href="AttendanceSystem.Api.AuthenticationService.html">AuthenticationService</a></dt>
+    <dd></dd>
+    <dt><code>userService</code> <a class="xref" href="AttendanceSystem.Domain.Services.UserService.html">UserService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_ConfigureCourse_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_ConfigureCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Domain_Services_Alterations_CourseAlteration_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Domain.Services.Alterations.CourseAlteration)">
+  ConfigureCourse(HttpRequest, FunctionContext, string, CourseAlteration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-ConfigureCourse&quot;)]
+public Task&lt;IActionResult&gt; ConfigureCourse(HttpRequest req, FunctionContext ctx, string courseId, CourseAlteration alteration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+    <dt><code>courseId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>alteration</code> <a class="xref" href="AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html">CourseAlteration</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_CreateNewCourse_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_CreateNewCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_AttendanceSystem_Api_Contracts_CreateCourseContract_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,AttendanceSystem.Api.Contracts.CreateCourseContract)">
+  CreateNewCourse(HttpRequest, FunctionContext, CreateCourseContract)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-CreateNewCourse&quot;)]
+public Task&lt;IActionResult&gt; CreateNewCourse(HttpRequest req, FunctionContext ctx, CreateCourseContract contract)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+    <dt><code>contract</code> <a class="xref" href="AttendanceSystem.Api.Contracts.CreateCourseContract.html">CreateCourseContract</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_DeleteCourse_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_DeleteCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)">
+  DeleteCourse(HttpRequest, FunctionContext, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-DeleteCourse&quot;)]
+public Task&lt;IActionResult&gt; DeleteCourse(HttpRequest req, FunctionContext ctx, string courseId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+    <dt><code>courseId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_EnrollUser_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.EnrollUser*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_EnrollUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Api_Contracts_EnrollUserContract_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.EnrollUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Api.Contracts.EnrollUserContract)">
+  EnrollUser(HttpRequest, FunctionContext, string, EnrollUserContract)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-EnrollUser&quot;)]
+public Task&lt;IActionResult&gt; EnrollUser(HttpRequest req, FunctionContext ctx, string courseId, EnrollUserContract contract)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+    <dt><code>courseId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>contract</code> <a class="xref" href="AttendanceSystem.Api.Contracts.EnrollUserContract.html">EnrollUserContract</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_GetAllCourses_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_GetAllCourses_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)">
+  GetAllCourses(HttpRequest, FunctionContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-GetAllCourses&quot;)]
+public Task&lt;IActionResult&gt; GetAllCourses(HttpRequest req, FunctionContext ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Controllers_CoursesController_GetCourse_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.GetCourse*"></a>
+
+  <h3 id="AttendanceSystem_Api_Controllers_CoursesController_GetCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_" data-uid="AttendanceSystem.Api.Controllers.CoursesController.GetCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)">
+  GetCourse(HttpRequest, FunctionContext, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/CoursesController.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Function(&quot;CoursesController-GetCourse&quot;)]
+public Task&lt;IActionResult&gt; GetCourse(HttpRequest req, FunctionContext ctx, string courseId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>req</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></dt>
+    <dd></dd>
+    <dt><code>ctx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.azure.functions.worker.functioncontext">FunctionContext</a></dt>
+    <dd></dd>
+    <dt><code>courseId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

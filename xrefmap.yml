@@ -1,0 +1,2403 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: AttendanceSystem.Api
+  name: AttendanceSystem.Api
+  href: api/AttendanceSystem.Api.html
+  commentId: N:AttendanceSystem.Api
+  fullName: AttendanceSystem.Api
+  nameWithType: AttendanceSystem.Api
+- uid: AttendanceSystem.Api.AuthenticationService
+  name: AuthenticationService
+  href: api/AttendanceSystem.Api.AuthenticationService.html
+  commentId: T:AttendanceSystem.Api.AuthenticationService
+  fullName: AttendanceSystem.Api.AuthenticationService
+  nameWithType: AuthenticationService
+- uid: AttendanceSystem.Api.AuthenticationService.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.AuthenticationService},Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  name: AuthenticationService(ILogger<AuthenticationService>, JsonWebTokenHandler)
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_AuthenticationService__Microsoft_IdentityModel_JsonWebTokens_JsonWebTokenHandler_
+  commentId: M:AttendanceSystem.Api.AuthenticationService.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.AuthenticationService},Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  name.vb: New(ILogger(Of AuthenticationService), JsonWebTokenHandler)
+  fullName: AttendanceSystem.Api.AuthenticationService.AuthenticationService(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.AuthenticationService>, Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  fullName.vb: AttendanceSystem.Api.AuthenticationService.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.AuthenticationService), Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  nameWithType: AuthenticationService.AuthenticationService(ILogger<AuthenticationService>, JsonWebTokenHandler)
+  nameWithType.vb: AuthenticationService.New(ILogger(Of AuthenticationService), JsonWebTokenHandler)
+- uid: AttendanceSystem.Api.AuthenticationService.#ctor*
+  name: AuthenticationService
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService__ctor_
+  commentId: Overload:AttendanceSystem.Api.AuthenticationService.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.AuthenticationService.AuthenticationService
+  fullName.vb: AttendanceSystem.Api.AuthenticationService.New
+  nameWithType: AuthenticationService.AuthenticationService
+  nameWithType.vb: AuthenticationService.New
+- uid: AttendanceSystem.Api.AuthenticationService.GetRoles(Microsoft.IdentityModel.Tokens.TokenValidationResult)
+  name: GetRoles(TokenValidationResult)
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService_GetRoles_Microsoft_IdentityModel_Tokens_TokenValidationResult_
+  commentId: M:AttendanceSystem.Api.AuthenticationService.GetRoles(Microsoft.IdentityModel.Tokens.TokenValidationResult)
+  fullName: AttendanceSystem.Api.AuthenticationService.GetRoles(Microsoft.IdentityModel.Tokens.TokenValidationResult)
+  nameWithType: AuthenticationService.GetRoles(TokenValidationResult)
+- uid: AttendanceSystem.Api.AuthenticationService.GetRoles*
+  name: GetRoles
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService_GetRoles_
+  commentId: Overload:AttendanceSystem.Api.AuthenticationService.GetRoles
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.AuthenticationService.GetRoles
+  nameWithType: AuthenticationService.GetRoles
+- uid: AttendanceSystem.Api.AuthenticationService.IsAuthenticated(Microsoft.IdentityModel.Tokens.TokenValidationResult,System.Collections.Generic.IEnumerable{System.String})
+  name: IsAuthenticated(TokenValidationResult, IEnumerable<string>)
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService_IsAuthenticated_Microsoft_IdentityModel_Tokens_TokenValidationResult_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:AttendanceSystem.Api.AuthenticationService.IsAuthenticated(Microsoft.IdentityModel.Tokens.TokenValidationResult,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: IsAuthenticated(TokenValidationResult, IEnumerable(Of String))
+  fullName: AttendanceSystem.Api.AuthenticationService.IsAuthenticated(Microsoft.IdentityModel.Tokens.TokenValidationResult, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: AttendanceSystem.Api.AuthenticationService.IsAuthenticated(Microsoft.IdentityModel.Tokens.TokenValidationResult, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: AuthenticationService.IsAuthenticated(TokenValidationResult, IEnumerable<string>)
+  nameWithType.vb: AuthenticationService.IsAuthenticated(TokenValidationResult, IEnumerable(Of String))
+- uid: AttendanceSystem.Api.AuthenticationService.IsAuthenticated*
+  name: IsAuthenticated
+  href: api/AttendanceSystem.Api.AuthenticationService.html#AttendanceSystem_Api_AuthenticationService_IsAuthenticated_
+  commentId: Overload:AttendanceSystem.Api.AuthenticationService.IsAuthenticated
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.AuthenticationService.IsAuthenticated
+  nameWithType: AuthenticationService.IsAuthenticated
+- uid: AttendanceSystem.Api.Contracts
+  name: AttendanceSystem.Api.Contracts
+  href: api/AttendanceSystem.Api.Contracts.html
+  commentId: N:AttendanceSystem.Api.Contracts
+  fullName: AttendanceSystem.Api.Contracts
+  nameWithType: AttendanceSystem.Api.Contracts
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract
+  name: CreateCourseContract
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.CreateCourseContract
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract
+  nameWithType: CreateCourseContract
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId
+  name: DepartmentId
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_DepartmentId
+  commentId: P:AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId
+  nameWithType: CreateCourseContract.DepartmentId
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId*
+  name: DepartmentId
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_DepartmentId_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.DepartmentId
+  nameWithType: CreateCourseContract.DepartmentId
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.Id
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_Id
+  commentId: P:AttendanceSystem.Api.Contracts.CreateCourseContract.Id
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.Id
+  nameWithType: CreateCourseContract.Id
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.Id*
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_Id_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateCourseContract.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.Id
+  nameWithType: CreateCourseContract.Id
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.Name
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_Name
+  commentId: P:AttendanceSystem.Api.Contracts.CreateCourseContract.Name
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.Name
+  nameWithType: CreateCourseContract.Name
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.Name*
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_Name_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateCourseContract.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.Name
+  nameWithType: CreateCourseContract.Name
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds
+  name: TeacherIds
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_TeacherIds
+  commentId: P:AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds
+  nameWithType: CreateCourseContract.TeacherIds
+- uid: AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds*
+  name: TeacherIds
+  href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html#AttendanceSystem_Api_Contracts_CreateCourseContract_TeacherIds_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateCourseContract.TeacherIds
+  nameWithType: CreateCourseContract.TeacherIds
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract
+  name: CreateSessionContract
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.CreateSessionContract
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract
+  nameWithType: CreateSessionContract
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate
+  name: EndDate
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_EndDate
+  commentId: P:AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate
+  nameWithType: CreateSessionContract.EndDate
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate*
+  name: EndDate
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_EndDate_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.EndDate
+  nameWithType: CreateSessionContract.EndDate
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.Participants
+  name: Participants
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_Participants
+  commentId: P:AttendanceSystem.Api.Contracts.CreateSessionContract.Participants
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.Participants
+  nameWithType: CreateSessionContract.Participants
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.Participants*
+  name: Participants
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_Participants_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateSessionContract.Participants
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.Participants
+  nameWithType: CreateSessionContract.Participants
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate
+  name: StartDate
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_StartDate
+  commentId: P:AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate
+  nameWithType: CreateSessionContract.StartDate
+- uid: AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate*
+  name: StartDate
+  href: api/AttendanceSystem.Api.Contracts.CreateSessionContract.html#AttendanceSystem_Api_Contracts_CreateSessionContract_StartDate_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateSessionContract.StartDate
+  nameWithType: CreateSessionContract.StartDate
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract
+  name: CreateUserContract
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.CreateUserContract
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract
+  nameWithType: CreateUserContract
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Email
+  name: Email
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Email
+  commentId: P:AttendanceSystem.Api.Contracts.CreateUserContract.Email
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Email
+  nameWithType: CreateUserContract.Email
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Email*
+  name: Email
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Email_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateUserContract.Email
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Email
+  nameWithType: CreateUserContract.Email
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Id
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Id
+  commentId: P:AttendanceSystem.Api.Contracts.CreateUserContract.Id
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Id
+  nameWithType: CreateUserContract.Id
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Id*
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Id_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateUserContract.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Id
+  nameWithType: CreateUserContract.Id
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Name
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Name
+  commentId: P:AttendanceSystem.Api.Contracts.CreateUserContract.Name
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Name
+  nameWithType: CreateUserContract.Name
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Name*
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Name_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateUserContract.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Name
+  nameWithType: CreateUserContract.Name
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Type
+  name: Type
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Type
+  commentId: P:AttendanceSystem.Api.Contracts.CreateUserContract.Type
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Type
+  nameWithType: CreateUserContract.Type
+- uid: AttendanceSystem.Api.Contracts.CreateUserContract.Type*
+  name: Type
+  href: api/AttendanceSystem.Api.Contracts.CreateUserContract.html#AttendanceSystem_Api_Contracts_CreateUserContract_Type_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CreateUserContract.Type
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CreateUserContract.Type
+  nameWithType: CreateUserContract.Type
+- uid: AttendanceSystem.Api.Contracts.EnrollUserContract
+  name: EnrollUserContract
+  href: api/AttendanceSystem.Api.Contracts.EnrollUserContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.EnrollUserContract
+  fullName: AttendanceSystem.Api.Contracts.EnrollUserContract
+  nameWithType: EnrollUserContract
+- uid: AttendanceSystem.Api.Contracts.EnrollUserContract.UserId
+  name: UserId
+  href: api/AttendanceSystem.Api.Contracts.EnrollUserContract.html#AttendanceSystem_Api_Contracts_EnrollUserContract_UserId
+  commentId: P:AttendanceSystem.Api.Contracts.EnrollUserContract.UserId
+  fullName: AttendanceSystem.Api.Contracts.EnrollUserContract.UserId
+  nameWithType: EnrollUserContract.UserId
+- uid: AttendanceSystem.Api.Contracts.EnrollUserContract.UserId*
+  name: UserId
+  href: api/AttendanceSystem.Api.Contracts.EnrollUserContract.html#AttendanceSystem_Api_Contracts_EnrollUserContract_UserId_
+  commentId: Overload:AttendanceSystem.Api.Contracts.EnrollUserContract.UserId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.EnrollUserContract.UserId
+  nameWithType: EnrollUserContract.UserId
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord
+  name: ExtendedAttendanceRecord
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html
+  commentId: T:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord
+  nameWithType: ExtendedAttendanceRecord
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor
+  name: ExtendedAttendanceRecord()
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html#AttendanceSystem_Api_Contracts_ExtendedAttendanceRecord__ctor
+  commentId: M:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor
+  name.vb: New()
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.ExtendedAttendanceRecord()
+  fullName.vb: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.New()
+  nameWithType: ExtendedAttendanceRecord.ExtendedAttendanceRecord()
+  nameWithType.vb: ExtendedAttendanceRecord.New()
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor(AttendanceSystem.Domain.Model.AttendanceRecord)
+  name: ExtendedAttendanceRecord(AttendanceRecord)
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html#AttendanceSystem_Api_Contracts_ExtendedAttendanceRecord__ctor_AttendanceSystem_Domain_Model_AttendanceRecord_
+  commentId: M:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor(AttendanceSystem.Domain.Model.AttendanceRecord)
+  name.vb: New(AttendanceRecord)
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.ExtendedAttendanceRecord(AttendanceSystem.Domain.Model.AttendanceRecord)
+  fullName.vb: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.New(AttendanceSystem.Domain.Model.AttendanceRecord)
+  nameWithType: ExtendedAttendanceRecord.ExtendedAttendanceRecord(AttendanceRecord)
+  nameWithType.vb: ExtendedAttendanceRecord.New(AttendanceRecord)
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor*
+  name: ExtendedAttendanceRecord
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html#AttendanceSystem_Api_Contracts_ExtendedAttendanceRecord__ctor_
+  commentId: Overload:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.ExtendedAttendanceRecord
+  fullName.vb: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.New
+  nameWithType: ExtendedAttendanceRecord.ExtendedAttendanceRecord
+  nameWithType.vb: ExtendedAttendanceRecord.New
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
+  name: StudentName
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html#AttendanceSystem_Api_Contracts_ExtendedAttendanceRecord_StudentName
+  commentId: P:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
+  nameWithType: ExtendedAttendanceRecord.StudentName
+- uid: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName*
+  name: StudentName
+  href: api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html#AttendanceSystem_Api_Contracts_ExtendedAttendanceRecord_StudentName_
+  commentId: Overload:AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
+  nameWithType: ExtendedAttendanceRecord.StudentName
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract
+  name: GetAttendanceListContract
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.GetAttendanceListContract
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract
+  nameWithType: GetAttendanceListContract
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course
+  name: Course
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Course
+  commentId: P:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course
+  nameWithType: GetAttendanceListContract.Course
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course*
+  name: Course
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Course_
+  commentId: Overload:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Course
+  nameWithType: GetAttendanceListContract.Course
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime
+  name: EndTime
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_EndTime
+  commentId: P:AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime
+  nameWithType: GetAttendanceListContract.EndTime
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime*
+  name: EndTime
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_EndTime_
+  commentId: Overload:AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.EndTime
+  nameWithType: GetAttendanceListContract.EndTime
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Id
+  commentId: P:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id
+  nameWithType: GetAttendanceListContract.Id
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id*
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Id_
+  commentId: Overload:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Id
+  nameWithType: GetAttendanceListContract.Id
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register
+  name: Register
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Register
+  commentId: P:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register
+  nameWithType: GetAttendanceListContract.Register
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register*
+  name: Register
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_Register_
+  commentId: Overload:AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.Register
+  nameWithType: GetAttendanceListContract.Register
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
+  name: StartTime
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_StartTime
+  commentId: P:AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
+  nameWithType: GetAttendanceListContract.StartTime
+- uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime*
+  name: StartTime
+  href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html#AttendanceSystem_Api_Contracts_GetAttendanceListContract_StartTime_
+  commentId: Overload:AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
+  nameWithType: GetAttendanceListContract.StartTime
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract
+  name: UpdateAttendanceContract
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.UpdateAttendanceContract
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract
+  nameWithType: UpdateAttendanceContract
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
+  name: Attendance
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContract_Attendance
+  commentId: P:AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
+  nameWithType: UpdateAttendanceContract.Attendance
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance*
+  name: Attendance
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContract_Attendance_
+  commentId: Overload:AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
+  nameWithType: UpdateAttendanceContract.Attendance
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem
+  name: UpdateAttendanceContractItem
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html
+  commentId: T:AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem
+  nameWithType: UpdateAttendanceContractItem
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind
+  name: Kind
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem_Kind
+  commentId: P:AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind
+  nameWithType: UpdateAttendanceContractItem.Kind
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind*
+  name: Kind
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem_Kind_
+  commentId: Overload:AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.Kind
+  nameWithType: UpdateAttendanceContractItem.Kind
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId
+  name: UserId
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem_UserId
+  commentId: P:AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId
+  nameWithType: UpdateAttendanceContractItem.UserId
+- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId*
+  name: UserId
+  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem_UserId_
+  commentId: Overload:AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.UserId
+  nameWithType: UpdateAttendanceContractItem.UserId
+- uid: AttendanceSystem.Api.Contracts.UserType
+  name: UserType
+  href: api/AttendanceSystem.Api.Contracts.UserType.html
+  commentId: T:AttendanceSystem.Api.Contracts.UserType
+  fullName: AttendanceSystem.Api.Contracts.UserType
+  nameWithType: UserType
+- uid: AttendanceSystem.Api.Contracts.UserType.Administrator
+  name: Administrator
+  href: api/AttendanceSystem.Api.Contracts.UserType.html#AttendanceSystem_Api_Contracts_UserType_Administrator
+  commentId: F:AttendanceSystem.Api.Contracts.UserType.Administrator
+  fullName: AttendanceSystem.Api.Contracts.UserType.Administrator
+  nameWithType: UserType.Administrator
+- uid: AttendanceSystem.Api.Contracts.UserType.Student
+  name: Student
+  href: api/AttendanceSystem.Api.Contracts.UserType.html#AttendanceSystem_Api_Contracts_UserType_Student
+  commentId: F:AttendanceSystem.Api.Contracts.UserType.Student
+  fullName: AttendanceSystem.Api.Contracts.UserType.Student
+  nameWithType: UserType.Student
+- uid: AttendanceSystem.Api.Contracts.UserType.Teacher
+  name: Teacher
+  href: api/AttendanceSystem.Api.Contracts.UserType.html#AttendanceSystem_Api_Contracts_UserType_Teacher
+  commentId: F:AttendanceSystem.Api.Contracts.UserType.Teacher
+  fullName: AttendanceSystem.Api.Contracts.UserType.Teacher
+  nameWithType: UserType.Teacher
+- uid: AttendanceSystem.Api.Controllers
+  name: AttendanceSystem.Api.Controllers
+  href: api/AttendanceSystem.Api.Controllers.html
+  commentId: N:AttendanceSystem.Api.Controllers
+  fullName: AttendanceSystem.Api.Controllers
+  nameWithType: AttendanceSystem.Api.Controllers
+- uid: AttendanceSystem.Api.Controllers.BaseController
+  name: BaseController
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html
+  commentId: T:AttendanceSystem.Api.Controllers.BaseController
+  fullName: AttendanceSystem.Api.Controllers.BaseController
+  nameWithType: BaseController
+- uid: AttendanceSystem.Api.Controllers.BaseController.#ctor(AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name: BaseController(AuthenticationService, UserService)
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController__ctor_AttendanceSystem_Api_AuthenticationService_AttendanceSystem_Domain_Services_UserService_
+  commentId: M:AttendanceSystem.Api.Controllers.BaseController.#ctor(AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name.vb: New(AuthenticationService, UserService)
+  fullName: AttendanceSystem.Api.Controllers.BaseController.BaseController(AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  fullName.vb: AttendanceSystem.Api.Controllers.BaseController.New(AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  nameWithType: BaseController.BaseController(AuthenticationService, UserService)
+  nameWithType.vb: BaseController.New(AuthenticationService, UserService)
+- uid: AttendanceSystem.Api.Controllers.BaseController.#ctor*
+  name: BaseController
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.BaseController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.BaseController.BaseController
+  fullName.vb: AttendanceSystem.Api.Controllers.BaseController.New
+  nameWithType: BaseController.BaseController
+  nameWithType.vb: BaseController.New
+- uid: AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication(Microsoft.Azure.Functions.Worker.FunctionContext,System.Collections.Generic.IEnumerable{System.String})
+  name: AssertAuthentication(FunctionContext, IEnumerable<string>)
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_AssertAuthentication_Microsoft_Azure_Functions_Worker_FunctionContext_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication(Microsoft.Azure.Functions.Worker.FunctionContext,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: AssertAuthentication(FunctionContext, IEnumerable(Of String))
+  fullName: AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication(Microsoft.Azure.Functions.Worker.FunctionContext, System.Collections.Generic.IEnumerable<string>)
+  fullName.vb: AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication(Microsoft.Azure.Functions.Worker.FunctionContext, System.Collections.Generic.IEnumerable(Of String))
+  nameWithType: BaseController.AssertAuthentication(FunctionContext, IEnumerable<string>)
+  nameWithType.vb: BaseController.AssertAuthentication(FunctionContext, IEnumerable(Of String))
+- uid: AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication*
+  name: AssertAuthentication
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_AssertAuthentication_
+  commentId: Overload:AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.BaseController.AssertAuthentication
+  nameWithType: BaseController.AssertAuthentication
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUser(Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetUser(FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUser_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.BaseController.GetUser(Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUser(Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: BaseController.GetUser(FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUser*
+  name: GetUser
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.BaseController.GetUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUser
+  nameWithType: BaseController.GetUser
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUserId(Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetUserId(FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserId_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.BaseController.GetUserId(Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUserId(Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: BaseController.GetUserId(FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUserId*
+  name: GetUserId
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserId_
+  commentId: Overload:AttendanceSystem.Api.Controllers.BaseController.GetUserId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUserId
+  nameWithType: BaseController.GetUserId
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUserRoles(Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetUserRoles(FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserRoles_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.BaseController.GetUserRoles(Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUserRoles(Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: BaseController.GetUserRoles(FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.BaseController.GetUserRoles*
+  name: GetUserRoles
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController_GetUserRoles_
+  commentId: Overload:AttendanceSystem.Api.Controllers.BaseController.GetUserRoles
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.BaseController.GetUserRoles
+  nameWithType: BaseController.GetUserRoles
+- uid: AttendanceSystem.Api.Controllers.BaseController._userService
+  name: _userService
+  href: api/AttendanceSystem.Api.Controllers.BaseController.html#AttendanceSystem_Api_Controllers_BaseController__userService
+  commentId: F:AttendanceSystem.Api.Controllers.BaseController._userService
+  fullName: AttendanceSystem.Api.Controllers.BaseController._userService
+  nameWithType: BaseController._userService
+- uid: AttendanceSystem.Api.Controllers.CoursesController
+  name: CoursesController
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html
+  commentId: T:AttendanceSystem.Api.Controllers.CoursesController
+  fullName: AttendanceSystem.Api.Controllers.CoursesController
+  nameWithType: CoursesController
+- uid: AttendanceSystem.Api.Controllers.CoursesController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.CoursesController},AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name: CoursesController(ILogger<CoursesController>, CourseService, AuthenticationService, UserService)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_CoursesController__AttendanceSystem_Domain_Services_CourseService_AttendanceSystem_Api_AuthenticationService_AttendanceSystem_Domain_Services_UserService_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.CoursesController},AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name.vb: New(ILogger(Of CoursesController), CourseService, AuthenticationService, UserService)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.CoursesController(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Controllers.CoursesController>, AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Controllers.CoursesController), AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  nameWithType: CoursesController.CoursesController(ILogger<CoursesController>, CourseService, AuthenticationService, UserService)
+  nameWithType.vb: CoursesController.New(ILogger(Of CoursesController), CourseService, AuthenticationService, UserService)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.#ctor*
+  name: CoursesController
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.CoursesController
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.New
+  nameWithType: CoursesController.CoursesController
+  nameWithType.vb: CoursesController.New
+- uid: AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  name: ConfigureCourse(HttpRequest, FunctionContext, string, CourseAlteration)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_ConfigureCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Domain_Services_Alterations_CourseAlteration_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  name.vb: ConfigureCourse(HttpRequest, FunctionContext, String, CourseAlteration)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  nameWithType: CoursesController.ConfigureCourse(HttpRequest, FunctionContext, string, CourseAlteration)
+  nameWithType.vb: CoursesController.ConfigureCourse(HttpRequest, FunctionContext, String, CourseAlteration)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse*
+  name: ConfigureCourse
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_ConfigureCourse_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.ConfigureCourse
+  nameWithType: CoursesController.ConfigureCourse
+- uid: AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,AttendanceSystem.Api.Contracts.CreateCourseContract)
+  name: CreateNewCourse(HttpRequest, FunctionContext, CreateCourseContract)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_CreateNewCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_AttendanceSystem_Api_Contracts_CreateCourseContract_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,AttendanceSystem.Api.Contracts.CreateCourseContract)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, AttendanceSystem.Api.Contracts.CreateCourseContract)
+  nameWithType: CoursesController.CreateNewCourse(HttpRequest, FunctionContext, CreateCourseContract)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse*
+  name: CreateNewCourse
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_CreateNewCourse_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.CreateNewCourse
+  nameWithType: CoursesController.CreateNewCourse
+- uid: AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name: DeleteCourse(HttpRequest, FunctionContext, string)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_DeleteCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name.vb: DeleteCourse(HttpRequest, FunctionContext, String)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string)
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String)
+  nameWithType: CoursesController.DeleteCourse(HttpRequest, FunctionContext, string)
+  nameWithType.vb: CoursesController.DeleteCourse(HttpRequest, FunctionContext, String)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse*
+  name: DeleteCourse
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_DeleteCourse_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.DeleteCourse
+  nameWithType: CoursesController.DeleteCourse
+- uid: AttendanceSystem.Api.Controllers.CoursesController.EnrollUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Api.Contracts.EnrollUserContract)
+  name: EnrollUser(HttpRequest, FunctionContext, string, EnrollUserContract)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_EnrollUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Api_Contracts_EnrollUserContract_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.EnrollUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Api.Contracts.EnrollUserContract)
+  name.vb: EnrollUser(HttpRequest, FunctionContext, String, EnrollUserContract)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.EnrollUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, AttendanceSystem.Api.Contracts.EnrollUserContract)
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.EnrollUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, AttendanceSystem.Api.Contracts.EnrollUserContract)
+  nameWithType: CoursesController.EnrollUser(HttpRequest, FunctionContext, string, EnrollUserContract)
+  nameWithType.vb: CoursesController.EnrollUser(HttpRequest, FunctionContext, String, EnrollUserContract)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.EnrollUser*
+  name: EnrollUser
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_EnrollUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.EnrollUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.EnrollUser
+  nameWithType: CoursesController.EnrollUser
+- uid: AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetAllCourses(HttpRequest, FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_GetAllCourses_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: CoursesController.GetAllCourses(HttpRequest, FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses*
+  name: GetAllCourses
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_GetAllCourses_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.GetAllCourses
+  nameWithType: CoursesController.GetAllCourses
+- uid: AttendanceSystem.Api.Controllers.CoursesController.GetCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name: GetCourse(HttpRequest, FunctionContext, string)
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_GetCourse_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_
+  commentId: M:AttendanceSystem.Api.Controllers.CoursesController.GetCourse(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name.vb: GetCourse(HttpRequest, FunctionContext, String)
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.GetCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string)
+  fullName.vb: AttendanceSystem.Api.Controllers.CoursesController.GetCourse(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String)
+  nameWithType: CoursesController.GetCourse(HttpRequest, FunctionContext, string)
+  nameWithType.vb: CoursesController.GetCourse(HttpRequest, FunctionContext, String)
+- uid: AttendanceSystem.Api.Controllers.CoursesController.GetCourse*
+  name: GetCourse
+  href: api/AttendanceSystem.Api.Controllers.CoursesController.html#AttendanceSystem_Api_Controllers_CoursesController_GetCourse_
+  commentId: Overload:AttendanceSystem.Api.Controllers.CoursesController.GetCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.CoursesController.GetCourse
+  nameWithType: CoursesController.GetCourse
+- uid: AttendanceSystem.Api.Controllers.FeedController
+  name: FeedController
+  href: api/AttendanceSystem.Api.Controllers.FeedController.html
+  commentId: T:AttendanceSystem.Api.Controllers.FeedController
+  fullName: AttendanceSystem.Api.Controllers.FeedController
+  nameWithType: FeedController
+- uid: AttendanceSystem.Api.Controllers.FeedController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SessionsController},AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name: FeedController(ILogger<SessionsController>, AttendanceService, AuthenticationService, UserService)
+  href: api/AttendanceSystem.Api.Controllers.FeedController.html#AttendanceSystem_Api_Controllers_FeedController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_SessionsController__AttendanceSystem_Domain_Services_AttendanceService_AttendanceSystem_Api_AuthenticationService_AttendanceSystem_Domain_Services_UserService_
+  commentId: M:AttendanceSystem.Api.Controllers.FeedController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SessionsController},AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService)
+  name.vb: New(ILogger(Of SessionsController), AttendanceService, AuthenticationService, UserService)
+  fullName: AttendanceSystem.Api.Controllers.FeedController.FeedController(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Controllers.SessionsController>, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  fullName.vb: AttendanceSystem.Api.Controllers.FeedController.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Controllers.SessionsController), AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService)
+  nameWithType: FeedController.FeedController(ILogger<SessionsController>, AttendanceService, AuthenticationService, UserService)
+  nameWithType.vb: FeedController.New(ILogger(Of SessionsController), AttendanceService, AuthenticationService, UserService)
+- uid: AttendanceSystem.Api.Controllers.FeedController.#ctor*
+  name: FeedController
+  href: api/AttendanceSystem.Api.Controllers.FeedController.html#AttendanceSystem_Api_Controllers_FeedController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.FeedController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.FeedController.FeedController
+  fullName.vb: AttendanceSystem.Api.Controllers.FeedController.New
+  nameWithType: FeedController.FeedController
+  nameWithType.vb: FeedController.New
+- uid: AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetUpcomingSessions(HttpRequest, FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.FeedController.html#AttendanceSystem_Api_Controllers_FeedController_GetUpcomingSessions_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: FeedController.GetUpcomingSessions(HttpRequest, FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions*
+  name: GetUpcomingSessions
+  href: api/AttendanceSystem.Api.Controllers.FeedController.html#AttendanceSystem_Api_Controllers_FeedController_GetUpcomingSessions_
+  commentId: Overload:AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.FeedController.GetUpcomingSessions
+  nameWithType: FeedController.GetUpcomingSessions
+- uid: AttendanceSystem.Api.Controllers.SessionsController
+  name: SessionsController
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html
+  commentId: T:AttendanceSystem.Api.Controllers.SessionsController
+  fullName: AttendanceSystem.Api.Controllers.SessionsController
+  nameWithType: SessionsController
+- uid: AttendanceSystem.Api.Controllers.SessionsController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SessionsController},AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService)
+  name: SessionsController(ILogger<SessionsController>, AttendanceService, AuthenticationService, UserService, CourseService)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_SessionsController__AttendanceSystem_Domain_Services_AttendanceService_AttendanceSystem_Api_AuthenticationService_AttendanceSystem_Domain_Services_UserService_AttendanceSystem_Domain_Services_CourseService_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SessionsController},AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Api.AuthenticationService,AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService)
+  name.vb: New(ILogger(Of SessionsController), AttendanceService, AuthenticationService, UserService, CourseService)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.SessionsController(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Controllers.SessionsController>, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Controllers.SessionsController), AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Api.AuthenticationService, AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService)
+  nameWithType: SessionsController.SessionsController(ILogger<SessionsController>, AttendanceService, AuthenticationService, UserService, CourseService)
+  nameWithType.vb: SessionsController.New(ILogger(Of SessionsController), AttendanceService, AuthenticationService, UserService, CourseService)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.#ctor*
+  name: SessionsController
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.SessionsController
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.New
+  nameWithType: SessionsController.SessionsController
+  nameWithType.vb: SessionsController.New
+- uid: AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Api.Contracts.CreateSessionContract)
+  name: CreateNewSession(HttpRequest, FunctionContext, string, CreateSessionContract)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_CreateNewSession_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Api_Contracts_CreateSessionContract_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Api.Contracts.CreateSessionContract)
+  name.vb: CreateNewSession(HttpRequest, FunctionContext, String, CreateSessionContract)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, AttendanceSystem.Api.Contracts.CreateSessionContract)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, AttendanceSystem.Api.Contracts.CreateSessionContract)
+  nameWithType: SessionsController.CreateNewSession(HttpRequest, FunctionContext, string, CreateSessionContract)
+  nameWithType.vb: SessionsController.CreateNewSession(HttpRequest, FunctionContext, String, CreateSessionContract)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession*
+  name: CreateNewSession
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_CreateNewSession_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.CreateNewSession
+  nameWithType: SessionsController.CreateNewSession
+- uid: AttendanceSystem.Api.Controllers.SessionsController.DeleteSession(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid)
+  name: DeleteSession(HttpRequest, FunctionContext, string, Guid)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_DeleteSession_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.DeleteSession(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid)
+  name.vb: DeleteSession(HttpRequest, FunctionContext, String, Guid)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.DeleteSession(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, System.Guid)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.DeleteSession(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, System.Guid)
+  nameWithType: SessionsController.DeleteSession(HttpRequest, FunctionContext, string, Guid)
+  nameWithType.vb: SessionsController.DeleteSession(HttpRequest, FunctionContext, String, Guid)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.DeleteSession*
+  name: DeleteSession
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_DeleteSession_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.DeleteSession
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.DeleteSession
+  nameWithType: SessionsController.DeleteSession
+- uid: AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name: GetAllSessions(HttpRequest, FunctionContext, string)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_GetAllSessions_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name.vb: GetAllSessions(HttpRequest, FunctionContext, String)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String)
+  nameWithType: SessionsController.GetAllSessions(HttpRequest, FunctionContext, string)
+  nameWithType.vb: SessionsController.GetAllSessions(HttpRequest, FunctionContext, String)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions*
+  name: GetAllSessions
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_GetAllSessions_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.GetAllSessions
+  nameWithType: SessionsController.GetAllSessions
+- uid: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid)
+  name: GetSessionInfo(HttpRequest, FunctionContext, string, Guid)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_GetSessionInfo_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid)
+  name.vb: GetSessionInfo(HttpRequest, FunctionContext, String, Guid)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, System.Guid)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, System.Guid)
+  nameWithType: SessionsController.GetSessionInfo(HttpRequest, FunctionContext, string, Guid)
+  nameWithType.vb: SessionsController.GetSessionInfo(HttpRequest, FunctionContext, String, Guid)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo*
+  name: GetSessionInfo
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_GetSessionInfo_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo
+  nameWithType: SessionsController.GetSessionInfo
+- uid: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
+  name: SetAttendance(HttpRequest, FunctionContext, string, Guid, UpdateAttendanceContract)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_AttendanceSystem_Api_Contracts_UpdateAttendanceContract_
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
+  name.vb: SetAttendance(HttpRequest, FunctionContext, String, Guid, UpdateAttendanceContract)
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, System.Guid, AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, System.Guid, AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
+  nameWithType: SessionsController.SetAttendance(HttpRequest, FunctionContext, string, Guid, UpdateAttendanceContract)
+  nameWithType.vb: SessionsController.SetAttendance(HttpRequest, FunctionContext, String, Guid, UpdateAttendanceContract)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance*
+  name: SetAttendance
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SessionsController.SetAttendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance
+  nameWithType: SessionsController.SetAttendance
+- uid: AttendanceSystem.Api.Controllers.SwaggerController
+  name: SwaggerController
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html
+  commentId: T:AttendanceSystem.Api.Controllers.SwaggerController
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController
+  nameWithType: SwaggerController
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SwaggerController},AzureFunctions.Extensions.Swashbuckle.ISwashBuckleClient)
+  name: SwaggerController(ILogger<SwaggerController>, ISwashBuckleClient)
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_SwaggerController__AzureFunctions_Extensions_Swashbuckle_ISwashBuckleClient_
+  commentId: M:AttendanceSystem.Api.Controllers.SwaggerController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.SwaggerController},AzureFunctions.Extensions.Swashbuckle.ISwashBuckleClient)
+  name.vb: New(ILogger(Of SwaggerController), ISwashBuckleClient)
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerController(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Controllers.SwaggerController>, AzureFunctions.Extensions.Swashbuckle.ISwashBuckleClient)
+  fullName.vb: AttendanceSystem.Api.Controllers.SwaggerController.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Controllers.SwaggerController), AzureFunctions.Extensions.Swashbuckle.ISwashBuckleClient)
+  nameWithType: SwaggerController.SwaggerController(ILogger<SwaggerController>, ISwashBuckleClient)
+  nameWithType.vb: SwaggerController.New(ILogger(Of SwaggerController), ISwashBuckleClient)
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.#ctor*
+  name: SwaggerController
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SwaggerController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerController
+  fullName.vb: AttendanceSystem.Api.Controllers.SwaggerController.New
+  nameWithType: SwaggerController.SwaggerController
+  nameWithType.vb: SwaggerController.New
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  name: SwaggerJson(HttpRequestData)
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerJson_Microsoft_Azure_Functions_Worker_Http_HttpRequestData_
+  commentId: M:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  nameWithType: SwaggerController.SwaggerJson(HttpRequestData)
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson*
+  name: SwaggerJson
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerJson_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerJson
+  nameWithType: SwaggerController.SwaggerJson
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  name: SwaggerOAuth2Redirect(HttpRequestData)
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerOAuth2Redirect_Microsoft_Azure_Functions_Worker_Http_HttpRequestData_
+  commentId: M:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  nameWithType: SwaggerController.SwaggerOAuth2Redirect(HttpRequestData)
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect*
+  name: SwaggerOAuth2Redirect
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerOAuth2Redirect_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerOAuth2Redirect
+  nameWithType: SwaggerController.SwaggerOAuth2Redirect
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  name: SwaggerUi(HttpRequestData)
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerUi_Microsoft_Azure_Functions_Worker_Http_HttpRequestData_
+  commentId: M:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi(Microsoft.Azure.Functions.Worker.Http.HttpRequestData)
+  nameWithType: SwaggerController.SwaggerUi(HttpRequestData)
+- uid: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi*
+  name: SwaggerUi
+  href: api/AttendanceSystem.Api.Controllers.SwaggerController.html#AttendanceSystem_Api_Controllers_SwaggerController_SwaggerUi_
+  commentId: Overload:AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.SwaggerController.SwaggerUi
+  nameWithType: SwaggerController.SwaggerUi
+- uid: AttendanceSystem.Api.Controllers.UsersController
+  name: UsersController
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html
+  commentId: T:AttendanceSystem.Api.Controllers.UsersController
+  fullName: AttendanceSystem.Api.Controllers.UsersController
+  nameWithType: UsersController
+- uid: AttendanceSystem.Api.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.UsersController},AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Api.AuthenticationService)
+  name: UsersController(ILogger<UsersController>, UserService, AuthenticationService)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Controllers_UsersController__AttendanceSystem_Domain_Services_UserService_AttendanceSystem_Api_AuthenticationService_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Controllers.UsersController},AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Api.AuthenticationService)
+  name.vb: New(ILogger(Of UsersController), UserService, AuthenticationService)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.UsersController(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Controllers.UsersController>, AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Api.AuthenticationService)
+  fullName.vb: AttendanceSystem.Api.Controllers.UsersController.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Controllers.UsersController), AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Api.AuthenticationService)
+  nameWithType: UsersController.UsersController(ILogger<UsersController>, UserService, AuthenticationService)
+  nameWithType.vb: UsersController.New(ILogger(Of UsersController), UserService, AuthenticationService)
+- uid: AttendanceSystem.Api.Controllers.UsersController.#ctor*
+  name: UsersController
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController__ctor_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Controllers.UsersController.UsersController
+  fullName.vb: AttendanceSystem.Api.Controllers.UsersController.New
+  nameWithType: UsersController.UsersController
+  nameWithType.vb: UsersController.New
+- uid: AttendanceSystem.Api.Controllers.UsersController.ConfigureUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  name: ConfigureUser(HttpRequest, FunctionContext, string, UserAlteration)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_ConfigureUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_AttendanceSystem_Domain_Services_Alterations_UserAlteration_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.ConfigureUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  name.vb: ConfigureUser(HttpRequest, FunctionContext, String, UserAlteration)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.ConfigureUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  fullName.vb: AttendanceSystem.Api.Controllers.UsersController.ConfigureUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  nameWithType: UsersController.ConfigureUser(HttpRequest, FunctionContext, string, UserAlteration)
+  nameWithType.vb: UsersController.ConfigureUser(HttpRequest, FunctionContext, String, UserAlteration)
+- uid: AttendanceSystem.Api.Controllers.UsersController.ConfigureUser*
+  name: ConfigureUser
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_ConfigureUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.ConfigureUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.UsersController.ConfigureUser
+  nameWithType: UsersController.ConfigureUser
+- uid: AttendanceSystem.Api.Controllers.UsersController.CreateUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,AttendanceSystem.Api.Contracts.CreateUserContract)
+  name: CreateUser(HttpRequest, FunctionContext, CreateUserContract)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_CreateUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_AttendanceSystem_Api_Contracts_CreateUserContract_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.CreateUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,AttendanceSystem.Api.Contracts.CreateUserContract)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.CreateUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, AttendanceSystem.Api.Contracts.CreateUserContract)
+  nameWithType: UsersController.CreateUser(HttpRequest, FunctionContext, CreateUserContract)
+- uid: AttendanceSystem.Api.Controllers.UsersController.CreateUser*
+  name: CreateUser
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_CreateUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.CreateUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.UsersController.CreateUser
+  nameWithType: UsersController.CreateUser
+- uid: AttendanceSystem.Api.Controllers.UsersController.DeleteUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name: DeleteUser(HttpRequest, FunctionContext, string)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_DeleteUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.DeleteUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name.vb: DeleteUser(HttpRequest, FunctionContext, String)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.DeleteUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string)
+  fullName.vb: AttendanceSystem.Api.Controllers.UsersController.DeleteUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String)
+  nameWithType: UsersController.DeleteUser(HttpRequest, FunctionContext, string)
+  nameWithType.vb: UsersController.DeleteUser(HttpRequest, FunctionContext, String)
+- uid: AttendanceSystem.Api.Controllers.UsersController.DeleteUser*
+  name: DeleteUser
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_DeleteUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.DeleteUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.UsersController.DeleteUser
+  nameWithType: UsersController.DeleteUser
+- uid: AttendanceSystem.Api.Controllers.UsersController.GetAllUsers(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  name: GetAllUsers(HttpRequest, FunctionContext)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_GetAllUsers_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.GetAllUsers(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.GetAllUsers(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext)
+  nameWithType: UsersController.GetAllUsers(HttpRequest, FunctionContext)
+- uid: AttendanceSystem.Api.Controllers.UsersController.GetAllUsers*
+  name: GetAllUsers
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_GetAllUsers_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.GetAllUsers
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.UsersController.GetAllUsers
+  nameWithType: UsersController.GetAllUsers
+- uid: AttendanceSystem.Api.Controllers.UsersController.GetUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name: GetUser(HttpRequest, FunctionContext, string)
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_GetUser_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_
+  commentId: M:AttendanceSystem.Api.Controllers.UsersController.GetUser(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String)
+  name.vb: GetUser(HttpRequest, FunctionContext, String)
+  fullName: AttendanceSystem.Api.Controllers.UsersController.GetUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string)
+  fullName.vb: AttendanceSystem.Api.Controllers.UsersController.GetUser(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String)
+  nameWithType: UsersController.GetUser(HttpRequest, FunctionContext, string)
+  nameWithType.vb: UsersController.GetUser(HttpRequest, FunctionContext, String)
+- uid: AttendanceSystem.Api.Controllers.UsersController.GetUser*
+  name: GetUser
+  href: api/AttendanceSystem.Api.Controllers.UsersController.html#AttendanceSystem_Api_Controllers_UsersController_GetUser_
+  commentId: Overload:AttendanceSystem.Api.Controllers.UsersController.GetUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Controllers.UsersController.GetUser
+  nameWithType: UsersController.GetUser
+- uid: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions
+  name: FunctionExecutorHostBuilderExtensions
+  href: api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.html
+  commentId: T:AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions
+  fullName: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions
+  nameWithType: FunctionExecutorHostBuilderExtensions
+- uid: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor(Microsoft.Extensions.Hosting.IHostBuilder)
+  name: ConfigureGeneratedFunctionExecutor(IHostBuilder)
+  href: api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.html#AttendanceSystem_Api_FunctionExecutorHostBuilderExtensions_ConfigureGeneratedFunctionExecutor_Microsoft_Extensions_Hosting_IHostBuilder_
+  commentId: M:AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor(Microsoft.Extensions.Hosting.IHostBuilder)
+  fullName: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor(Microsoft.Extensions.Hosting.IHostBuilder)
+  nameWithType: FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor(IHostBuilder)
+- uid: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor*
+  name: ConfigureGeneratedFunctionExecutor
+  href: api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.html#AttendanceSystem_Api_FunctionExecutorHostBuilderExtensions_ConfigureGeneratedFunctionExecutor_
+  commentId: Overload:AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor
+  nameWithType: FunctionExecutorHostBuilderExtensions.ConfigureGeneratedFunctionExecutor
+- uid: AttendanceSystem.Api.Middleware
+  name: AttendanceSystem.Api.Middleware
+  href: api/AttendanceSystem.Api.Middleware.html
+  commentId: N:AttendanceSystem.Api.Middleware
+  fullName: AttendanceSystem.Api.Middleware
+  nameWithType: AttendanceSystem.Api.Middleware
+- uid: AttendanceSystem.Api.Middleware.AuthenticationHandler
+  name: AuthenticationHandler
+  href: api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html
+  commentId: T:AttendanceSystem.Api.Middleware.AuthenticationHandler
+  fullName: AttendanceSystem.Api.Middleware.AuthenticationHandler
+  nameWithType: AuthenticationHandler
+- uid: AttendanceSystem.Api.Middleware.AuthenticationHandler.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Middleware.AuthenticationHandler},Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  name: AuthenticationHandler(ILogger<AuthenticationHandler>, JsonWebTokenHandler)
+  href: api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html#AttendanceSystem_Api_Middleware_AuthenticationHandler__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Middleware_AuthenticationHandler__Microsoft_IdentityModel_JsonWebTokens_JsonWebTokenHandler_
+  commentId: M:AttendanceSystem.Api.Middleware.AuthenticationHandler.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Middleware.AuthenticationHandler},Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  name.vb: New(ILogger(Of AuthenticationHandler), JsonWebTokenHandler)
+  fullName: AttendanceSystem.Api.Middleware.AuthenticationHandler.AuthenticationHandler(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Middleware.AuthenticationHandler>, Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  fullName.vb: AttendanceSystem.Api.Middleware.AuthenticationHandler.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Middleware.AuthenticationHandler), Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler)
+  nameWithType: AuthenticationHandler.AuthenticationHandler(ILogger<AuthenticationHandler>, JsonWebTokenHandler)
+  nameWithType.vb: AuthenticationHandler.New(ILogger(Of AuthenticationHandler), JsonWebTokenHandler)
+- uid: AttendanceSystem.Api.Middleware.AuthenticationHandler.#ctor*
+  name: AuthenticationHandler
+  href: api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html#AttendanceSystem_Api_Middleware_AuthenticationHandler__ctor_
+  commentId: Overload:AttendanceSystem.Api.Middleware.AuthenticationHandler.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Middleware.AuthenticationHandler.AuthenticationHandler
+  fullName.vb: AttendanceSystem.Api.Middleware.AuthenticationHandler.New
+  nameWithType: AuthenticationHandler.AuthenticationHandler
+  nameWithType.vb: AuthenticationHandler.New
+- uid: AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext,Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  name: Invoke(FunctionContext, FunctionExecutionDelegate)
+  href: api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html#AttendanceSystem_Api_Middleware_AuthenticationHandler_Invoke_Microsoft_Azure_Functions_Worker_FunctionContext_Microsoft_Azure_Functions_Worker_Middleware_FunctionExecutionDelegate_
+  commentId: M:AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext,Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  fullName: AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext, Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  nameWithType: AuthenticationHandler.Invoke(FunctionContext, FunctionExecutionDelegate)
+- uid: AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke*
+  name: Invoke
+  href: api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html#AttendanceSystem_Api_Middleware_AuthenticationHandler_Invoke_
+  commentId: Overload:AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Middleware.AuthenticationHandler.Invoke
+  nameWithType: AuthenticationHandler.Invoke
+- uid: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler
+  name: ExceptionToErrorCodeHandler
+  href: api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html
+  commentId: T:AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler
+  fullName: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler
+  nameWithType: ExceptionToErrorCodeHandler
+- uid: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler})
+  name: ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler>)
+  href: api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html#AttendanceSystem_Api_Middleware_ExceptionToErrorCodeHandler__ctor_Microsoft_Extensions_Logging_ILogger_AttendanceSystem_Api_Middleware_ExceptionToErrorCodeHandler__
+  commentId: M:AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.#ctor(Microsoft.Extensions.Logging.ILogger{AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler})
+  name.vb: New(ILogger(Of ExceptionToErrorCodeHandler))
+  fullName: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.ExceptionToErrorCodeHandler(Microsoft.Extensions.Logging.ILogger<AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler>)
+  fullName.vb: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.New(Microsoft.Extensions.Logging.ILogger(Of AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler))
+  nameWithType: ExceptionToErrorCodeHandler.ExceptionToErrorCodeHandler(ILogger<ExceptionToErrorCodeHandler>)
+  nameWithType.vb: ExceptionToErrorCodeHandler.New(ILogger(Of ExceptionToErrorCodeHandler))
+- uid: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.#ctor*
+  name: ExceptionToErrorCodeHandler
+  href: api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html#AttendanceSystem_Api_Middleware_ExceptionToErrorCodeHandler__ctor_
+  commentId: Overload:AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.ExceptionToErrorCodeHandler
+  fullName.vb: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.New
+  nameWithType: ExceptionToErrorCodeHandler.ExceptionToErrorCodeHandler
+  nameWithType.vb: ExceptionToErrorCodeHandler.New
+- uid: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext,Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  name: Invoke(FunctionContext, FunctionExecutionDelegate)
+  href: api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html#AttendanceSystem_Api_Middleware_ExceptionToErrorCodeHandler_Invoke_Microsoft_Azure_Functions_Worker_FunctionContext_Microsoft_Azure_Functions_Worker_Middleware_FunctionExecutionDelegate_
+  commentId: M:AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext,Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  fullName: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke(Microsoft.Azure.Functions.Worker.FunctionContext, Microsoft.Azure.Functions.Worker.Middleware.FunctionExecutionDelegate)
+  nameWithType: ExceptionToErrorCodeHandler.Invoke(FunctionContext, FunctionExecutionDelegate)
+- uid: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke*
+  name: Invoke
+  href: api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html#AttendanceSystem_Api_Middleware_ExceptionToErrorCodeHandler_Invoke_
+  commentId: Overload:AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.Invoke
+  nameWithType: ExceptionToErrorCodeHandler.Invoke
+- uid: AttendanceSystem.Api.Roles
+  name: Roles
+  href: api/AttendanceSystem.Api.Roles.html
+  commentId: T:AttendanceSystem.Api.Roles
+  fullName: AttendanceSystem.Api.Roles
+  nameWithType: Roles
+- uid: AttendanceSystem.Api.Roles.Admin
+  name: Admin
+  href: api/AttendanceSystem.Api.Roles.html#AttendanceSystem_Api_Roles_Admin
+  commentId: F:AttendanceSystem.Api.Roles.Admin
+  fullName: AttendanceSystem.Api.Roles.Admin
+  nameWithType: Roles.Admin
+- uid: AttendanceSystem.Api.Roles.AllowAll
+  name: AllowAll
+  href: api/AttendanceSystem.Api.Roles.html#AttendanceSystem_Api_Roles_AllowAll
+  commentId: F:AttendanceSystem.Api.Roles.AllowAll
+  fullName: AttendanceSystem.Api.Roles.AllowAll
+  nameWithType: Roles.AllowAll
+- uid: AttendanceSystem.Api.Roles.AllowElevated
+  name: AllowElevated
+  href: api/AttendanceSystem.Api.Roles.html#AttendanceSystem_Api_Roles_AllowElevated
+  commentId: F:AttendanceSystem.Api.Roles.AllowElevated
+  fullName: AttendanceSystem.Api.Roles.AllowElevated
+  nameWithType: Roles.AllowElevated
+- uid: AttendanceSystem.Api.Roles.Student
+  name: Student
+  href: api/AttendanceSystem.Api.Roles.html#AttendanceSystem_Api_Roles_Student
+  commentId: F:AttendanceSystem.Api.Roles.Student
+  fullName: AttendanceSystem.Api.Roles.Student
+  nameWithType: Roles.Student
+- uid: AttendanceSystem.Api.Roles.Teacher
+  name: Teacher
+  href: api/AttendanceSystem.Api.Roles.html#AttendanceSystem_Api_Roles_Teacher
+  commentId: F:AttendanceSystem.Api.Roles.Teacher
+  fullName: AttendanceSystem.Api.Roles.Teacher
+  nameWithType: Roles.Teacher
+- uid: AttendanceSystem.Api.Services
+  name: Services
+  href: api/AttendanceSystem.Api.Services.html
+  commentId: T:AttendanceSystem.Api.Services
+  fullName: AttendanceSystem.Api.Services
+  nameWithType: Services
+- uid: AttendanceSystem.Api.Services.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddServices(IServiceCollection)
+  href: api/AttendanceSystem.Api.Services.html#AttendanceSystem_Api_Services_AddServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:AttendanceSystem.Api.Services.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: AttendanceSystem.Api.Services.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: Services.AddServices(IServiceCollection)
+- uid: AttendanceSystem.Api.Services.AddServices*
+  name: AddServices
+  href: api/AttendanceSystem.Api.Services.html#AttendanceSystem_Api_Services_AddServices_
+  commentId: Overload:AttendanceSystem.Api.Services.AddServices
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Services.AddServices
+  nameWithType: Services.AddServices
+- uid: AttendanceSystem.Api.SwaggerSetup
+  name: SwaggerSetup
+  href: api/AttendanceSystem.Api.SwaggerSetup.html
+  commentId: T:AttendanceSystem.Api.SwaggerSetup
+  fullName: AttendanceSystem.Api.SwaggerSetup
+  nameWithType: SwaggerSetup
+- uid: AttendanceSystem.Api.SwaggerSetup.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddSwagger(IServiceCollection)
+  href: api/AttendanceSystem.Api.SwaggerSetup.html#AttendanceSystem_Api_SwaggerSetup_AddSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:AttendanceSystem.Api.SwaggerSetup.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: AttendanceSystem.Api.SwaggerSetup.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: SwaggerSetup.AddSwagger(IServiceCollection)
+- uid: AttendanceSystem.Api.SwaggerSetup.AddSwagger*
+  name: AddSwagger
+  href: api/AttendanceSystem.Api.SwaggerSetup.html#AttendanceSystem_Api_SwaggerSetup_AddSwagger_
+  commentId: Overload:AttendanceSystem.Api.SwaggerSetup.AddSwagger
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.SwaggerSetup.AddSwagger
+  nameWithType: SwaggerSetup.AddSwagger
+- uid: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension
+  name: WorkerHostBuilderFunctionMetadataProviderExtension
+  href: api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.html
+  commentId: T:AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension
+  fullName: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension
+  nameWithType: WorkerHostBuilderFunctionMetadataProviderExtension
+- uid: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider(Microsoft.Extensions.Hosting.IHostBuilder)
+  name: ConfigureGeneratedFunctionMetadataProvider(IHostBuilder)
+  href: api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.html#AttendanceSystem_Api_WorkerHostBuilderFunctionMetadataProviderExtension_ConfigureGeneratedFunctionMetadataProvider_Microsoft_Extensions_Hosting_IHostBuilder_
+  commentId: M:AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider(Microsoft.Extensions.Hosting.IHostBuilder)
+  fullName: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider(Microsoft.Extensions.Hosting.IHostBuilder)
+  nameWithType: WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider(IHostBuilder)
+- uid: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider*
+  name: ConfigureGeneratedFunctionMetadataProvider
+  href: api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.html#AttendanceSystem_Api_WorkerHostBuilderFunctionMetadataProviderExtension_ConfigureGeneratedFunctionMetadataProvider_
+  commentId: Overload:AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider
+  nameWithType: WorkerHostBuilderFunctionMetadataProviderExtension.ConfigureGeneratedFunctionMetadataProvider
+- uid: AttendanceSystem.Data
+  name: AttendanceSystem.Data
+  href: api/AttendanceSystem.Data.html
+  commentId: N:AttendanceSystem.Data
+  fullName: AttendanceSystem.Data
+  nameWithType: AttendanceSystem.Data
+- uid: AttendanceSystem.Data.CoursesContext
+  name: CoursesContext
+  href: api/AttendanceSystem.Data.CoursesContext.html
+  commentId: T:AttendanceSystem.Data.CoursesContext
+  fullName: AttendanceSystem.Data.CoursesContext
+  nameWithType: CoursesContext
+- uid: AttendanceSystem.Data.CoursesContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{AttendanceSystem.Data.CoursesContext})
+  name: CoursesContext(DbContextOptions<CoursesContext>)
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_AttendanceSystem_Data_CoursesContext__
+  commentId: M:AttendanceSystem.Data.CoursesContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{AttendanceSystem.Data.CoursesContext})
+  name.vb: New(DbContextOptions(Of CoursesContext))
+  fullName: AttendanceSystem.Data.CoursesContext.CoursesContext(Microsoft.EntityFrameworkCore.DbContextOptions<AttendanceSystem.Data.CoursesContext>)
+  fullName.vb: AttendanceSystem.Data.CoursesContext.New(Microsoft.EntityFrameworkCore.DbContextOptions(Of AttendanceSystem.Data.CoursesContext))
+  nameWithType: CoursesContext.CoursesContext(DbContextOptions<CoursesContext>)
+  nameWithType.vb: CoursesContext.New(DbContextOptions(Of CoursesContext))
+- uid: AttendanceSystem.Data.CoursesContext.#ctor*
+  name: CoursesContext
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext__ctor_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Data.CoursesContext.CoursesContext
+  fullName.vb: AttendanceSystem.Data.CoursesContext.New
+  nameWithType: CoursesContext.CoursesContext
+  nameWithType.vb: CoursesContext.New
+- uid: AttendanceSystem.Data.CoursesContext.Courses
+  name: Courses
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Courses
+  commentId: P:AttendanceSystem.Data.CoursesContext.Courses
+  fullName: AttendanceSystem.Data.CoursesContext.Courses
+  nameWithType: CoursesContext.Courses
+- uid: AttendanceSystem.Data.CoursesContext.Courses*
+  name: Courses
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Courses_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.Courses
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.Courses
+  nameWithType: CoursesContext.Courses
+- uid: AttendanceSystem.Data.CoursesContext.Departments
+  name: Departments
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Departments
+  commentId: P:AttendanceSystem.Data.CoursesContext.Departments
+  fullName: AttendanceSystem.Data.CoursesContext.Departments
+  nameWithType: CoursesContext.Departments
+- uid: AttendanceSystem.Data.CoursesContext.Departments*
+  name: Departments
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Departments_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.Departments
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.Departments
+  nameWithType: CoursesContext.Departments
+- uid: AttendanceSystem.Data.CoursesContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: OnModelCreating(ModelBuilder)
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:AttendanceSystem.Data.CoursesContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: AttendanceSystem.Data.CoursesContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: CoursesContext.OnModelCreating(ModelBuilder)
+- uid: AttendanceSystem.Data.CoursesContext.OnModelCreating*
+  name: OnModelCreating
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_OnModelCreating_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.OnModelCreating
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.OnModelCreating
+  nameWithType: CoursesContext.OnModelCreating
+- uid: AttendanceSystem.Data.CoursesContext.Sessions
+  name: Sessions
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Sessions
+  commentId: P:AttendanceSystem.Data.CoursesContext.Sessions
+  fullName: AttendanceSystem.Data.CoursesContext.Sessions
+  nameWithType: CoursesContext.Sessions
+- uid: AttendanceSystem.Data.CoursesContext.Sessions*
+  name: Sessions
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Sessions_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.Sessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.Sessions
+  nameWithType: CoursesContext.Sessions
+- uid: AttendanceSystem.Data.CoursesContext.Students
+  name: Students
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Students
+  commentId: P:AttendanceSystem.Data.CoursesContext.Students
+  fullName: AttendanceSystem.Data.CoursesContext.Students
+  nameWithType: CoursesContext.Students
+- uid: AttendanceSystem.Data.CoursesContext.Students*
+  name: Students
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Students_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.Students
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.Students
+  nameWithType: CoursesContext.Students
+- uid: AttendanceSystem.Data.CoursesContext.Users
+  name: Users
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Users
+  commentId: P:AttendanceSystem.Data.CoursesContext.Users
+  fullName: AttendanceSystem.Data.CoursesContext.Users
+  nameWithType: CoursesContext.Users
+- uid: AttendanceSystem.Data.CoursesContext.Users*
+  name: Users
+  href: api/AttendanceSystem.Data.CoursesContext.html#AttendanceSystem_Data_CoursesContext_Users_
+  commentId: Overload:AttendanceSystem.Data.CoursesContext.Users
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.CoursesContext.Users
+  nameWithType: CoursesContext.Users
+- uid: AttendanceSystem.Data.Migrations
+  name: AttendanceSystem.Data.Migrations
+  href: api/AttendanceSystem.Data.Migrations.html
+  commentId: N:AttendanceSystem.Data.Migrations
+  fullName: AttendanceSystem.Data.Migrations
+  nameWithType: AttendanceSystem.Data.Migrations
+- uid: AttendanceSystem.Data.Migrations.Initial
+  name: Initial
+  href: api/AttendanceSystem.Data.Migrations.Initial.html
+  commentId: T:AttendanceSystem.Data.Migrations.Initial
+  fullName: AttendanceSystem.Data.Migrations.Initial
+  nameWithType: Initial
+- uid: AttendanceSystem.Data.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:AttendanceSystem.Data.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: AttendanceSystem.Data.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: Initial.BuildTargetModel(ModelBuilder)
+- uid: AttendanceSystem.Data.Migrations.Initial.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_BuildTargetModel_
+  commentId: Overload:AttendanceSystem.Data.Migrations.Initial.BuildTargetModel
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.Migrations.Initial.BuildTargetModel
+  nameWithType: Initial.BuildTargetModel
+- uid: AttendanceSystem.Data.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:AttendanceSystem.Data.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: AttendanceSystem.Data.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: Initial.Down(MigrationBuilder)
+- uid: AttendanceSystem.Data.Migrations.Initial.Down*
+  name: Down
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_Down_
+  commentId: Overload:AttendanceSystem.Data.Migrations.Initial.Down
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.Migrations.Initial.Down
+  nameWithType: Initial.Down
+- uid: AttendanceSystem.Data.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:AttendanceSystem.Data.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: AttendanceSystem.Data.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: Initial.Up(MigrationBuilder)
+- uid: AttendanceSystem.Data.Migrations.Initial.Up*
+  name: Up
+  href: api/AttendanceSystem.Data.Migrations.Initial.html#AttendanceSystem_Data_Migrations_Initial_Up_
+  commentId: Overload:AttendanceSystem.Data.Migrations.Initial.Up
+  isSpec: "True"
+  fullName: AttendanceSystem.Data.Migrations.Initial.Up
+  nameWithType: Initial.Up
+- uid: AttendanceSystem.Domain.Model
+  name: AttendanceSystem.Domain.Model
+  href: api/AttendanceSystem.Domain.Model.html
+  commentId: N:AttendanceSystem.Domain.Model
+  fullName: AttendanceSystem.Domain.Model
+  nameWithType: AttendanceSystem.Domain.Model
+- uid: AttendanceSystem.Domain.Model.Administrator
+  name: Administrator
+  href: api/AttendanceSystem.Domain.Model.Administrator.html
+  commentId: T:AttendanceSystem.Domain.Model.Administrator
+  fullName: AttendanceSystem.Domain.Model.Administrator
+  nameWithType: Administrator
+- uid: AttendanceSystem.Domain.Model.AttendanceKind
+  name: AttendanceKind
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html
+  commentId: T:AttendanceSystem.Domain.Model.AttendanceKind
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind
+  nameWithType: AttendanceKind
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.Absent
+  name: Absent
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_Absent
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.Absent
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.Absent
+  nameWithType: AttendanceKind.Absent
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.Late
+  name: Late
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_Late
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.Late
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.Late
+  nameWithType: AttendanceKind.Late
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.LeftEarly
+  name: LeftEarly
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_LeftEarly
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.LeftEarly
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.LeftEarly
+  nameWithType: AttendanceKind.LeftEarly
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.Present
+  name: Present
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_Present
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.Present
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.Present
+  nameWithType: AttendanceKind.Present
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.Sick
+  name: Sick
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_Sick
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.Sick
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.Sick
+  nameWithType: AttendanceKind.Sick
+- uid: AttendanceSystem.Domain.Model.AttendanceKind.Unknown
+  name: Unknown
+  href: api/AttendanceSystem.Domain.Model.AttendanceKind.html#AttendanceSystem_Domain_Model_AttendanceKind_Unknown
+  commentId: F:AttendanceSystem.Domain.Model.AttendanceKind.Unknown
+  fullName: AttendanceSystem.Domain.Model.AttendanceKind.Unknown
+  nameWithType: AttendanceKind.Unknown
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord
+  name: AttendanceRecord
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html
+  commentId: T:AttendanceSystem.Domain.Model.AttendanceRecord
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord
+  nameWithType: AttendanceRecord
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.SessionId
+  name: SessionId
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_SessionId
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceRecord.SessionId
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.SessionId
+  nameWithType: AttendanceRecord.SessionId
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.SessionId*
+  name: SessionId
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_SessionId_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceRecord.SessionId
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.SessionId
+  nameWithType: AttendanceRecord.SessionId
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.StudentId
+  name: StudentId
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_StudentId
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceRecord.StudentId
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.StudentId
+  nameWithType: AttendanceRecord.StudentId
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.StudentId*
+  name: StudentId
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_StudentId_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceRecord.StudentId
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.StudentId
+  nameWithType: AttendanceRecord.StudentId
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission
+  name: StudentSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_StudentSubmission
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission
+  nameWithType: AttendanceRecord.StudentSubmission
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission*
+  name: StudentSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_StudentSubmission_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.StudentSubmission
+  nameWithType: AttendanceRecord.StudentSubmission
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission
+  name: TeacherSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_TeacherSubmission
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission
+  nameWithType: AttendanceRecord.TeacherSubmission
+- uid: AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission*
+  name: TeacherSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceRecord.html#AttendanceSystem_Domain_Model_AttendanceRecord_TeacherSubmission_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceRecord.TeacherSubmission
+  nameWithType: AttendanceRecord.TeacherSubmission
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission
+  name: AttendanceSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html
+  commentId: T:AttendanceSystem.Domain.Model.AttendanceSubmission
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission
+  nameWithType: AttendanceSubmission
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.#ctor
+  name: AttendanceSubmission()
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission__ctor
+  commentId: M:AttendanceSystem.Domain.Model.AttendanceSubmission.#ctor
+  name.vb: New()
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.AttendanceSubmission()
+  fullName.vb: AttendanceSystem.Domain.Model.AttendanceSubmission.New()
+  nameWithType: AttendanceSubmission.AttendanceSubmission()
+  nameWithType.vb: AttendanceSubmission.New()
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.#ctor*
+  name: AttendanceSubmission
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceSubmission.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.AttendanceSubmission
+  fullName.vb: AttendanceSystem.Domain.Model.AttendanceSubmission.New
+  nameWithType: AttendanceSubmission.AttendanceSubmission
+  nameWithType.vb: AttendanceSubmission.New
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance
+  name: Attendance
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_Attendance
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance
+  nameWithType: AttendanceSubmission.Attendance
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance*
+  name: Attendance
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_Attendance_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.Attendance
+  nameWithType: AttendanceSubmission.Attendance
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted
+  name: IsSubmitted
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_IsSubmitted
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted
+  nameWithType: AttendanceSubmission.IsSubmitted
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted*
+  name: IsSubmitted
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_IsSubmitted_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.IsSubmitted
+  nameWithType: AttendanceSubmission.IsSubmitted
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted
+  name: Submitted
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_Submitted
+  commentId: P:AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted
+  nameWithType: AttendanceSubmission.Submitted
+- uid: AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted*
+  name: Submitted
+  href: api/AttendanceSystem.Domain.Model.AttendanceSubmission.html#AttendanceSystem_Domain_Model_AttendanceSubmission_Submitted_
+  commentId: Overload:AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.AttendanceSubmission.Submitted
+  nameWithType: AttendanceSubmission.Submitted
+- uid: AttendanceSystem.Domain.Model.Course
+  name: Course
+  href: api/AttendanceSystem.Domain.Model.Course.html
+  commentId: T:AttendanceSystem.Domain.Model.Course
+  fullName: AttendanceSystem.Domain.Model.Course
+  nameWithType: Course
+- uid: AttendanceSystem.Domain.Model.Course.#ctor(System.String,System.String,System.String,System.Collections.Generic.List{System.String})
+  name: Course(string, string, string, List<string>)
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course__ctor_System_String_System_String_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:AttendanceSystem.Domain.Model.Course.#ctor(System.String,System.String,System.String,System.Collections.Generic.List{System.String})
+  name.vb: New(String, String, String, List(Of String))
+  fullName: AttendanceSystem.Domain.Model.Course.Course(string, string, string, System.Collections.Generic.List<string>)
+  fullName.vb: AttendanceSystem.Domain.Model.Course.New(String, String, String, System.Collections.Generic.List(Of String))
+  nameWithType: Course.Course(string, string, string, List<string>)
+  nameWithType.vb: Course.New(String, String, String, List(Of String))
+- uid: AttendanceSystem.Domain.Model.Course.#ctor*
+  name: Course
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Model.Course.Course
+  fullName.vb: AttendanceSystem.Domain.Model.Course.New
+  nameWithType: Course.Course
+  nameWithType.vb: Course.New
+- uid: AttendanceSystem.Domain.Model.Course.Department
+  name: Department
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Department
+  commentId: P:AttendanceSystem.Domain.Model.Course.Department
+  fullName: AttendanceSystem.Domain.Model.Course.Department
+  nameWithType: Course.Department
+- uid: AttendanceSystem.Domain.Model.Course.Department*
+  name: Department
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Department_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Department
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Department
+  nameWithType: Course.Department
+- uid: AttendanceSystem.Domain.Model.Course.Id
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Id
+  commentId: P:AttendanceSystem.Domain.Model.Course.Id
+  fullName: AttendanceSystem.Domain.Model.Course.Id
+  nameWithType: Course.Id
+- uid: AttendanceSystem.Domain.Model.Course.Id*
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Id_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Id
+  nameWithType: Course.Id
+- uid: AttendanceSystem.Domain.Model.Course.Name
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Name
+  commentId: P:AttendanceSystem.Domain.Model.Course.Name
+  fullName: AttendanceSystem.Domain.Model.Course.Name
+  nameWithType: Course.Name
+- uid: AttendanceSystem.Domain.Model.Course.Name*
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Name_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Name
+  nameWithType: Course.Name
+- uid: AttendanceSystem.Domain.Model.Course.Sessions
+  name: Sessions
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Sessions
+  commentId: P:AttendanceSystem.Domain.Model.Course.Sessions
+  fullName: AttendanceSystem.Domain.Model.Course.Sessions
+  nameWithType: Course.Sessions
+- uid: AttendanceSystem.Domain.Model.Course.Sessions*
+  name: Sessions
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Sessions_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Sessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Sessions
+  nameWithType: Course.Sessions
+- uid: AttendanceSystem.Domain.Model.Course.Students
+  name: Students
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Students
+  commentId: P:AttendanceSystem.Domain.Model.Course.Students
+  fullName: AttendanceSystem.Domain.Model.Course.Students
+  nameWithType: Course.Students
+- uid: AttendanceSystem.Domain.Model.Course.Students*
+  name: Students
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Students_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Students
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Students
+  nameWithType: Course.Students
+- uid: AttendanceSystem.Domain.Model.Course.Teachers
+  name: Teachers
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Teachers
+  commentId: P:AttendanceSystem.Domain.Model.Course.Teachers
+  fullName: AttendanceSystem.Domain.Model.Course.Teachers
+  nameWithType: Course.Teachers
+- uid: AttendanceSystem.Domain.Model.Course.Teachers*
+  name: Teachers
+  href: api/AttendanceSystem.Domain.Model.Course.html#AttendanceSystem_Domain_Model_Course_Teachers_
+  commentId: Overload:AttendanceSystem.Domain.Model.Course.Teachers
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Course.Teachers
+  nameWithType: Course.Teachers
+- uid: AttendanceSystem.Domain.Model.Department
+  name: Department
+  href: api/AttendanceSystem.Domain.Model.Department.html
+  commentId: T:AttendanceSystem.Domain.Model.Department
+  fullName: AttendanceSystem.Domain.Model.Department
+  nameWithType: Department
+- uid: AttendanceSystem.Domain.Model.Department.Name
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.Department.html#AttendanceSystem_Domain_Model_Department_Name
+  commentId: P:AttendanceSystem.Domain.Model.Department.Name
+  fullName: AttendanceSystem.Domain.Model.Department.Name
+  nameWithType: Department.Name
+- uid: AttendanceSystem.Domain.Model.Department.Name*
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.Department.html#AttendanceSystem_Domain_Model_Department_Name_
+  commentId: Overload:AttendanceSystem.Domain.Model.Department.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Department.Name
+  nameWithType: Department.Name
+- uid: AttendanceSystem.Domain.Model.Exceptions
+  name: AttendanceSystem.Domain.Model.Exceptions
+  href: api/AttendanceSystem.Domain.Model.Exceptions.html
+  commentId: N:AttendanceSystem.Domain.Model.Exceptions
+  fullName: AttendanceSystem.Domain.Model.Exceptions
+  nameWithType: AttendanceSystem.Domain.Model.Exceptions
+- uid: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException
+  name: EntityNotFoundException
+  href: api/AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.html
+  commentId: T:AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException
+  fullName: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException
+  nameWithType: EntityNotFoundException
+- uid: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.#ctor(System.String)
+  name: EntityNotFoundException(string)
+  href: api/AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.html#AttendanceSystem_Domain_Model_Exceptions_EntityNotFoundException__ctor_System_String_
+  commentId: M:AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.EntityNotFoundException(string)
+  fullName.vb: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.New(String)
+  nameWithType: EntityNotFoundException.EntityNotFoundException(string)
+  nameWithType.vb: EntityNotFoundException.New(String)
+- uid: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.#ctor*
+  name: EntityNotFoundException
+  href: api/AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.html#AttendanceSystem_Domain_Model_Exceptions_EntityNotFoundException__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.EntityNotFoundException
+  fullName.vb: AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.New
+  nameWithType: EntityNotFoundException.EntityNotFoundException
+  nameWithType.vb: EntityNotFoundException.New
+- uid: AttendanceSystem.Domain.Model.Session
+  name: Session
+  href: api/AttendanceSystem.Domain.Model.Session.html
+  commentId: T:AttendanceSystem.Domain.Model.Session
+  fullName: AttendanceSystem.Domain.Model.Session
+  nameWithType: Session
+- uid: AttendanceSystem.Domain.Model.Session.#ctor(AttendanceSystem.Domain.Model.Course,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime)
+  name: Session(Course, List<string>, DateTime, DateTime)
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session__ctor_AttendanceSystem_Domain_Model_Course_System_Collections_Generic_List_System_String__System_DateTime_System_DateTime_
+  commentId: M:AttendanceSystem.Domain.Model.Session.#ctor(AttendanceSystem.Domain.Model.Course,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime)
+  name.vb: New(Course, List(Of String), Date, Date)
+  fullName: AttendanceSystem.Domain.Model.Session.Session(AttendanceSystem.Domain.Model.Course, System.Collections.Generic.List<string>, System.DateTime, System.DateTime)
+  fullName.vb: AttendanceSystem.Domain.Model.Session.New(AttendanceSystem.Domain.Model.Course, System.Collections.Generic.List(Of String), Date, Date)
+  nameWithType: Session.Session(Course, List<string>, DateTime, DateTime)
+  nameWithType.vb: Session.New(Course, List(Of String), Date, Date)
+- uid: AttendanceSystem.Domain.Model.Session.#ctor*
+  name: Session
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Model.Session.Session
+  fullName.vb: AttendanceSystem.Domain.Model.Session.New
+  nameWithType: Session.Session
+  nameWithType.vb: Session.New
+- uid: AttendanceSystem.Domain.Model.Session.Course
+  name: Course
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Course
+  commentId: P:AttendanceSystem.Domain.Model.Session.Course
+  fullName: AttendanceSystem.Domain.Model.Session.Course
+  nameWithType: Session.Course
+- uid: AttendanceSystem.Domain.Model.Session.Course*
+  name: Course
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Course_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.Course
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.Course
+  nameWithType: Session.Course
+- uid: AttendanceSystem.Domain.Model.Session.EndTime
+  name: EndTime
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_EndTime
+  commentId: P:AttendanceSystem.Domain.Model.Session.EndTime
+  fullName: AttendanceSystem.Domain.Model.Session.EndTime
+  nameWithType: Session.EndTime
+- uid: AttendanceSystem.Domain.Model.Session.EndTime*
+  name: EndTime
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_EndTime_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.EndTime
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.EndTime
+  nameWithType: Session.EndTime
+- uid: AttendanceSystem.Domain.Model.Session.Id
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Id
+  commentId: P:AttendanceSystem.Domain.Model.Session.Id
+  fullName: AttendanceSystem.Domain.Model.Session.Id
+  nameWithType: Session.Id
+- uid: AttendanceSystem.Domain.Model.Session.Id*
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Id_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.Id
+  nameWithType: Session.Id
+- uid: AttendanceSystem.Domain.Model.Session.Register
+  name: Register
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Register
+  commentId: P:AttendanceSystem.Domain.Model.Session.Register
+  fullName: AttendanceSystem.Domain.Model.Session.Register
+  nameWithType: Session.Register
+- uid: AttendanceSystem.Domain.Model.Session.Register*
+  name: Register
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_Register_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.Register
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.Register
+  nameWithType: Session.Register
+- uid: AttendanceSystem.Domain.Model.Session.SetStudentAttendance(System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name: SetStudentAttendance(string, AttendanceKind)
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_SetStudentAttendance_System_String_AttendanceSystem_Domain_Model_AttendanceKind_
+  commentId: M:AttendanceSystem.Domain.Model.Session.SetStudentAttendance(System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name.vb: SetStudentAttendance(String, AttendanceKind)
+  fullName: AttendanceSystem.Domain.Model.Session.SetStudentAttendance(string, AttendanceSystem.Domain.Model.AttendanceKind)
+  fullName.vb: AttendanceSystem.Domain.Model.Session.SetStudentAttendance(String, AttendanceSystem.Domain.Model.AttendanceKind)
+  nameWithType: Session.SetStudentAttendance(string, AttendanceKind)
+  nameWithType.vb: Session.SetStudentAttendance(String, AttendanceKind)
+- uid: AttendanceSystem.Domain.Model.Session.SetStudentAttendance*
+  name: SetStudentAttendance
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_SetStudentAttendance_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.SetStudentAttendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.SetStudentAttendance
+  nameWithType: Session.SetStudentAttendance
+- uid: AttendanceSystem.Domain.Model.Session.SetTeacherApproval(System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name: SetTeacherApproval(string, AttendanceKind)
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_SetTeacherApproval_System_String_AttendanceSystem_Domain_Model_AttendanceKind_
+  commentId: M:AttendanceSystem.Domain.Model.Session.SetTeacherApproval(System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name.vb: SetTeacherApproval(String, AttendanceKind)
+  fullName: AttendanceSystem.Domain.Model.Session.SetTeacherApproval(string, AttendanceSystem.Domain.Model.AttendanceKind)
+  fullName.vb: AttendanceSystem.Domain.Model.Session.SetTeacherApproval(String, AttendanceSystem.Domain.Model.AttendanceKind)
+  nameWithType: Session.SetTeacherApproval(string, AttendanceKind)
+  nameWithType.vb: Session.SetTeacherApproval(String, AttendanceKind)
+- uid: AttendanceSystem.Domain.Model.Session.SetTeacherApproval*
+  name: SetTeacherApproval
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_SetTeacherApproval_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.SetTeacherApproval
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.SetTeacherApproval
+  nameWithType: Session.SetTeacherApproval
+- uid: AttendanceSystem.Domain.Model.Session.StartTime
+  name: StartTime
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_StartTime
+  commentId: P:AttendanceSystem.Domain.Model.Session.StartTime
+  fullName: AttendanceSystem.Domain.Model.Session.StartTime
+  nameWithType: Session.StartTime
+- uid: AttendanceSystem.Domain.Model.Session.StartTime*
+  name: StartTime
+  href: api/AttendanceSystem.Domain.Model.Session.html#AttendanceSystem_Domain_Model_Session_StartTime_
+  commentId: Overload:AttendanceSystem.Domain.Model.Session.StartTime
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.Session.StartTime
+  nameWithType: Session.StartTime
+- uid: AttendanceSystem.Domain.Model.Student
+  name: Student
+  href: api/AttendanceSystem.Domain.Model.Student.html
+  commentId: T:AttendanceSystem.Domain.Model.Student
+  fullName: AttendanceSystem.Domain.Model.Student
+  nameWithType: Student
+- uid: AttendanceSystem.Domain.Model.Teacher
+  name: Teacher
+  href: api/AttendanceSystem.Domain.Model.Teacher.html
+  commentId: T:AttendanceSystem.Domain.Model.Teacher
+  fullName: AttendanceSystem.Domain.Model.Teacher
+  nameWithType: Teacher
+- uid: AttendanceSystem.Domain.Model.User
+  name: User
+  href: api/AttendanceSystem.Domain.Model.User.html
+  commentId: T:AttendanceSystem.Domain.Model.User
+  fullName: AttendanceSystem.Domain.Model.User
+  nameWithType: User
+- uid: AttendanceSystem.Domain.Model.User.Courses
+  name: Courses
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Courses
+  commentId: P:AttendanceSystem.Domain.Model.User.Courses
+  fullName: AttendanceSystem.Domain.Model.User.Courses
+  nameWithType: User.Courses
+- uid: AttendanceSystem.Domain.Model.User.Courses*
+  name: Courses
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Courses_
+  commentId: Overload:AttendanceSystem.Domain.Model.User.Courses
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.User.Courses
+  nameWithType: User.Courses
+- uid: AttendanceSystem.Domain.Model.User.Email
+  name: Email
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Email
+  commentId: P:AttendanceSystem.Domain.Model.User.Email
+  fullName: AttendanceSystem.Domain.Model.User.Email
+  nameWithType: User.Email
+- uid: AttendanceSystem.Domain.Model.User.Email*
+  name: Email
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Email_
+  commentId: Overload:AttendanceSystem.Domain.Model.User.Email
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.User.Email
+  nameWithType: User.Email
+- uid: AttendanceSystem.Domain.Model.User.Id
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Id
+  commentId: P:AttendanceSystem.Domain.Model.User.Id
+  fullName: AttendanceSystem.Domain.Model.User.Id
+  nameWithType: User.Id
+- uid: AttendanceSystem.Domain.Model.User.Id*
+  name: Id
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Id_
+  commentId: Overload:AttendanceSystem.Domain.Model.User.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.User.Id
+  nameWithType: User.Id
+- uid: AttendanceSystem.Domain.Model.User.Name
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Name
+  commentId: P:AttendanceSystem.Domain.Model.User.Name
+  fullName: AttendanceSystem.Domain.Model.User.Name
+  nameWithType: User.Name
+- uid: AttendanceSystem.Domain.Model.User.Name*
+  name: Name
+  href: api/AttendanceSystem.Domain.Model.User.html#AttendanceSystem_Domain_Model_User_Name_
+  commentId: Overload:AttendanceSystem.Domain.Model.User.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Model.User.Name
+  nameWithType: User.Name
+- uid: AttendanceSystem.Domain.Services
+  name: AttendanceSystem.Domain.Services
+  href: api/AttendanceSystem.Domain.Services.html
+  commentId: N:AttendanceSystem.Domain.Services
+  fullName: AttendanceSystem.Domain.Services
+  nameWithType: AttendanceSystem.Domain.Services
+- uid: AttendanceSystem.Domain.Services.Alterations
+  name: AttendanceSystem.Domain.Services.Alterations
+  href: api/AttendanceSystem.Domain.Services.Alterations.html
+  commentId: N:AttendanceSystem.Domain.Services.Alterations
+  fullName: AttendanceSystem.Domain.Services.Alterations
+  nameWithType: AttendanceSystem.Domain.Services.Alterations
+- uid: AttendanceSystem.Domain.Services.Alterations.CourseAlteration
+  name: CourseAlteration
+  href: api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html
+  commentId: T:AttendanceSystem.Domain.Services.Alterations.CourseAlteration
+  fullName: AttendanceSystem.Domain.Services.Alterations.CourseAlteration
+  nameWithType: CourseAlteration
+- uid: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department
+  name: Department
+  href: api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html#AttendanceSystem_Domain_Services_Alterations_CourseAlteration_Department
+  commentId: P:AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department
+  fullName: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department
+  nameWithType: CourseAlteration.Department
+- uid: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department*
+  name: Department
+  href: api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html#AttendanceSystem_Domain_Services_Alterations_CourseAlteration_Department_
+  commentId: Overload:AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Department
+  nameWithType: CourseAlteration.Department
+- uid: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name
+  name: Name
+  href: api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html#AttendanceSystem_Domain_Services_Alterations_CourseAlteration_Name
+  commentId: P:AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name
+  fullName: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name
+  nameWithType: CourseAlteration.Name
+- uid: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name*
+  name: Name
+  href: api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html#AttendanceSystem_Domain_Services_Alterations_CourseAlteration_Name_
+  commentId: Overload:AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.Alterations.CourseAlteration.Name
+  nameWithType: CourseAlteration.Name
+- uid: AttendanceSystem.Domain.Services.Alterations.UserAlteration
+  name: UserAlteration
+  href: api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html
+  commentId: T:AttendanceSystem.Domain.Services.Alterations.UserAlteration
+  fullName: AttendanceSystem.Domain.Services.Alterations.UserAlteration
+  nameWithType: UserAlteration
+- uid: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email
+  name: Email
+  href: api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html#AttendanceSystem_Domain_Services_Alterations_UserAlteration_Email
+  commentId: P:AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email
+  fullName: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email
+  nameWithType: UserAlteration.Email
+- uid: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email*
+  name: Email
+  href: api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html#AttendanceSystem_Domain_Services_Alterations_UserAlteration_Email_
+  commentId: Overload:AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Email
+  nameWithType: UserAlteration.Email
+- uid: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name
+  name: Name
+  href: api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html#AttendanceSystem_Domain_Services_Alterations_UserAlteration_Name
+  commentId: P:AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name
+  fullName: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name
+  nameWithType: UserAlteration.Name
+- uid: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name*
+  name: Name
+  href: api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html#AttendanceSystem_Domain_Services_Alterations_UserAlteration_Name_
+  commentId: Overload:AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.Alterations.UserAlteration.Name
+  nameWithType: UserAlteration.Name
+- uid: AttendanceSystem.Domain.Services.AttendanceService
+  name: AttendanceService
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html
+  commentId: T:AttendanceSystem.Domain.Services.AttendanceService
+  fullName: AttendanceSystem.Domain.Services.AttendanceService
+  nameWithType: AttendanceService
+- uid: AttendanceSystem.Domain.Services.AttendanceService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name: AttendanceService(CoursesContext)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService__ctor_AttendanceSystem_Data_CoursesContext_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name.vb: New(CoursesContext)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.AttendanceService(AttendanceSystem.Data.CoursesContext)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.New(AttendanceSystem.Data.CoursesContext)
+  nameWithType: AttendanceService.AttendanceService(CoursesContext)
+  nameWithType.vb: AttendanceService.New(CoursesContext)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.#ctor*
+  name: AttendanceService
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.AttendanceService
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.New
+  nameWithType: AttendanceService.AttendanceService
+  nameWithType.vb: AttendanceService.New
+- uid: AttendanceSystem.Domain.Services.AttendanceService.CreateSession(System.String,System.DateTime,System.DateTime,System.Collections.Generic.List{System.String})
+  name: CreateSession(string, DateTime, DateTime, List<string>)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_CreateSession_System_String_System_DateTime_System_DateTime_System_Collections_Generic_List_System_String__
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.CreateSession(System.String,System.DateTime,System.DateTime,System.Collections.Generic.List{System.String})
+  name.vb: CreateSession(String, Date, Date, List(Of String))
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.CreateSession(string, System.DateTime, System.DateTime, System.Collections.Generic.List<string>)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.CreateSession(String, Date, Date, System.Collections.Generic.List(Of String))
+  nameWithType: AttendanceService.CreateSession(string, DateTime, DateTime, List<string>)
+  nameWithType.vb: AttendanceService.CreateSession(String, Date, Date, List(Of String))
+- uid: AttendanceSystem.Domain.Services.AttendanceService.CreateSession*
+  name: CreateSession
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_CreateSession_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.CreateSession
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.CreateSession
+  nameWithType: AttendanceService.CreateSession
+- uid: AttendanceSystem.Domain.Services.AttendanceService.DeleteSession(System.Guid)
+  name: DeleteSession(Guid)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_DeleteSession_System_Guid_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.DeleteSession(System.Guid)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.DeleteSession(System.Guid)
+  nameWithType: AttendanceService.DeleteSession(Guid)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.DeleteSession*
+  name: DeleteSession
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_DeleteSession_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.DeleteSession
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.DeleteSession
+  nameWithType: AttendanceService.DeleteSession
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSession(System.Guid)
+  name: GetSession(Guid)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSession_System_Guid_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetSession(System.Guid)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSession(System.Guid)
+  nameWithType: AttendanceService.GetSession(Guid)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSession*
+  name: GetSession
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSession_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetSession
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSession
+  nameWithType: AttendanceService.GetSession
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister(System.Guid)
+  name: GetSessionWithRegister(Guid)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessionWithRegister_System_Guid_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister(System.Guid)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister(System.Guid)
+  nameWithType: AttendanceService.GetSessionWithRegister(Guid)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister*
+  name: GetSessionWithRegister
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessionWithRegister_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister
+  nameWithType: AttendanceService.GetSessionWithRegister
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessions(System.String)
+  name: GetSessions(string)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessions_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetSessions(System.String)
+  name.vb: GetSessions(String)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessions(string)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.GetSessions(String)
+  nameWithType: AttendanceService.GetSessions(string)
+  nameWithType.vb: AttendanceService.GetSessions(String)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessions*
+  name: GetSessions
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessions_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetSessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessions
+  nameWithType: AttendanceService.GetSessions
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(System.String)
+  name: GetUpcomingSessionsForUser(string)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(System.String)
+  name.vb: GetUpcomingSessionsForUser(String)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(string)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(String)
+  nameWithType: AttendanceService.GetUpcomingSessionsForUser(string)
+  nameWithType.vb: AttendanceService.GetUpcomingSessionsForUser(String)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser*
+  name: GetUpcomingSessionsForUser
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser
+  nameWithType: AttendanceService.GetUpcomingSessionsForUser
+- uid: AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name: SetStudentAttendance(Guid, string, AttendanceKind)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_SetStudentAttendance_System_Guid_System_String_AttendanceSystem_Domain_Model_AttendanceKind_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name.vb: SetStudentAttendance(Guid, String, AttendanceKind)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance(System.Guid, string, AttendanceSystem.Domain.Model.AttendanceKind)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance(System.Guid, String, AttendanceSystem.Domain.Model.AttendanceKind)
+  nameWithType: AttendanceService.SetStudentAttendance(Guid, string, AttendanceKind)
+  nameWithType.vb: AttendanceService.SetStudentAttendance(Guid, String, AttendanceKind)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance*
+  name: SetStudentAttendance
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_SetStudentAttendance_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance
+  nameWithType: AttendanceService.SetStudentAttendance
+- uid: AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name: SetTeacherApproval(Guid, string, AttendanceKind)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_SetTeacherApproval_System_Guid_System_String_AttendanceSystem_Domain_Model_AttendanceKind_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)
+  name.vb: SetTeacherApproval(Guid, String, AttendanceKind)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval(System.Guid, string, AttendanceSystem.Domain.Model.AttendanceKind)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval(System.Guid, String, AttendanceSystem.Domain.Model.AttendanceKind)
+  nameWithType: AttendanceService.SetTeacherApproval(Guid, string, AttendanceKind)
+  nameWithType.vb: AttendanceService.SetTeacherApproval(Guid, String, AttendanceKind)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval*
+  name: SetTeacherApproval
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_SetTeacherApproval_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval
+  nameWithType: AttendanceService.SetTeacherApproval
+- uid: AttendanceSystem.Domain.Services.CourseService
+  name: CourseService
+  href: api/AttendanceSystem.Domain.Services.CourseService.html
+  commentId: T:AttendanceSystem.Domain.Services.CourseService
+  fullName: AttendanceSystem.Domain.Services.CourseService
+  nameWithType: CourseService
+- uid: AttendanceSystem.Domain.Services.CourseService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name: CourseService(CoursesContext)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService__ctor_AttendanceSystem_Data_CoursesContext_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name.vb: New(CoursesContext)
+  fullName: AttendanceSystem.Domain.Services.CourseService.CourseService(AttendanceSystem.Data.CoursesContext)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.New(AttendanceSystem.Data.CoursesContext)
+  nameWithType: CourseService.CourseService(CoursesContext)
+  nameWithType.vb: CourseService.New(CoursesContext)
+- uid: AttendanceSystem.Domain.Services.CourseService.#ctor*
+  name: CourseService
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Services.CourseService.CourseService
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.New
+  nameWithType: CourseService.CourseService
+  nameWithType.vb: CourseService.New
+- uid: AttendanceSystem.Domain.Services.CourseService.ConfigureCourse(System.String,AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  name: ConfigureCourse(string, CourseAlteration)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_ConfigureCourse_System_String_AttendanceSystem_Domain_Services_Alterations_CourseAlteration_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.ConfigureCourse(System.String,AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  name.vb: ConfigureCourse(String, CourseAlteration)
+  fullName: AttendanceSystem.Domain.Services.CourseService.ConfigureCourse(string, AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.ConfigureCourse(String, AttendanceSystem.Domain.Services.Alterations.CourseAlteration)
+  nameWithType: CourseService.ConfigureCourse(string, CourseAlteration)
+  nameWithType.vb: CourseService.ConfigureCourse(String, CourseAlteration)
+- uid: AttendanceSystem.Domain.Services.CourseService.ConfigureCourse*
+  name: ConfigureCourse
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_ConfigureCourse_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.ConfigureCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.ConfigureCourse
+  nameWithType: CourseService.ConfigureCourse
+- uid: AttendanceSystem.Domain.Services.CourseService.CourseExists(System.String)
+  name: CourseExists(string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_CourseExists_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.CourseExists(System.String)
+  name.vb: CourseExists(String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.CourseExists(string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.CourseExists(String)
+  nameWithType: CourseService.CourseExists(string)
+  nameWithType.vb: CourseService.CourseExists(String)
+- uid: AttendanceSystem.Domain.Services.CourseService.CourseExists*
+  name: CourseExists
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_CourseExists_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.CourseExists
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.CourseExists
+  nameWithType: CourseService.CourseExists
+- uid: AttendanceSystem.Domain.Services.CourseService.CreateNewCourse(System.String,System.String,System.String,System.Collections.Generic.List{System.String})
+  name: CreateNewCourse(string, string, string, List<string>)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_CreateNewCourse_System_String_System_String_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.CreateNewCourse(System.String,System.String,System.String,System.Collections.Generic.List{System.String})
+  name.vb: CreateNewCourse(String, String, String, List(Of String))
+  fullName: AttendanceSystem.Domain.Services.CourseService.CreateNewCourse(string, string, string, System.Collections.Generic.List<string>)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.CreateNewCourse(String, String, String, System.Collections.Generic.List(Of String))
+  nameWithType: CourseService.CreateNewCourse(string, string, string, List<string>)
+  nameWithType.vb: CourseService.CreateNewCourse(String, String, String, List(Of String))
+- uid: AttendanceSystem.Domain.Services.CourseService.CreateNewCourse*
+  name: CreateNewCourse
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_CreateNewCourse_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.CreateNewCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.CreateNewCourse
+  nameWithType: CourseService.CreateNewCourse
+- uid: AttendanceSystem.Domain.Services.CourseService.DeleteCourse(System.String)
+  name: DeleteCourse(string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_DeleteCourse_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.DeleteCourse(System.String)
+  name.vb: DeleteCourse(String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.DeleteCourse(string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.DeleteCourse(String)
+  nameWithType: CourseService.DeleteCourse(string)
+  nameWithType.vb: CourseService.DeleteCourse(String)
+- uid: AttendanceSystem.Domain.Services.CourseService.DeleteCourse*
+  name: DeleteCourse
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_DeleteCourse_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.DeleteCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.DeleteCourse
+  nameWithType: CourseService.DeleteCourse
+- uid: AttendanceSystem.Domain.Services.CourseService.EnrollUser(System.String,System.String)
+  name: EnrollUser(string, string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_EnrollUser_System_String_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.EnrollUser(System.String,System.String)
+  name.vb: EnrollUser(String, String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.EnrollUser(string, string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.EnrollUser(String, String)
+  nameWithType: CourseService.EnrollUser(string, string)
+  nameWithType.vb: CourseService.EnrollUser(String, String)
+- uid: AttendanceSystem.Domain.Services.CourseService.EnrollUser*
+  name: EnrollUser
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_EnrollUser_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.EnrollUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.EnrollUser
+  nameWithType: CourseService.EnrollUser
+- uid: AttendanceSystem.Domain.Services.CourseService.GetAllCourses
+  name: GetAllCourses()
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_GetAllCourses
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.GetAllCourses
+  fullName: AttendanceSystem.Domain.Services.CourseService.GetAllCourses()
+  nameWithType: CourseService.GetAllCourses()
+- uid: AttendanceSystem.Domain.Services.CourseService.GetAllCourses(System.String)
+  name: GetAllCourses(string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_GetAllCourses_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.GetAllCourses(System.String)
+  name.vb: GetAllCourses(String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.GetAllCourses(string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.GetAllCourses(String)
+  nameWithType: CourseService.GetAllCourses(string)
+  nameWithType.vb: CourseService.GetAllCourses(String)
+- uid: AttendanceSystem.Domain.Services.CourseService.GetAllCourses*
+  name: GetAllCourses
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_GetAllCourses_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.GetAllCourses
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.GetAllCourses
+  nameWithType: CourseService.GetAllCourses
+- uid: AttendanceSystem.Domain.Services.CourseService.GetCourse(System.String)
+  name: GetCourse(string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_GetCourse_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.GetCourse(System.String)
+  name.vb: GetCourse(String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.GetCourse(string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.GetCourse(String)
+  nameWithType: CourseService.GetCourse(string)
+  nameWithType.vb: CourseService.GetCourse(String)
+- uid: AttendanceSystem.Domain.Services.CourseService.GetCourse*
+  name: GetCourse
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_GetCourse_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.GetCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.GetCourse
+  nameWithType: CourseService.GetCourse
+- uid: AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse(System.String,System.String)
+  name: UserCanAccessCourse(string, string)
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_UserCanAccessCourse_System_String_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse(System.String,System.String)
+  name.vb: UserCanAccessCourse(String, String)
+  fullName: AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse(string, string)
+  fullName.vb: AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse(String, String)
+  nameWithType: CourseService.UserCanAccessCourse(string, string)
+  nameWithType.vb: CourseService.UserCanAccessCourse(String, String)
+- uid: AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse*
+  name: UserCanAccessCourse
+  href: api/AttendanceSystem.Domain.Services.CourseService.html#AttendanceSystem_Domain_Services_CourseService_UserCanAccessCourse_
+  commentId: Overload:AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.CourseService.UserCanAccessCourse
+  nameWithType: CourseService.UserCanAccessCourse
+- uid: AttendanceSystem.Domain.Services.Tools
+  name: AttendanceSystem.Domain.Services.Tools
+  href: api/AttendanceSystem.Domain.Services.Tools.html
+  commentId: N:AttendanceSystem.Domain.Services.Tools
+  fullName: AttendanceSystem.Domain.Services.Tools
+  nameWithType: AttendanceSystem.Domain.Services.Tools
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator
+  name: MockDataGenerator
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html
+  commentId: T:AttendanceSystem.Domain.Services.Tools.MockDataGenerator
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator
+  nameWithType: MockDataGenerator
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Data.CoursesContext)
+  name: MockDataGenerator(UserService, CourseService, AttendanceService, CoursesContext)
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator__ctor_AttendanceSystem_Domain_Services_UserService_AttendanceSystem_Domain_Services_CourseService_AttendanceSystem_Domain_Services_AttendanceService_AttendanceSystem_Data_CoursesContext_
+  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Data.CoursesContext)
+  name.vb: New(UserService, CourseService, AttendanceService, CoursesContext)
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.MockDataGenerator(AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Data.CoursesContext)
+  fullName.vb: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.New(AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Data.CoursesContext)
+  nameWithType: MockDataGenerator.MockDataGenerator(UserService, CourseService, AttendanceService, CoursesContext)
+  nameWithType.vb: MockDataGenerator.New(UserService, CourseService, AttendanceService, CoursesContext)
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor*
+  name: MockDataGenerator
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.MockDataGenerator
+  fullName.vb: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.New
+  nameWithType: MockDataGenerator.MockDataGenerator
+  nameWithType.vb: MockDataGenerator.New
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
+  name: GenerateMockData()
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateMockData
+  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData()
+  nameWithType: MockDataGenerator.GenerateMockData()
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData*
+  name: GenerateMockData
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateMockData_
+  commentId: Overload:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
+  nameWithType: MockDataGenerator.GenerateMockData
+- uid: AttendanceSystem.Domain.Services.UserService
+  name: UserService
+  href: api/AttendanceSystem.Domain.Services.UserService.html
+  commentId: T:AttendanceSystem.Domain.Services.UserService
+  fullName: AttendanceSystem.Domain.Services.UserService
+  nameWithType: UserService
+- uid: AttendanceSystem.Domain.Services.UserService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name: UserService(CoursesContext)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService__ctor_AttendanceSystem_Data_CoursesContext_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.#ctor(AttendanceSystem.Data.CoursesContext)
+  name.vb: New(CoursesContext)
+  fullName: AttendanceSystem.Domain.Services.UserService.UserService(AttendanceSystem.Data.CoursesContext)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.New(AttendanceSystem.Data.CoursesContext)
+  nameWithType: UserService.UserService(CoursesContext)
+  nameWithType.vb: UserService.New(CoursesContext)
+- uid: AttendanceSystem.Domain.Services.UserService.#ctor*
+  name: UserService
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService__ctor_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AttendanceSystem.Domain.Services.UserService.UserService
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.New
+  nameWithType: UserService.UserService
+  nameWithType.vb: UserService.New
+- uid: AttendanceSystem.Domain.Services.UserService.CreateAdministrator(System.String,System.String,System.String)
+  name: CreateAdministrator(string, string, string)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateAdministrator_System_String_System_String_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.CreateAdministrator(System.String,System.String,System.String)
+  name.vb: CreateAdministrator(String, String, String)
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateAdministrator(string, string, string)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.CreateAdministrator(String, String, String)
+  nameWithType: UserService.CreateAdministrator(string, string, string)
+  nameWithType.vb: UserService.CreateAdministrator(String, String, String)
+- uid: AttendanceSystem.Domain.Services.UserService.CreateAdministrator*
+  name: CreateAdministrator
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateAdministrator_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.CreateAdministrator
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateAdministrator
+  nameWithType: UserService.CreateAdministrator
+- uid: AttendanceSystem.Domain.Services.UserService.CreateStudent(System.String,System.String,System.String)
+  name: CreateStudent(string, string, string)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateStudent_System_String_System_String_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.CreateStudent(System.String,System.String,System.String)
+  name.vb: CreateStudent(String, String, String)
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateStudent(string, string, string)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.CreateStudent(String, String, String)
+  nameWithType: UserService.CreateStudent(string, string, string)
+  nameWithType.vb: UserService.CreateStudent(String, String, String)
+- uid: AttendanceSystem.Domain.Services.UserService.CreateStudent*
+  name: CreateStudent
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateStudent_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.CreateStudent
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateStudent
+  nameWithType: UserService.CreateStudent
+- uid: AttendanceSystem.Domain.Services.UserService.CreateTeacher(System.String,System.String,System.String)
+  name: CreateTeacher(string, string, string)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateTeacher_System_String_System_String_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.CreateTeacher(System.String,System.String,System.String)
+  name.vb: CreateTeacher(String, String, String)
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateTeacher(string, string, string)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.CreateTeacher(String, String, String)
+  nameWithType: UserService.CreateTeacher(string, string, string)
+  nameWithType.vb: UserService.CreateTeacher(String, String, String)
+- uid: AttendanceSystem.Domain.Services.UserService.CreateTeacher*
+  name: CreateTeacher
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_CreateTeacher_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.CreateTeacher
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.CreateTeacher
+  nameWithType: UserService.CreateTeacher
+- uid: AttendanceSystem.Domain.Services.UserService.DeleteUser(System.String)
+  name: DeleteUser(string)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_DeleteUser_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.DeleteUser(System.String)
+  name.vb: DeleteUser(String)
+  fullName: AttendanceSystem.Domain.Services.UserService.DeleteUser(string)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.DeleteUser(String)
+  nameWithType: UserService.DeleteUser(string)
+  nameWithType.vb: UserService.DeleteUser(String)
+- uid: AttendanceSystem.Domain.Services.UserService.DeleteUser*
+  name: DeleteUser
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_DeleteUser_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.DeleteUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.DeleteUser
+  nameWithType: UserService.DeleteUser
+- uid: AttendanceSystem.Domain.Services.UserService.EditUser(System.String,AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  name: EditUser(string, UserAlteration)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_EditUser_System_String_AttendanceSystem_Domain_Services_Alterations_UserAlteration_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.EditUser(System.String,AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  name.vb: EditUser(String, UserAlteration)
+  fullName: AttendanceSystem.Domain.Services.UserService.EditUser(string, AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.EditUser(String, AttendanceSystem.Domain.Services.Alterations.UserAlteration)
+  nameWithType: UserService.EditUser(string, UserAlteration)
+  nameWithType.vb: UserService.EditUser(String, UserAlteration)
+- uid: AttendanceSystem.Domain.Services.UserService.EditUser*
+  name: EditUser
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_EditUser_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.EditUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.EditUser
+  nameWithType: UserService.EditUser
+- uid: AttendanceSystem.Domain.Services.UserService.GetAllStudents
+  name: GetAllStudents()
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetAllStudents
+  commentId: M:AttendanceSystem.Domain.Services.UserService.GetAllStudents
+  fullName: AttendanceSystem.Domain.Services.UserService.GetAllStudents()
+  nameWithType: UserService.GetAllStudents()
+- uid: AttendanceSystem.Domain.Services.UserService.GetAllStudents*
+  name: GetAllStudents
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetAllStudents_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.GetAllStudents
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.GetAllStudents
+  nameWithType: UserService.GetAllStudents
+- uid: AttendanceSystem.Domain.Services.UserService.GetUser(System.String)
+  name: GetUser(string)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetUser_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.UserService.GetUser(System.String)
+  name.vb: GetUser(String)
+  fullName: AttendanceSystem.Domain.Services.UserService.GetUser(string)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.GetUser(String)
+  nameWithType: UserService.GetUser(string)
+  nameWithType.vb: UserService.GetUser(String)
+- uid: AttendanceSystem.Domain.Services.UserService.GetUser*
+  name: GetUser
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetUser_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.GetUser
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.GetUser
+  nameWithType: UserService.GetUser
+- uid: AttendanceSystem.Domain.Services.UserService.GetUsers(System.Collections.Generic.List{System.String})
+  name: GetUsers(List<string>)
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetUsers_System_Collections_Generic_List_System_String__
+  commentId: M:AttendanceSystem.Domain.Services.UserService.GetUsers(System.Collections.Generic.List{System.String})
+  name.vb: GetUsers(List(Of String))
+  fullName: AttendanceSystem.Domain.Services.UserService.GetUsers(System.Collections.Generic.List<string>)
+  fullName.vb: AttendanceSystem.Domain.Services.UserService.GetUsers(System.Collections.Generic.List(Of String))
+  nameWithType: UserService.GetUsers(List<string>)
+  nameWithType.vb: UserService.GetUsers(List(Of String))
+- uid: AttendanceSystem.Domain.Services.UserService.GetUsers*
+  name: GetUsers
+  href: api/AttendanceSystem.Domain.Services.UserService.html#AttendanceSystem_Domain_Services_UserService_GetUsers_
+  commentId: Overload:AttendanceSystem.Domain.Services.UserService.GetUsers
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.UserService.GetUsers
+  nameWithType: UserService.GetUsers

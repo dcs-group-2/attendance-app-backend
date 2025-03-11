@@ -1,0 +1,774 @@
+{
+  "source_base_path": "/home/runner/work/attendance-app-backend/attendance-app-backend",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.AuthenticationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.AuthenticationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.AuthenticationService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.CreateCourseContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.CreateCourseContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.CreateCourseContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.CreateSessionContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.CreateSessionContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.CreateSessionContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.CreateUserContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.CreateUserContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.CreateUserContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.EnrollUserContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.EnrollUserContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.EnrollUserContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.GetAttendanceListContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.UpdateAttendanceContract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.UserType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.UserType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts.UserType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Contracts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Contracts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.BaseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.BaseController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.BaseController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.CoursesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.CoursesController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.CoursesController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.FeedController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.FeedController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.FeedController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.SessionsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.SessionsController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.SessionsController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.SwaggerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.SwaggerController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.SwaggerController",
+      "Summary": "<p sourcefile=\"api/AttendanceSystem.Api.Controllers.SwaggerController.yml\" sourcestartlinenumber=\"1\">Represents the controller that serves the swagger documents</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.UsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.UsersController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers.UsersController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/AttendanceSystem.Api.FunctionExecutorHostBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods to enable registration of the custom <xref href=\"Microsoft.Azure.Functions.Worker.Invocation.IFunctionExecutor\" data-throw-if-not-resolved=\"false\"></xref> implementation generated for the current worker.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Middleware.AuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Middleware.AuthenticationHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Middleware.AuthenticationHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Middleware.ExceptionToErrorCodeHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Middleware.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Middleware",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Roles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Roles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Roles",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.SwaggerSetup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.SwaggerSetup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.SwaggerSetup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension",
+      "Summary": "<p sourcefile=\"api/AttendanceSystem.Api.WorkerHostBuilderFunctionMetadataProviderExtension.yml\" sourcestartlinenumber=\"1\">Extension methods to enable registration of the custom <xref href=\"Microsoft.Azure.Functions.Worker.Core.FunctionMetadata.IFunctionMetadataProvider\" data-throw-if-not-resolved=\"false\"></xref> implementation generated for the current worker.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Api.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Api",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Data.CoursesContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Data.CoursesContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Data.CoursesContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Data.Migrations.Initial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Data.Migrations.Initial.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Data.Migrations.Initial",
+      "Summary": "<p sourcefile=\"api/AttendanceSystem.Data.Migrations.Initial.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Data.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Data.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Data.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Administrator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Administrator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Administrator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.AttendanceKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.AttendanceKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.AttendanceKind",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.AttendanceRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.AttendanceRecord.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.AttendanceRecord",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.AttendanceSubmission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.AttendanceSubmission.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.AttendanceSubmission",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Course.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Course.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Course",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Department.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Department.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Department",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Exceptions.EntityNotFoundException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Exceptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Session.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Session",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Student.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Student.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Student",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.Teacher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.Teacher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.Teacher",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Model.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Model",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.Alterations.CourseAlteration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.Alterations.CourseAlteration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.Alterations.UserAlteration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.Alterations.UserAlteration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.Alterations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.Alterations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.Alterations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.AttendanceService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.AttendanceService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.AttendanceService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.CourseService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.CourseService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.CourseService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.Tools.MockDataGenerator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.Tools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.Tools",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.UserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.UserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services.UserService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AttendanceSystem.Domain.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AttendanceSystem.Domain.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AttendanceSystem.Domain.Services",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
