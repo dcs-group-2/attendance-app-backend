@@ -67,6 +67,109 @@ references:
   commentId: N:AttendanceSystem.Api.Contracts
   fullName: AttendanceSystem.Api.Contracts
   nameWithType: AttendanceSystem.Api.Contracts
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto
+  name: AttendanceRecordDto
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html
+  commentId: T:AttendanceSystem.Api.Contracts.AttendanceRecordDto
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto
+  nameWithType: AttendanceRecordDto
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status
+  name: Status
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_Status
+  commentId: P:AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status
+  nameWithType: AttendanceRecordDto.Status
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status*
+  name: Status
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_Status_
+  commentId: Overload:AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.Status
+  nameWithType: AttendanceRecordDto.Status
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId
+  name: StudentId
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_StudentId
+  commentId: P:AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId
+  nameWithType: AttendanceRecordDto.StudentId
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId*
+  name: StudentId
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_StudentId_
+  commentId: Overload:AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentId
+  nameWithType: AttendanceRecordDto.StudentId
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName
+  name: StudentName
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_StudentName
+  commentId: P:AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName
+  nameWithType: AttendanceRecordDto.StudentName
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName*
+  name: StudentName
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_StudentName_
+  commentId: Overload:AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.StudentName
+  nameWithType: AttendanceRecordDto.StudentName
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus
+  name: TeacherStatus
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_TeacherStatus
+  commentId: P:AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus
+  nameWithType: AttendanceRecordDto.TeacherStatus
+- uid: AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus*
+  name: TeacherStatus
+  href: api/AttendanceSystem.Api.Contracts.AttendanceRecordDto.html#AttendanceSystem_Api_Contracts_AttendanceRecordDto_TeacherStatus_
+  commentId: Overload:AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.AttendanceRecordDto.TeacherStatus
+  nameWithType: AttendanceRecordDto.TeacherStatus
+- uid: AttendanceSystem.Api.Contracts.CourseDTO
+  name: CourseDTO
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html
+  commentId: T:AttendanceSystem.Api.Contracts.CourseDTO
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO
+  nameWithType: CourseDTO
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.Department
+  name: Department
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_Department
+  commentId: P:AttendanceSystem.Api.Contracts.CourseDTO.Department
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.Department
+  nameWithType: CourseDTO.Department
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.Department*
+  name: Department
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_Department_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CourseDTO.Department
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.Department
+  nameWithType: CourseDTO.Department
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.Name
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_Name
+  commentId: P:AttendanceSystem.Api.Contracts.CourseDTO.Name
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.Name
+  nameWithType: CourseDTO.Name
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.Name*
+  name: Name
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_Name_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CourseDTO.Name
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.Name
+  nameWithType: CourseDTO.Name
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds
+  name: TeacherIds
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_TeacherIds
+  commentId: P:AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds
+  nameWithType: CourseDTO.TeacherIds
+- uid: AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds*
+  name: TeacherIds
+  href: api/AttendanceSystem.Api.Contracts.CourseDTO.html#AttendanceSystem_Api_Contracts_CourseDTO_TeacherIds_
+  commentId: Overload:AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.CourseDTO.TeacherIds
+  nameWithType: CourseDTO.TeacherIds
 - uid: AttendanceSystem.Api.Contracts.CreateCourseContract
   name: CreateCourseContract
   href: api/AttendanceSystem.Api.Contracts.CreateCourseContract.html
@@ -294,6 +397,38 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord.StudentName
   nameWithType: ExtendedAttendanceRecord.StudentName
+- uid: AttendanceSystem.Api.Contracts.FeedContract
+  name: FeedContract
+  href: api/AttendanceSystem.Api.Contracts.FeedContract.html
+  commentId: T:AttendanceSystem.Api.Contracts.FeedContract
+  fullName: AttendanceSystem.Api.Contracts.FeedContract
+  nameWithType: FeedContract
+- uid: AttendanceSystem.Api.Contracts.FeedContract.Courses
+  name: Courses
+  href: api/AttendanceSystem.Api.Contracts.FeedContract.html#AttendanceSystem_Api_Contracts_FeedContract_Courses
+  commentId: P:AttendanceSystem.Api.Contracts.FeedContract.Courses
+  fullName: AttendanceSystem.Api.Contracts.FeedContract.Courses
+  nameWithType: FeedContract.Courses
+- uid: AttendanceSystem.Api.Contracts.FeedContract.Courses*
+  name: Courses
+  href: api/AttendanceSystem.Api.Contracts.FeedContract.html#AttendanceSystem_Api_Contracts_FeedContract_Courses_
+  commentId: Overload:AttendanceSystem.Api.Contracts.FeedContract.Courses
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.FeedContract.Courses
+  nameWithType: FeedContract.Courses
+- uid: AttendanceSystem.Api.Contracts.FeedContract.Sessions
+  name: Sessions
+  href: api/AttendanceSystem.Api.Contracts.FeedContract.html#AttendanceSystem_Api_Contracts_FeedContract_Sessions
+  commentId: P:AttendanceSystem.Api.Contracts.FeedContract.Sessions
+  fullName: AttendanceSystem.Api.Contracts.FeedContract.Sessions
+  nameWithType: FeedContract.Sessions
+- uid: AttendanceSystem.Api.Contracts.FeedContract.Sessions*
+  name: Sessions
+  href: api/AttendanceSystem.Api.Contracts.FeedContract.html#AttendanceSystem_Api_Contracts_FeedContract_Sessions_
+  commentId: Overload:AttendanceSystem.Api.Contracts.FeedContract.Sessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.FeedContract.Sessions
+  nameWithType: FeedContract.Sessions
 - uid: AttendanceSystem.Api.Contracts.GetAttendanceListContract
   name: GetAttendanceListContract
   href: api/AttendanceSystem.Api.Contracts.GetAttendanceListContract.html
@@ -365,6 +500,64 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Api.Contracts.GetAttendanceListContract.StartTime
   nameWithType: GetAttendanceListContract.StartTime
+- uid: AttendanceSystem.Api.Contracts.SessionDTO
+  name: SessionDTO
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html
+  commentId: T:AttendanceSystem.Api.Contracts.SessionDTO
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO
+  nameWithType: SessionDTO
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.Attendance
+  name: Attendance
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_Attendance
+  commentId: P:AttendanceSystem.Api.Contracts.SessionDTO.Attendance
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.Attendance
+  nameWithType: SessionDTO.Attendance
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.Attendance*
+  name: Attendance
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_Attendance_
+  commentId: Overload:AttendanceSystem.Api.Contracts.SessionDTO.Attendance
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.Attendance
+  nameWithType: SessionDTO.Attendance
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.EndDate
+  name: EndDate
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_EndDate
+  commentId: P:AttendanceSystem.Api.Contracts.SessionDTO.EndDate
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.EndDate
+  nameWithType: SessionDTO.EndDate
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.EndDate*
+  name: EndDate
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_EndDate_
+  commentId: Overload:AttendanceSystem.Api.Contracts.SessionDTO.EndDate
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.EndDate
+  nameWithType: SessionDTO.EndDate
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.Id
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_Id
+  commentId: P:AttendanceSystem.Api.Contracts.SessionDTO.Id
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.Id
+  nameWithType: SessionDTO.Id
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.Id*
+  name: Id
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_Id_
+  commentId: Overload:AttendanceSystem.Api.Contracts.SessionDTO.Id
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.Id
+  nameWithType: SessionDTO.Id
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.StartDate
+  name: StartDate
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_StartDate
+  commentId: P:AttendanceSystem.Api.Contracts.SessionDTO.StartDate
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.StartDate
+  nameWithType: SessionDTO.StartDate
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.StartDate*
+  name: StartDate
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_StartDate_
+  commentId: Overload:AttendanceSystem.Api.Contracts.SessionDTO.StartDate
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.StartDate
+  nameWithType: SessionDTO.StartDate
 - uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract
   name: UpdateAttendanceContract
   href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html
@@ -1971,6 +2164,22 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSession
   nameWithType: AttendanceService.GetSession
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus(System.Guid,System.String)
+  name: GetSessionStatus(Guid, string)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessionStatus_System_Guid_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus(System.Guid,System.String)
+  name.vb: GetSessionStatus(Guid, String)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus(System.Guid, string)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus(System.Guid, String)
+  nameWithType: AttendanceService.GetSessionStatus(Guid, string)
+  nameWithType.vb: AttendanceService.GetSessionStatus(Guid, String)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus*
+  name: GetSessionStatus
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessionStatus_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessionStatus
+  nameWithType: AttendanceService.GetSessionStatus
 - uid: AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister(System.Guid)
   name: GetSessionWithRegister(Guid)
   href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetSessionWithRegister_System_Guid_
@@ -2000,22 +2209,6 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessions
   nameWithType: AttendanceService.GetSessions
-- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(System.String)
-  name: GetUpcomingSessions(string)
-  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_System_String_
-  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(System.String)
-  name.vb: GetUpcomingSessions(String)
-  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(string)
-  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(String)
-  nameWithType: AttendanceService.GetUpcomingSessions(string)
-  nameWithType.vb: AttendanceService.GetUpcomingSessions(String)
-- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions*
-  name: GetUpcomingSessions
-  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_
-  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions
-  isSpec: "True"
-  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions
-  nameWithType: AttendanceService.GetUpcomingSessions
 - uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(System.String)
   name: GetUpcomingSessionsForUser(string)
   href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_System_String_
