@@ -2000,6 +2000,22 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Domain.Services.AttendanceService.GetSessions
   nameWithType: AttendanceService.GetSessions
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(System.String)
+  name: GetUpcomingSessions(string)
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_System_String_
+  commentId: M:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(System.String)
+  name.vb: GetUpcomingSessions(String)
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(string)
+  fullName.vb: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(String)
+  nameWithType: AttendanceService.GetUpcomingSessions(string)
+  nameWithType.vb: AttendanceService.GetUpcomingSessions(String)
+- uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions*
+  name: GetUpcomingSessions
+  href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_
+  commentId: Overload:AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions
+  isSpec: "True"
+  fullName: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions
+  nameWithType: AttendanceService.GetUpcomingSessions
 - uid: AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(System.String)
   name: GetUpcomingSessionsForUser(string)
   href: api/AttendanceSystem.Domain.Services.AttendanceService.html#AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_System_String_
@@ -2238,19 +2254,19 @@ references:
   fullName.vb: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.New
   nameWithType: MockDataGenerator.MockDataGenerator
   nameWithType.vb: MockDataGenerator.New
-- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
-  name: GenerateMockData()
-  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateMockData
-  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
-  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData()
-  nameWithType: MockDataGenerator.GenerateMockData()
-- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData*
-  name: GenerateMockData
-  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateMockData_
-  commentId: Overload:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData
+  name: GenerateRealData()
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateRealData
+  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData()
+  nameWithType: MockDataGenerator.GenerateRealData()
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData*
+  name: GenerateRealData
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator_GenerateRealData_
+  commentId: Overload:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData
   isSpec: "True"
-  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateMockData
-  nameWithType: MockDataGenerator.GenerateMockData
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.GenerateRealData
+  nameWithType: MockDataGenerator.GenerateRealData
 - uid: AttendanceSystem.Domain.Services.UserService
   name: UserService
   href: api/AttendanceSystem.Domain.Services.UserService.html

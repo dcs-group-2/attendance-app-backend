@@ -233,7 +233,7 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_DeleteSession_System_Guid_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.DeleteSession(System.Guid)">
   DeleteSession(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -269,7 +269,7 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_GetSession_System_Guid_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetSession(System.Guid)">
   GetSession(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -305,7 +305,7 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_GetSessionWithRegister_System_Guid_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetSessionWithRegister(System.Guid)">
   GetSessionWithRegister(Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -373,6 +373,42 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions*"></a>
+
+  <h3 id="AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessions_System_String_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessions(System.String)">
+  GetUpcomingSessions(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Session&gt;&gt; GetUpcomingSessions(string userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="AttendanceSystem.Domain.Model.Session.html">Session</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser*"></a>
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_GetUpcomingSessionsForUser_System_String_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.GetUpcomingSessionsForUser(System.String)">
@@ -413,7 +449,7 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_SetStudentAttendance_System_Guid_System_String_AttendanceSystem_Domain_Model_AttendanceKind_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.SetStudentAttendance(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)">
   SetStudentAttendance(Guid, string, AttendanceKind)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -453,21 +489,21 @@ Class AttendanceService  <a class="header-action link-secondary" title="View sou
 
   <h3 id="AttendanceSystem_Domain_Services_AttendanceService_SetTeacherApproval_System_Guid_System_String_AttendanceSystem_Domain_Model_AttendanceKind_" data-uid="AttendanceSystem.Domain.Services.AttendanceService.SetTeacherApproval(System.Guid,System.String,AttendanceSystem.Domain.Model.AttendanceKind)">
   SetTeacherApproval(Guid, string, AttendanceKind)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Domain.Services/AttendanceService.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SetTeacherApproval(Guid sessionId, string teacherId, AttendanceKind kind)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task SetTeacherApproval(Guid sessionId, string studentId, AttendanceKind kind)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
     <dd></dd>
-    <dt><code>teacherId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>studentId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>kind</code> <a class="xref" href="AttendanceSystem.Domain.Model.AttendanceKind.html">AttendanceKind</a></dt>
     <dd></dd>
