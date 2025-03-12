@@ -55,7 +55,7 @@ using (var scope = host.Services.CreateScope())
         context.Database.EnsureCreated();
 
         logger.LogInformation("Generating mock data...");
-        await mockDataGenerator.GenerateMockData();
+        await mockDataGenerator.GenerateRealData();
     }
     else
     {
@@ -65,7 +65,7 @@ using (var scope = host.Services.CreateScope())
         if (seedDatabase)
         {
             logger.LogInformation("Generating mock data...");
-            await mockDataGenerator.GenerateMockData();
+            await mockDataGenerator.GenerateRealData();
         }
     }
 }
