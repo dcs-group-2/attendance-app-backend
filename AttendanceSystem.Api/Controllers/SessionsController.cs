@@ -112,40 +112,42 @@ public class SessionsController : BaseController
     [Function( $"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
     public async Task<IActionResult> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
     {
+        // Authorize
+        await AssertAuthentication(ctx, AllowAll);
+        await AssertCourseAuthorization(courseId, GetUserId(ctx));
+
         // Right now, we only accept one attendance record at a time.
         if (contract.Attendance.Count != 1)
         {
             return new BadRequestObjectResult("Only one attendance record can be updated at a time.");
         }
-        
-        var recordProcessRequest = contract.Attendance.First();
-        
-        // Authorize
-        await AssertAuthentication(ctx, AllowAll);
-        await AssertCourseAuthorization(courseId, GetUserId(ctx));
 
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
         // Based on the role, set the attendance as a student or as a teacher
         bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
-        
-        if (isTeacher)
+
+
+        foreach (var recordProcessRequest in contract.Attendance)
         {
-            if(recordProcessRequest.UserId is null)
+            if (isTeacher)
             {
-                return new BadRequestObjectResult("The user id is required for teacher attendance.");
+                if (recordProcessRequest.UserId is null)
+                {
+                    return new BadRequestObjectResult("The user id is required for teacher attendance.");
+                }
+
+                await _attendanceService.SetTeacherApproval(sessionId, recordProcessRequest.UserId, recordProcessRequest.Kind);
             }
-            
-            await _attendanceService.SetTeacherApproval(sessionId, recordProcessRequest.UserId, recordProcessRequest.Kind);
+            else
+            {
+                await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
+            }
         }
-        else
-        {
-            await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
-        }
-        
-        return new NoContentResult();
+        return new OkObjectResult(await _attendanceService.GetSessionWithRegister(sessionId));
     }
-    
+
+
     [Function( $"{nameof(SessionsController)}-{nameof(DeleteSession)}")]
     public async Task<IActionResult> DeleteSession([HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route="courses/{courseId}/sessions/{sessionId:guid}")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId)
     {

@@ -1,5 +1,6 @@
 ﻿using AttendanceSystem.Domain.Model;
 using AttendanceSystem.Domain.Services;
+using AzureFunctions.Extensions.Swashbuckle.Attribute;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -31,10 +32,21 @@ public class FeedController : BaseController
         await AssertAuthentication(ctx, AllowAll);
 
         string userId = GetUserId(ctx);
-        
+
+        bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
+
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        var courses = await _attendanceService.GetUpcomingSessionsForUser(userId);
+        var courses = new List<Session>();
+        if (isTeacher)
+        {
+            courses = await _attendanceService.GetUpcomingSessionsForTeacher(userId);
+            return new OkObjectResult(courses);
+        }
+
+        courses = await _attendanceService.GetUpcomingSessionsForUser(userId);
         return new OkObjectResult(courses);
     }
+
+
 }
