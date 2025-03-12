@@ -37,16 +37,9 @@ public class AttendanceService
     {
         return await _context.Sessions
             .Include(s => s.Course)
-            .Where(s => s.Course.Students.Contains(userId)).ToListAsync();
+            .Where(s => s.Course.Students.Contains(userId) || s.Course.Teachers.Contains(userId)).ToListAsync();
     }
-
-    public async Task<List<Session>> GetUpcomingSessions(string userId)
-    {
-        return await _context.Sessions
-            .Include(s => s.Course)
-            .Where(s => s.Course.Students.Contain(userId) || s.Course.Teachers.Contains(userId)).OrderBy(m=>m.StartTime).ToListAsync();
-    }
-
+    
     public async Task<Session> GetSession(Guid sessionId)
     {
         return await _context.Sessions.FindAsync(sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));
@@ -76,5 +69,16 @@ public class AttendanceService
         var session = await GetSessionWithRegister(sessionId);
         session.SetTeacherApproval(studentId, kind);
         await _context.SaveChangesAsync();
+    }
+
+    public async Task<AttendanceRecord?> GetSessionStatus(Guid sessionId, string userId)
+    {
+        AttendanceRecord? attendanceRecord =
+            (from session in _context.Sessions
+            from record in session.Register
+            where record.SessionId == sessionId && record.StudentId == userId
+            select record).FirstOrDefault();
+        
+        return attendanceRecord;
     }
 }

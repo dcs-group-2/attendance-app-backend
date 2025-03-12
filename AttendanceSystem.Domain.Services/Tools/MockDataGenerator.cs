@@ -26,8 +26,8 @@ namespace AttendanceSystem.Domain.Services.Tools
             _context = context;
         }
 
-        private static readonly List<(string CourseId, string CourseName)> Courses = new List<(string, string)>
-    {
+        private static readonly List<(string CourseId, string CourseName)> Courses = new()
+        {
         ("CS101", "Introduction to Programming"),
         ("DSA101", "Data Structures and Algorithms"),
         ("DMK101", "Digital Marketing"),
@@ -53,8 +53,8 @@ namespace AttendanceSystem.Domain.Services.Tools
     };
 
 
-        private static readonly List<string> Departments = new List<string>
-    {
+        private static readonly List<string> Departments = new()
+        {
         "Computer Science", "Business Administration", "Philosophy", "Psychology", "Engineering", "Environmental Science",
         "Mathematics", "Marketing", "History", "Sociology", "Media Studies", "Economics", "Political Science", "Literature",
         "Education", "Law", "Health Sciences", "Arts", "Architecture", "Data Science", "Chemistry"
@@ -63,94 +63,175 @@ namespace AttendanceSystem.Domain.Services.Tools
         public async Task GenerateRealData()
         {
             // Real Users data from the CSV
-            var realUsers = new List<User>
-            {
-                new User { Id = "01b17f54-f437-46c2-9a1d-3d18b08bedf7", Name = "Maurice Mouw", Email = "maurice.mouw@sue.nl" },
-                new User { Id = "10c42de6-8144-44c8-ab33-64d9d86140a9", Name = "Alexander Serraris", Email = "alexander.serraris@student.uva.nl" },
-                new User { Id = "14cd03f5-6f8f-49fd-a6ef-ecae6bcbcd82", Name = "Bo ter Ham", Email = "Bo.TerHam@jdekker3008gmail.onmicrosoft.com" },
-                new User { Id = "24989931-d191-4a45-96eb-15319b34aa53", Name = "Sam Tudent", Email = "sam.tudent@jdekker3008gmail.onmicrosoft.com" },
-                new User { Id = "4c56be3f-67ea-4e52-88d8-68fca8d5e47f", Name = "Lara de Vries", Email = "lara.devries@student.uva.nl" },
-                new User { Id = "52f5c67a-89bd-4cd7-9955-bcdb71f3cb67", Name = "Finn Meijer", Email = "finn.meijer@example.com" },
-                new User { Id = "6e43a492-b34e-4b3a-bd72-d2f84d88537f", Name = "Isabel van Dijk", Email = "isabel.vandijk@example.com" },
-                new User { Id = "7ad3e8b6-22cc-498f-8c93-82a5c8b0a22b", Name = "Ruben Jansen", Email = "ruben.jansen@example.com" },
-                new User { Id = "82f1b6c4-f6bb-4d92-a7df-94b8f87e6c44", Name = "Emma Smit", Email = "emma.smit@student.uva.nl" },
-                new User { Id = "93c0e723-d9c2-4a8d-bbcf-35e2d3a5879b", Name = "Daan Kuiper", Email = "daan.kuiper@example.com" },
-                new User { Id = "a4b6e2f8-7d6f-4e9b-b842-8a2c5f3b8d9e", Name = "Noah Visser", Email = "noah.visser@student.uva.nl" },
-                new User { Id = "b5d7a8f9-3c5e-4f1d-a4e8-7d6c5b8e9a2f", Name = "Sophie Willems", Email = "sophie.willems@example.com" },
-                new User { Id = "c6e8a9f2-5b7d-4c3f-a2e8-6f9d5c3b7a4e", Name = "Lucas Hermans", Email = "lucas.hermans@example.com" },
-                new User { Id = "d7f9b0a3-6c5d-4e2b-a3d7-5b9e6c8f2a4e", Name = "Eva Peters", Email = "eva.peters@student.uva.nl" },
-                new User { Id = "e8a0b1c4-7d5f-4c3b-a2d9-4e7f6c5b8a3e", Name = "Tom van den Berg", Email = "tom.vandenberg@example.com" },
-                new User { Id = "f9b2c3d5-8a4e-4f3c-a2e7-6d5b9f7c8a1e", Name = "Sanne Bakker", Email = "sanne.bakker@student.uva.nl" },
-                new User { Id = "0a1b2c3d-9e5f-4d3c-a2b7-6c8f5b7a9d4e", Name = "Milan de Jong", Email = "milan.dejong@example.com" },
-                new User { Id = "1b2c3d4e-0a5f-4e3c-a2b9-7c6d5f8a7b9e", Name = "Yara Brouwer", Email = "yara.brouwer@student.uva.nl" }
-            };
+            List<Student> realUsers =
+            [
+                new()
+                {
+                    Id = "0a615b34-a48e-4035-bba3-6cf07b883454", Name = "Paula Upil",
+                    Email = "Paula.Upil@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "10c42de6-8144-44c8-ab33-64d9d86140a9", Name = "Alexander Serraris",
+                    Email = "alexander.serraris@student.uva.nl"
+                },
+                new()
+                {
+                    Id = "14cd03f5-6f8f-49fd-a6ef-ecae6bcbcd82", Name = "Bo ter Ham",
+                    Email = "Bo.TerHam@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "24989931-d191-4a45-96eb-15319b34aa53", Name = "Sam Tudent",
+                    Email = "sam.tudent@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "27b0da69-2f96-48b1-872a-7ab1dc9ca441", Name = "Max Entee",
+                    Email = "Max.Entee@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "2c120d5f-5a4a-4e74-8196-1a76af39dae6", Name = "Lieke Eerling",
+                    Email = "Lieke.Eerling@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "37c81da2-872e-4d79-895b-1cfeabc3c005", Name = "Kekka Zone",
+                    Email = "kekka.zone@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "413980e6-2cd7-4a77-b1b2-908bd01a4ccf", Name = "Alexi Dministrator",
+                    Email = "alexi.dministrator@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "4e2091a4-53d0-4c5d-81d1-fa6287a42bc4", Name = "Beef Boss",
+                    Email = "Beef.Boss@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "568efdc4-a887-4862-935d-235d9d25fa72", Name = "Doachim Jekker",
+                    Email = "Doachim.Jekker@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "6270e6f2-8ccc-469a-bd06-da521c38d381", Name = "Georgia Raduate",
+                    Email = "Georgia.Raduate@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "733226df-6eea-43a8-a5fd-9a805002eebb", Name = "Sicola Nantolini",
+                    Email = "Sicola.Nantolini@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "9a5f09d1-3d84-4cc4-a9c9-8fbf6f0fd67e", Name = "Tim Rainee",
+                    Email = "Tim.Rainee@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "b448c3c9-6341-414f-8f1c-9d1d77b66260", Name = "Serexander Alraris",
+                    Email = "Serexander.Alraris@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "bce30295-8657-472f-aa8d-6cbcf47c0641", Name = "Parlo Keranovic",
+                    Email = "Parlo.Keranovic@jdekker3008gmail.onmicrosoft.com"
+                }
+            ];
 
 
             // Teacher names
-            var teachers = new List<User>
+            var teachers = new List<Teacher>
             {
-                new User { Id = "3b83a493-eb84-4b32-b5cd-c79a3367eeec", Name = "Nicola Santolini", Email = "nicola.santolini@student.uva.nl" },
-                new User { Id = "8c9dd623-f5de-46a2-bf91-df9b158906a6", Name = "Joachim Dekker", Email = "joachim.dekker@example.com" },
-                new User { Id = "6e43a492-b34e-4b3a-bd72-d2f84d88537f", Name = "Karlo Peranovic", Email = "karlo.peranovic@student.uva.nl" }
+                new()
+                {
+                    Id = "50508f48-dbc9-4857-8caa-0a512ef49408", Name = "Tamara Eacher",
+                    Email = "tamara.eacher@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "24e644af-efd4-411b-81c2-9e29523edfc2", Name = "Suki Einsei",
+                    Email = "Suki.Ensei@jdekker3008gmail.onmicrosoft.com"
+                },
+                new()
+                {
+                    Id = "ab937eae-a79e-4c7f-9f33-d7728af5f5e8", Name = "Suesan Duva",
+                    Email = "Suesan.Duva@jdekker3008gmail.onmicrosoft.com"
+                },
             };
-
-            // All students
-            var studentUsers = realUsers.Where(u => !teachers.Any(t => t.Id == u.Id)).ToList();
-
-            // Create users in the system
-            var userIds = new List<string>();
-            foreach (var user in teachers.Concat(studentUsers)) // Teachers followed by students
+            
+            // Admin users
+            List<Administrator> admins =
+            [
+                new()
+                {
+                    Id = "01b17f54-f437-46c2-9a1d-3d18b08bedf7", Name = "Maurice Mouw",
+                    Email = "maurice.mouw@sue.nl"
+                },
+                new()
+                {
+                    Id = "3b83a493-eb84-4b32-b5cd-c79a3367eeec", Name = "Nicola Santolini",
+                    Email = "nicola.santolini@student.uva.nl"
+                },
+                new()
+                {
+                    Id = "3f359fb8-ae2e-49eb-9b36-3bba83cada3d", Name = "Karlo Peranović",
+                    Email = "karlo.peranovic@student.uva.nl"
+                },
+                new()
+                {
+                    Id = "b0aec77f-3275-4d6f-b17b-f2c4a018fd99", Name = "Joachim Dekker",
+                    Email = "jdekker3008@gmail.com"
+                },
+            ];
+            
+            // Add these users to the system, if they do not exist
+            List<User> allUsers = [..realUsers,..admins, ..teachers];
+            List<User> existingUsers = await _context.Users.ToListAsync();
+            
+            foreach (var user in allUsers.Where(user => existingUsers.All(u => u.Id != user.Id)))
             {
-                if (teachers.Contains(user)) // Teacher
+                _context.Users.Add(user);
+            }
+            await _context.SaveChangesAsync();
+            
+            // Generate three courses
+            List<Course> courses =
+            [
+                new Course("CS101", "Introduction to Programming", "Computer Science",
+                    new List<string> { teachers[0].Id }),
+                new Course("DSA101", "Data Structures and Algorithms", "Computer Science",
+                    new List<string> { teachers[1].Id }),
+                new Course("DMK101", "Digital Marketing", "Marketing", new List<string> { teachers[2].Id }),
+                new Course("BI101", name: "Business Informatics", department: "Computer Science",
+                    new List<string>() { teachers[1].Id, teachers[2].Id })
+            ];
+            
+            // Add these courses to the system, if they do not exist
+            List<Course> existingCourses = await _context.Courses.ToListAsync();
+            foreach (var course in courses.Where(course => existingCourses.All(c => c.Id != course.Id)))
+            {
+                course.Students = realUsers.Select(u => u.Id).ToList();
+                _context.Courses.Add(course);
+                
+                // Add sessions to the course
+                for (int i = 0; i < 5; i++) // 5 sessions for each course
                 {
-                    var teacher = await _userService.CreateTeacher(user.Id, user.Name, user.Email);
-                    userIds.Add(teacher.Id);
-                }
-                else // Student
-                {
-                    var student = await _userService.CreateStudent(user.Id, user.Name, user.Email);
-                    userIds.Add(student.Id);
+                    DateTime startTime = DateTime.Now.AddDays(i + 1); // Start from tomorrow
+                    DateTime endTime = startTime.AddHours(2);
+
+                    Session session = new Session(course, realUsers.Select(u => u.Id).ToList(), startTime, endTime);
+                    _context.Sessions.Add(session);
+                    
+                    course.Sessions.Add(session);
                 }
             }
-
-            // Create courses for each teacher and assign students to them
-            var courseIds = new List<string>();
-            foreach (var teacher in teachers)
-            {
-                for (int i = 0; i < 3; i++) // Each teacher teaches 3 courses
-                {
-                    var courseId = Guid.NewGuid().ToString();
-                    string courseName = Courses[new Random().Next(Courses.Count)].CourseName;
-                    string courseDepartment = Departments[new Random().Next(Departments.Count)];
-
-                    // Add the teacher as the course instructor
-                    var courseTeachers = new List<string> { teacher.Id };
-                    courseIds.Add(courseId);
-
-                    // Create the course and assign students
-                    await _courseService.CreateNewCourse(courseId, courseName, courseDepartment, courseTeachers);
-
-                    // Add all students to the course
-                    foreach (var studentId in userIds.Where(id => !courseTeachers.Contains(id)))
-                    {
-                        await _courseService.EnrollUser(courseId, studentId);
-                    }
-                }
-            }
-
-            // Generate sessions (5 sessions per course, starting from tomorrow, one per day)
-            for (int i = 0; i < 5; i++) // 5 sessions for each course
-            {
-                var courseId = courseIds[new Random().Next(courseIds.Count)];
-                var course = await _courseService.GetCourse(courseId);
-                DateTime startTime = DateTime.Now.AddDays(i + 1); // Start from tomorrow
-                DateTime endTime = startTime.AddHours(2);
-
-                // Add all users (students and teachers) to the session
-                await _attendanceService.CreateSession(courseId, startTime, endTime, userIds);
-            }
+            
+            await _context.SaveChangesAsync();
         }
-
     }
 
 }
