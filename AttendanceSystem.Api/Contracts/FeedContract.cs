@@ -19,6 +19,9 @@ public class CourseDTO
 public class SessionDTO
 {
     public Guid Id { get; set; }
+    
+    public string CourseId { get; set; }
+    
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public AttendanceRecordDto? Attendance { get; set; } = null!;

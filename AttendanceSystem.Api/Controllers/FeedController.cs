@@ -54,6 +54,7 @@ public class FeedController : BaseController
                 Id = session.Id,
                 StartDate = session.StartTime,
                 EndDate = session.EndTime,
+                CourseId = session.Course.Id,
                 Attendance = user is Student ? new AttendanceRecordDto() {
                     Status = record.StudentSubmission,
                     TeacherStatus = record.StudentSubmission,
