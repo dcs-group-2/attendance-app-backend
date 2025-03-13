@@ -39,7 +39,7 @@ public class AttendanceService
             .Include(s => s.Course)
             .Where(s => s.Course.Students.Contains(userId) || s.Course.Teachers.Contains(userId)).ToListAsync();
     }
-    
+
     public async Task<Session> GetSession(Guid sessionId)
     {
         return await _context.Sessions.FindAsync(sessionId) ?? throw new ArgumentException("Session not found", nameof(sessionId));
@@ -74,11 +74,24 @@ public class AttendanceService
     public async Task<AttendanceRecord?> GetSessionStatus(Guid sessionId, string userId)
     {
         AttendanceRecord? attendanceRecord =
-            (from session in _context.Sessions
+            await (from session in _context.Sessions
             from record in session.Register
             where record.SessionId == sessionId && record.StudentId == userId
-            select record).FirstOrDefault();
-        
+            select record).FirstOrDefaultAsync();
+
         return attendanceRecord;
+    }
+
+    public async Task<Dictionary<Guid, AttendanceRecord>> GetSessionStatuses(string userId, List<Guid> toList)
+    {
+        var records =
+            from session in _context.Sessions
+            from record in session.Register
+            where toList.Contains(session.Id) && record.StudentId == userId
+            select record;
+
+        var recordsList = await records.ToListAsync();
+
+        return recordsList.ToDictionary(r => r.SessionId, r => r);
     }
 }
