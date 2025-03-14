@@ -3,11 +3,6 @@ using AttendanceSystem.Domain.Model;
 
 namespace AttendanceSystem.Api.Contracts;
 
-public class UpdateAttendanceContract
-{
-    public required List<UpdateAttendanceContractItem> Attendance { get; set; }
-}
-
 public class UpdateAttendanceContractItem
 {
     public string? UserId { get; init; } = null!;
