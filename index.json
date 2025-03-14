@@ -257,7 +257,7 @@
   "api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html": {
     "href": "api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html",
     "title": "Class MockDataGenerator | Attendance App",
-    "summary": "Class MockDataGenerator Namespace AttendanceSystem.Domain.Services.Tools Assembly AttendanceSystem.Domain.Services.dll public class MockDataGenerator Inheritance object MockDataGenerator Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors MockDataGenerator(UserService, CourseService, AttendanceService, CoursesContext) public MockDataGenerator(UserService userService, CourseService courseService, AttendanceService attendanceService, CoursesContext context) Parameters userService UserService courseService CourseService attendanceService AttendanceService context CoursesContext Methods GenerateRealData() public Task GenerateRealData() Returns Task"
+    "summary": "Class MockDataGenerator Namespace AttendanceSystem.Domain.Services.Tools Assembly AttendanceSystem.Domain.Services.dll public class MockDataGenerator Inheritance object MockDataGenerator Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors MockDataGenerator(CoursesContext) public MockDataGenerator(CoursesContext context) Parameters context CoursesContext Methods GenerateRealData() public Task GenerateRealData() Returns Task"
   },
   "api/AttendanceSystem.Domain.Services.Tools.html": {
     "href": "api/AttendanceSystem.Domain.Services.Tools.html",

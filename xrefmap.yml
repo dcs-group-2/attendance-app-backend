@@ -2380,15 +2380,15 @@ references:
   commentId: T:AttendanceSystem.Domain.Services.Tools.MockDataGenerator
   fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator
   nameWithType: MockDataGenerator
-- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Data.CoursesContext)
-  name: MockDataGenerator(UserService, CourseService, AttendanceService, CoursesContext)
-  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator__ctor_AttendanceSystem_Domain_Services_UserService_AttendanceSystem_Domain_Services_CourseService_AttendanceSystem_Domain_Services_AttendanceService_AttendanceSystem_Data_CoursesContext_
-  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Domain.Services.UserService,AttendanceSystem.Domain.Services.CourseService,AttendanceSystem.Domain.Services.AttendanceService,AttendanceSystem.Data.CoursesContext)
-  name.vb: New(UserService, CourseService, AttendanceService, CoursesContext)
-  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.MockDataGenerator(AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Data.CoursesContext)
-  fullName.vb: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.New(AttendanceSystem.Domain.Services.UserService, AttendanceSystem.Domain.Services.CourseService, AttendanceSystem.Domain.Services.AttendanceService, AttendanceSystem.Data.CoursesContext)
-  nameWithType: MockDataGenerator.MockDataGenerator(UserService, CourseService, AttendanceService, CoursesContext)
-  nameWithType.vb: MockDataGenerator.New(UserService, CourseService, AttendanceService, CoursesContext)
+- uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Data.CoursesContext)
+  name: MockDataGenerator(CoursesContext)
+  href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator__ctor_AttendanceSystem_Data_CoursesContext_
+  commentId: M:AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor(AttendanceSystem.Data.CoursesContext)
+  name.vb: New(CoursesContext)
+  fullName: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.MockDataGenerator(AttendanceSystem.Data.CoursesContext)
+  fullName.vb: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.New(AttendanceSystem.Data.CoursesContext)
+  nameWithType: MockDataGenerator.MockDataGenerator(CoursesContext)
+  nameWithType.vb: MockDataGenerator.New(CoursesContext)
 - uid: AttendanceSystem.Domain.Services.Tools.MockDataGenerator.#ctor*
   name: MockDataGenerator
   href: api/AttendanceSystem.Domain.Services.Tools.MockDataGenerator.html#AttendanceSystem_Domain_Services_Tools_MockDataGenerator__ctor_
