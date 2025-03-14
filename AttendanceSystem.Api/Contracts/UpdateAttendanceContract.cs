@@ -10,7 +10,7 @@ public class UpdateAttendanceContract
 
 public class UpdateAttendanceContractItem
 {
-    public required string? UserId { get; init; }
+    public string? UserId { get; init; } = null!;
 
     [JsonConverter(typeof(JsonStringEnumConverter<AttendanceKind>))]
     public required AttendanceKind Kind { get; init; }
