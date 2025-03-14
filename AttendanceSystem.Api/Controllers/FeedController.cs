@@ -27,8 +27,8 @@ public class FeedController : BaseController
     /// <returns>The upcoming session which the user needs to attend.</returns>
     /// <response code="200">Successful</response>
     [Function( $"{nameof(FeedController)}-{nameof(GetUpcomingSessions)}")]
-    [ProducesResponseType<List<Session>>(StatusCodes.Status200OK)]
-    public async Task<ActionResult<List<SessionDTO>>> GetUpcomingSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="feed")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx)
+    [ProducesResponseType<List<SessionDTO>>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetUpcomingSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="feed")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx)
     {
         await AssertAuthentication(ctx, AllowAll);
 
