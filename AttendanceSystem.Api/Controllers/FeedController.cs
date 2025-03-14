@@ -54,6 +54,7 @@ public class FeedController : BaseController
                 {
                     Id = session.Id,
                     CourseName = session.Course.Name,
+                    CourseId = session.Course.Id,
                     StartDate = session.StartTime,
                     EndDate = session.EndTime,
                     Attendance = user is Student
