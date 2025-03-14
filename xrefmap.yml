@@ -442,6 +442,19 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Api.Contracts.SessionDTO.Attendance
   nameWithType: SessionDTO.Attendance
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.CourseId
+  name: CourseId
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_CourseId
+  commentId: P:AttendanceSystem.Api.Contracts.SessionDTO.CourseId
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.CourseId
+  nameWithType: SessionDTO.CourseId
+- uid: AttendanceSystem.Api.Contracts.SessionDTO.CourseId*
+  name: CourseId
+  href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_CourseId_
+  commentId: Overload:AttendanceSystem.Api.Contracts.SessionDTO.CourseId
+  isSpec: "True"
+  fullName: AttendanceSystem.Api.Contracts.SessionDTO.CourseId
+  nameWithType: SessionDTO.CourseId
 - uid: AttendanceSystem.Api.Contracts.SessionDTO.CourseName
   name: CourseName
   href: api/AttendanceSystem.Api.Contracts.SessionDTO.html#AttendanceSystem_Api_Contracts_SessionDTO_CourseName
