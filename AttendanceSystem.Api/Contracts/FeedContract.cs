@@ -7,6 +7,8 @@ public record SessionDTO
     public required Guid Id { get; set; }
 
     public required string CourseName { get; set; }
+
+    public required string CourseId { get; set; }
     public required DateTime StartDate { get; set; }
     public required DateTime EndDate { get; set; }
     public AttendanceRecordDto? Attendance { get; set; } = null!;
