@@ -223,7 +223,7 @@ Class FeedController  <a class="header-action link-secondary" title="View source
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Function(&quot;FeedController-GetUpcomingSessions&quot;)]
 [ProducesResponseType&lt;List&lt;Session&gt;&gt;(200)]
-public Task&lt;IActionResult&gt; GetUpcomingSessions(HttpRequest req, FunctionContext ctx)</code></pre>
+public Task&lt;ActionResult&lt;List&lt;SessionDTO&gt;&gt;&gt; GetUpcomingSessions(HttpRequest req, FunctionContext ctx)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -236,7 +236,7 @@ public Task&lt;IActionResult&gt; GetUpcomingSessions(HttpRequest req, FunctionCo
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="AttendanceSystem.Api.Contracts.SessionDTO.html">SessionDTO</a>&gt;&gt;&gt;</dt>
     <dd><p>The upcoming session which the user needs to attend.</p>
 </dd>
   </dl>

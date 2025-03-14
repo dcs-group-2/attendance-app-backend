@@ -89,7 +89,7 @@
 
 
   <h1 id="AttendanceSystem_Api_Contracts_SessionDTO" data-uid="AttendanceSystem.Api.Contracts.SessionDTO" class="text-break">
-Class SessionDTO  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L19"><i class="bi bi-code-slash"></i></a>
+Class SessionDTO  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SessionDTO</code></pre>
+    <pre><code class="lang-csharp hljs">public record SessionDTO : IEquatable&lt;SessionDTO&gt;</code></pre>
   </div>
 
 
@@ -115,6 +115,12 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="AttendanceSystem.Api.Contracts.SessionDTO.html">SessionDTO</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -156,7 +162,7 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_Attendance" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.Attendance">
   Attendance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -183,18 +189,49 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
 
 
 
-  <a id="AttendanceSystem_Api_Contracts_SessionDTO_EndDate_" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.EndDate*"></a>
+  <a id="AttendanceSystem_Api_Contracts_SessionDTO_CourseName_" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.CourseName*"></a>
 
-  <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_EndDate" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.EndDate">
-  EndDate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_CourseName" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.CourseName">
+  CourseName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime EndDate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required string CourseName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AttendanceSystem_Api_Contracts_SessionDTO_EndDate_" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.EndDate*"></a>
+
+  <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_EndDate" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.EndDate">
+  EndDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required DateTime EndDate { get; set; }</code></pre>
   </div>
 
 
@@ -218,14 +255,14 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_Id" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Guid Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required Guid Id { get; set; }</code></pre>
   </div>
 
 
@@ -249,14 +286,14 @@ Class SessionDTO  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="AttendanceSystem_Api_Contracts_SessionDTO_StartDate" data-uid="AttendanceSystem.Api.Contracts.SessionDTO.StartDate">
   StartDate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Contracts/FeedContract.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime StartDate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public required DateTime StartDate { get; set; }</code></pre>
   </div>
 
 

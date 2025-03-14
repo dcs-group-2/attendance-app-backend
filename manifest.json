@@ -40,20 +40,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AttendanceSystem.Api.Contracts.CourseDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AttendanceSystem.Api.Contracts.CourseDTO.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "AttendanceSystem.Api.Contracts.CourseDTO",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AttendanceSystem.Api.Contracts.CreateCourseContract.yml",
       "output": {
         ".html": {
@@ -120,20 +106,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "AttendanceSystem.Api.Contracts.ExtendedAttendanceRecord",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AttendanceSystem.Api.Contracts.FeedContract.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AttendanceSystem.Api.Contracts.FeedContract.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "AttendanceSystem.Api.Contracts.FeedContract",
       "Summary": null
     },
     {
