@@ -61,7 +61,7 @@ public class FeedController : BaseController
                         ? new AttendanceRecordDto()
                         {
                             Status = record.StudentSubmission,
-                            TeacherStatus = record.StudentSubmission,
+                            TeacherStatus = record.TeacherSubmission,
                             StudentId = record.StudentId,
                             StudentName = user.Name,
                         }
