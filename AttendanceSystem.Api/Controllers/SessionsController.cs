@@ -40,7 +40,7 @@ public class SessionsController : BaseController
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
         await AssertCourseAuthorization(courseId, GetUserId(ctx));
-        
+
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var sessions = await _attendanceService.GetSessions(courseId);
 
@@ -53,10 +53,10 @@ public class SessionsController : BaseController
     {
         // Authorize
         await AssertAuthentication(ctx, [Admin]);
-        
+
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        Session session = await _attendanceService.CreateSession(courseId, contract.StartDate, contract.EndDate, contract.Participants);    
+        Session session = await _attendanceService.CreateSession(courseId, contract.StartDate, contract.EndDate, contract.Participants);
 
         return new OkObjectResult(session);
     }
@@ -82,7 +82,7 @@ public class SessionsController : BaseController
         await AssertCourseAuthorization(courseId, userId);
 
         bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
-        
+
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         var session = await _attendanceService.GetSessionWithRegister(sessionId);
         var userProfiles = await _userService.GetUsers(session.Register.Select(r => r.StudentId).ToList());
@@ -95,7 +95,7 @@ public class SessionsController : BaseController
         {
             StudentName = userProfiles.FirstOrDefault(u => u.Id == r.StudentId)?.Name!,
         });
-        
+
         // Convert the session to a response contract
         var contract = new GetAttendanceListContract
         {
@@ -105,19 +105,19 @@ public class SessionsController : BaseController
             EndTime = session.EndTime,
             Register = extendedRegister.ToList(),
         };
-        
+
         return new OkObjectResult(contract);
     }
 
     [Function( $"{nameof(SessionsController)}-{nameof(SetAttendance)}")]
-    public async Task<IActionResult> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] UpdateAttendanceContract contract)
+    public async Task<IActionResult> SetAttendance([HttpTrigger(AuthorizationLevel.Anonymous, "put", Route="courses/{courseId}/sessions/{sessionId:guid}/attendance")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx, string courseId, Guid sessionId, [FromBody] List<UpdateAttendanceContractItem> contract)
     {
         // Authorize
         await AssertAuthentication(ctx, AllowAll);
         await AssertCourseAuthorization(courseId, GetUserId(ctx));
 
         // Right now, we only accept one attendance record at a time.
-        if (contract.Attendance.Count != 1)
+        if (contract.Count != 1 && GetUserRoles(ctx).Contains(Roles.Student))
         {
             return new BadRequestObjectResult("Only one attendance record can be updated at a time.");
         }
@@ -128,7 +128,7 @@ public class SessionsController : BaseController
         bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
 
 
-        foreach (var recordProcessRequest in contract.Attendance)
+        foreach (var recordProcessRequest in contract)
         {
             if (isTeacher)
             {
@@ -144,6 +144,7 @@ public class SessionsController : BaseController
                 await _attendanceService.SetStudentAttendance(sessionId, GetUserId(ctx), recordProcessRequest.Kind);
             }
         }
+
         return new OkObjectResult(await _attendanceService.GetSessionWithRegister(sessionId));
     }
 

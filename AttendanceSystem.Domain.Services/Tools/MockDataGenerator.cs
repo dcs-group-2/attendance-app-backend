@@ -217,7 +217,7 @@ public class MockDataGenerator(CoursesContext context)
                 DateTime startTime = startDate.AddHours(i * 2);
                 DateTime endTime = startTime.AddHours((i + 1) * 2);
 
-                Session session = new(course, students.Select(u => u.Id).ToList(), startTime, endTime);
+                Session session = new(course, course.Students, startTime, endTime);
                 context.Sessions.Add(session);
 
                 course.Sessions.Add(session);
