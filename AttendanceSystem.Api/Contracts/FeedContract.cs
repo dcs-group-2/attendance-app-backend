@@ -2,29 +2,17 @@
 
 namespace AttendanceSystem.Api.Contracts;
 
-public class FeedContract
+public record SessionDTO
 {
-    public List<CourseDTO> Courses { get; set; }
-    
-    public List<SessionDTO> Sessions { get; set; }
-}
+    public required Guid Id { get; set; }
 
-public class CourseDTO
-{
-    public string Name { get; set; }
-    public List<string> TeacherIds { get; set; }
-    public string Department { get; set; }
-}
-
-public class SessionDTO
-{
-    public Guid Id { get; set; }
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public required string CourseName { get; set; }
+    public required DateTime StartDate { get; set; }
+    public required DateTime EndDate { get; set; }
     public AttendanceRecordDto? Attendance { get; set; } = null!;
 }
 
-public class AttendanceRecordDto
+public record AttendanceRecordDto
 {
     public string StudentId { get; set; }
     public string StudentName { get; set; }
