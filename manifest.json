@@ -138,20 +138,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "AttendanceSystem.Api.Contracts.UpdateAttendanceContract",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.yml",
       "output": {
         ".html": {

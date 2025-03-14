@@ -494,25 +494,6 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Api.Contracts.SessionDTO.StartDate
   nameWithType: SessionDTO.StartDate
-- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract
-  name: UpdateAttendanceContract
-  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html
-  commentId: T:AttendanceSystem.Api.Contracts.UpdateAttendanceContract
-  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract
-  nameWithType: UpdateAttendanceContract
-- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
-  name: Attendance
-  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContract_Attendance
-  commentId: P:AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
-  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
-  nameWithType: UpdateAttendanceContract.Attendance
-- uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance*
-  name: Attendance
-  href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html#AttendanceSystem_Api_Contracts_UpdateAttendanceContract_Attendance_
-  commentId: Overload:AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
-  isSpec: "True"
-  fullName: AttendanceSystem.Api.Contracts.UpdateAttendanceContract.Attendance
-  nameWithType: UpdateAttendanceContract.Attendance
 - uid: AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem
   name: UpdateAttendanceContractItem
   href: api/AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html
@@ -903,15 +884,15 @@ references:
   isSpec: "True"
   fullName: AttendanceSystem.Api.Controllers.SessionsController.GetSessionInfo
   nameWithType: SessionsController.GetSessionInfo
-- uid: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
-  name: SetAttendance(HttpRequest, FunctionContext, string, Guid, UpdateAttendanceContract)
-  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_AttendanceSystem_Api_Contracts_UpdateAttendanceContract_
-  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
-  name.vb: SetAttendance(HttpRequest, FunctionContext, String, Guid, UpdateAttendanceContract)
-  fullName: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, System.Guid, AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
-  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, System.Guid, AttendanceSystem.Api.Contracts.UpdateAttendanceContract)
-  nameWithType: SessionsController.SetAttendance(HttpRequest, FunctionContext, string, Guid, UpdateAttendanceContract)
-  nameWithType.vb: SessionsController.SetAttendance(HttpRequest, FunctionContext, String, Guid, UpdateAttendanceContract)
+- uid: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,System.Collections.Generic.List{AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem})
+  name: SetAttendance(HttpRequest, FunctionContext, string, Guid, List<UpdateAttendanceContractItem>)
+  href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_System_Collections_Generic_List_AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem__
+  commentId: M:AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,System.Collections.Generic.List{AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem})
+  name.vb: SetAttendance(HttpRequest, FunctionContext, String, Guid, List(Of UpdateAttendanceContractItem))
+  fullName: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, string, System.Guid, System.Collections.Generic.List<AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem>)
+  fullName.vb: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest, Microsoft.Azure.Functions.Worker.FunctionContext, String, System.Guid, System.Collections.Generic.List(Of AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem))
+  nameWithType: SessionsController.SetAttendance(HttpRequest, FunctionContext, string, Guid, List<UpdateAttendanceContractItem>)
+  nameWithType.vb: SessionsController.SetAttendance(HttpRequest, FunctionContext, String, Guid, List(Of UpdateAttendanceContractItem))
 - uid: AttendanceSystem.Api.Controllers.SessionsController.SetAttendance*
   name: SetAttendance
   href: api/AttendanceSystem.Api.Controllers.SessionsController.html#AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_

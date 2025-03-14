@@ -258,7 +258,7 @@ public Task&lt;IActionResult&gt; CreateNewSession(HttpRequest req, FunctionConte
 
   <h3 id="AttendanceSystem_Api_Controllers_SessionsController_DeleteSession_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_" data-uid="AttendanceSystem.Api.Controllers.SessionsController.DeleteSession(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid)">
   DeleteSession(HttpRequest, FunctionContext, string, Guid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/SessionsController.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/SessionsController.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -393,8 +393,8 @@ public Task&lt;IActionResult&gt; GetSessionInfo(HttpRequest req, FunctionContext
 
   <a id="AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_" data-uid="AttendanceSystem.Api.Controllers.SessionsController.SetAttendance*"></a>
 
-  <h3 id="AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_AttendanceSystem_Api_Contracts_UpdateAttendanceContract_" data-uid="AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,AttendanceSystem.Api.Contracts.UpdateAttendanceContract)">
-  SetAttendance(HttpRequest, FunctionContext, string, Guid, UpdateAttendanceContract)
+  <h3 id="AttendanceSystem_Api_Controllers_SessionsController_SetAttendance_Microsoft_AspNetCore_Http_HttpRequest_Microsoft_Azure_Functions_Worker_FunctionContext_System_String_System_Guid_System_Collections_Generic_List_AttendanceSystem_Api_Contracts_UpdateAttendanceContractItem__" data-uid="AttendanceSystem.Api.Controllers.SessionsController.SetAttendance(Microsoft.AspNetCore.Http.HttpRequest,Microsoft.Azure.Functions.Worker.FunctionContext,System.String,System.Guid,System.Collections.Generic.List{AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem})">
+  SetAttendance(HttpRequest, FunctionContext, string, Guid, List&lt;UpdateAttendanceContractItem&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/dcs-group-2/attendance-app-backend/blob/main/AttendanceSystem.Api/Controllers/SessionsController.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -403,7 +403,7 @@ public Task&lt;IActionResult&gt; GetSessionInfo(HttpRequest req, FunctionContext
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Function(&quot;SessionsController-SetAttendance&quot;)]
-public Task&lt;IActionResult&gt; SetAttendance(HttpRequest req, FunctionContext ctx, string courseId, Guid sessionId, UpdateAttendanceContract contract)</code></pre>
+public Task&lt;IActionResult&gt; SetAttendance(HttpRequest req, FunctionContext ctx, string courseId, Guid sessionId, List&lt;UpdateAttendanceContractItem&gt; contract)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -416,7 +416,7 @@ public Task&lt;IActionResult&gt; SetAttendance(HttpRequest req, FunctionContext 
     <dd></dd>
     <dt><code>sessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
     <dd></dd>
-    <dt><code>contract</code> <a class="xref" href="AttendanceSystem.Api.Contracts.UpdateAttendanceContract.html">UpdateAttendanceContract</a></dt>
+    <dt><code>contract</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="AttendanceSystem.Api.Contracts.UpdateAttendanceContractItem.html">UpdateAttendanceContractItem</a>&gt;</dt>
     <dd></dd>
   </dl>
 
