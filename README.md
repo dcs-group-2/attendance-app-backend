@@ -6,7 +6,7 @@ The Attendance App Backend is a robust, multi-layered application built with .NE
 
 - **User Management:** Easily create and manage user profiles.
 - **Course & Session Management:** Schedule courses and sessions, and record attendance.
-- **Real-Time Feeds:** Get live updates on attendance events.
+- **Feeds:** Feeds combine three or more separate API requests for an improved API usability.
 - **Domain-Driven Design:** Clear separation of concerns with dedicated projects for API, data access, domain models, and services.
 - **Robust Error Handling:** Custom middleware ensures secure authentication and graceful error management.
 - **CI/CD Pipelines:** Automated workflows for building, testing, and deploying the application.
