@@ -1,0 +1,69 @@
+name: Deploy Bicep file
+on:
+  push:
+    branches:
+      - main
+      - dev
+permissions:
+  id-token: write
+  contents: read
+env:
+  BICEP_PARAMS: '{"appName": "attendly"}'
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v2
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+    - name: Deploy Shared
+      uses: azure/bicep-deploy@v2
+      with:
+        type: deploymentStack
+        operation: create
+        name: Shared
+        scope: resourceGroup 
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        template-file: ../../.infra/shared.bicep
+        parameters: ${{ env.BICEP_PARAMS }}
+        action-on-unmanage-resources: delete
+        deny-settings-mode: denyWriteAndDelete
+
+    - name: Deploy Frontend
+      uses: azure/bicep-deploy@v2
+      with:
+        type: deploymentStack
+        operation: create
+        name: Frontend
+        scope: resourceGroup 
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        template-file: ../../.infra/frontend.bicep
+        parameters: ${{ env.BICEP_PARAMS }}
+        action-on-unmanage-resources: delete
+        deny-settings-mode: denyWriteAndDelete
+
+    
+    - name: Deploy Backend
+      uses: azure/bicep-deploy@v2
+      with:
+        type: deploymentStack
+        operation: create
+        name: Backend
+        scope: resourceGroup 
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        template-file: ../../.infra/shared.bicep
+        parameters: ${{ env.BICEP_PARAMS }}
+        action-on-unmanage-resources: delete
+        deny-settings-mode: denyWriteAndDelete
+
