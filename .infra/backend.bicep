@@ -7,11 +7,9 @@ param appName string
 @description('Location for Application Insights')
 param appInsightsLocation string
 
-@description('The name for the functionapp')
-param functionAppName string
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
-  name: '${replace(storageAccountName, '-', '')}st'
+  name: replace('${appName}-st', '-', '')
   location: location
   sku: {
     name: 'Standard_LRS'
@@ -25,7 +23,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
 }
 
 resource hostingPlan 'Microsoft.Web/serverfarms@2021-03-01' = {
-  name: hostingPlanName
+  name: '${appName}-asp'
   location: location
   sku: {
     name: 'Y1'
@@ -33,6 +31,9 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   }
   properties: {}
 }
+
+var functionAppName = '${appName}-fn'
+var keyvaultStorageSecretName = 'storageAccountConnectionString'
 
 resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
   name: functionAppName
@@ -47,7 +48,7 @@ resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
         allowedOrigins: [
           'https://portal.azure.com'
           'https://dev.azure.com'
-
+          'https://attendance.sueniversity.com'
         ]
       }
       use32BitWorkerProcess: false
@@ -67,15 +68,15 @@ resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
       FUNCTIONS_WORKER_RUNTIME: 'dotnet-isolated'
       AzureWebJobsFeatureFlags: 'EnableWorkerIndexing'
       APPLICATIONINSIGHTS_CONNECTION_STRING: applicationInsights.properties.ConnectionString
-      AzureWebJobsStorage: '@Microsoft.KeyVault(VaultName=${keyvaultName};SecretName=${keyvaultStorageSecretName})'
-      WEBSITE_CONTENTAZUREFILECONNECTIONSTRING: '@Microsoft.KeyVault(VaultName=${keyvaultName};SecretName=${keyvaultStorageSecretName})'
+      AzureWebJobsStorage: '@Microsoft.KeyVault(VaultName=${keyvault.name};SecretName=${keyvaultStorageSecretName})'
+      WEBSITE_CONTENTAZUREFILECONNECTIONSTRING: '@Microsoft.KeyVault(VaultName=${keyvault.name};SecretName=${keyvaultStorageSecretName})'
       WEBSITE_CONTENTSHARE: toLower(functionAppName)
     }
   }
 }
 
 resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
-  name: applicationInsightsName
+  name: '${appName}-appi'
   location: appInsightsLocation
   kind: 'web'
   properties: {
@@ -85,27 +86,15 @@ resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
 }
 
 // Key vault
-resource keyvault 'Microsoft.KeyVault/vaults@2021-11-01-preview' = {
-  name: keyvaultName
-  location: location
-  properties: {
-    enableSoftDelete: true
-    enabledForDeployment: true
-    enabledForTemplateDeployment: true
-    enableRbacAuthorization: true
-    sku: {
-      name: 'standard'
-      family: 'A'
-    }
-    tenantId: tenantId
-  }
+resource keyvault 'Microsoft.KeyVault/vaults@2021-11-01-preview' existing = {
+  name: '${appName}-kv'
 }
 
 resource secret 'Microsoft.KeyVault/vaults/secrets@2023-07-01' = {
   parent: keyvault
   name: keyvaultStorageSecretName
   properties: {
-    value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${az.environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
+    value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};EndpointSuffix=${az.environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
   }
 }
 
