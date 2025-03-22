@@ -17,12 +17,12 @@ public class UserService
 
     public async Task<User> GetUser(string userId)
     {
-        return await _context.Students.FindAsync(userId) ?? throw new EntityNotFoundException("User not found");
+        return await _context.Users.FindAsync(userId) ?? throw new EntityNotFoundException("User not found");
     }
 
     public async Task<List<User>> GetAllStudents()
     {
-        return await _context.Students.ToListAsync<User>();
+        return await _context.Users.ToListAsync();
     }
 
     public async Task<User> CreateTeacher(string id, string name, string email)

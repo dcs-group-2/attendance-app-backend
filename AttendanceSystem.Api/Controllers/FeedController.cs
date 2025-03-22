@@ -27,7 +27,7 @@ public class FeedController : BaseController
     /// <returns>The upcoming session which the user needs to attend.</returns>
     /// <response code="200">Successful</response>
     [Function( $"{nameof(FeedController)}-{nameof(GetUpcomingSessions)}")]
-    [ProducesResponseType<List<Session>>(StatusCodes.Status200OK)]
+    [ProducesResponseType<List<SessionDTO>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetUpcomingSessions([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route="feed")] HttpRequest req, [SwaggerIgnore] FunctionContext ctx)
     {
         await AssertAuthentication(ctx, AllowAll);
@@ -35,41 +35,41 @@ public class FeedController : BaseController
         User user = await GetUser(ctx);
         string userId = user.Id;
 
-        bool isTeacher = GetUserRoles(ctx).Contains(Roles.Teacher) || GetUserRoles(ctx).Contains(Roles.Admin);
-
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
         var sessions = await _attendanceService.GetUpcomingSessionsForUser(userId);
-        
-        // Get the courses
-        var courses = sessions.Select(s => s.Course).Distinct();
-        
-        // Create the feed
-        List<SessionDTO> sessionDTOs = new();
-        foreach (Session session in sessions)
+
+        Dictionary<Guid, AttendanceRecord> attendanceStatus = [];
+        if (user is Student)
         {
-            var record = await _attendanceService.GetSessionStatus(session.Id, userId);
-            sessionDTOs.Add(new SessionDTO()
-            {
-                Id = session.Id,
-                StartDate = session.StartTime,
-                EndDate = session.EndTime,
-                Attendance = user is Student ? new AttendanceRecordDto() {
-                    Status = record.StudentSubmission,
-                    TeacherStatus = record.StudentSubmission,
-                    StudentId = record.StudentId,
-                    StudentName = user.Name,
-                } : null!,
-            });
+            attendanceStatus = await _attendanceService.GetSessionStatuses(userId, sessions.Select(s => s.Id).ToList());
         }
 
-        FeedContract contract = new FeedContract()
+        // Create the feed
+        List<SessionDTO> sessionContracts = new();
+        foreach (Session session in sessions)
         {
-            Courses = courses.Select(c => new CourseDTO()
-                { Department = c.Department, Name = c.Name, TeacherIds = c.Teachers }).ToList(),
-            Sessions = sessionDTOs,
-        };
+            AttendanceRecord record = user is Student ? attendanceStatus[session.Id] : null!;
+            sessionContracts.Add(new SessionDTO
+                {
+                    Id = session.Id,
+                    CourseName = session.Course.Name,
+                    CourseId = session.Course.Id,
+                    StartDate = session.StartTime,
+                    EndDate = session.EndTime,
+                    Attendance = user is Student
+                        ? new AttendanceRecordDto()
+                        {
+                            Status = record.StudentSubmission,
+                            TeacherStatus = record.TeacherSubmission,
+                            StudentId = record.StudentId,
+                            StudentName = user.Name,
+                        }
+                        : null!,
+                }
+            );
+        }
 
-        return new OkObjectResult(contract);
+        return new OkObjectResult(sessionContracts);
     }
 }
